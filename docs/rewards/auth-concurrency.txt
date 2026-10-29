@@ -1,0 +1,1 @@
+PASS: two real Auth accounts, two concurrent devices, 8 claims = one 5-jeton ledger entry, foreign-wallet isolation, referral binding/replay, 1 active day not sufficient, admin/credit forgery denied, revoked token denied

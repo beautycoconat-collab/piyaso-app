@@ -1,0 +1,18 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> kiyi-mobile@0.1.0 check:release
+> node scripts/check-release.mjs
+
+APP STORE GÖNDERİMİ HAZIR DEĞİL
+• Bundle ID hesabında doğrulanmalı
+• Apple Developer hesabı
+• Apple satın alma doğrulaması
+• Satın alımları geri yükleme testi
+• İşletmeci bilgileriyle son gizlilik metni
+• iPhone ve TestFlight testleri
+• Son sürümün gerçek ekran görüntüleri
+• Yaş derecelendirme formu
+• Xcode 26+ imzalı arşiv doğrulaması
+• İşletmeci adı
+• Destek e-postası
+• Demo yerine production sürümü

@@ -1,0 +1,39 @@
+{
+  "advisories": {
+    "1243436": {
+      "findings": [
+        {
+          "version": "0.16.0",
+          "paths": [
+            ".>vinext>@vercel/og>satori"
+          ],
+          "dev": true,
+          "optional": false,
+          "bundled": false
+        }
+      ],
+      "id": 1243436,
+      "title": "Satori-generated SVG has improper escaping",
+      "module_name": "satori",
+      "vulnerable_versions": ">=0.0.27 <0.33.5",
+      "patched_versions": ">=0.33.5",
+      "severity": "moderate",
+      "cwe": "CWE-116",
+      "github_advisory_id": "GHSA-wx4j-mvgx-mqwp",
+      "url": "https://github.com/advisories/GHSA-wx4j-mvgx-mqwp"
+    }
+  },
+  "metadata": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 1,
+      "high": 0,
+      "critical": 0
+    },
+    "dependencies": 206,
+    "devDependencies": 534,
+    "optionalDependencies": 144,
+    "totalDependencies": 775
+  }
+}

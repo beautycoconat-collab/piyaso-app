@@ -1,0 +1,48 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> kiyi-admin-foundation@2.0.0 test
+> node scripts/generate-worker.mjs && node --test tests/*.test.mjs
+
+PASS: real Postgres permission, MFA, lease, role, masking, idempotency, audit, revocation, and bootstrap controls
+✔ tests/database.test.mjs (2225.461081ms)
+✔ all operational modules return bounded authorized live-schema results (84.028251ms)
+✔ role restrictions and fresh membership are enforced server-side (11.174592ms)
+✔ plate uniqueness, profile DTO, and support user privacy (21.329242ms)
+✔ catalog update controls debit atomically, is idempotent, and inactive products cannot spend (26.865441ms)
+✔ manual credits need a distinct approver and one ledger entry (17.452817ms)
+✔ moderation hides existing content, suspended accounts retain appeal path (55.825945ms)
+✔ announcements obey audience and marketing preference; maintenance blocks user writes (22.937383ms)
+✔ map uses approximate coordinates and respects active region, ghost and Premium (20.335339ms)
+✔ account deletion cannot claim completion before media erasure; shared Auth and finance remain (21.062912ms)
+✔ cleanup physically removes stale GPS; private operations cannot be directly read by users (6.35536ms)
+✔ gallery enforces max three, type, uniqueness and ownership on the server (60.151039ms)
+✔ extra photos are on-demand and observe searchability, blocks and moderation (43.931546ms)
+✔ photo posts fail while text and recorded audio remain possible (19.101985ms)
+✔ photo cleanup never suggests deleting referenced images; primary can be reordered (21.69361ms)
+✔ cached counts remain fixed until scheduled refresh; usage unknowns are explicit (69.698286ms)
+✔ 75 percent boundaries, duplicate alert prevention, recovery and stale readings (120.856467ms)
+✔ roles cannot bypass private caches, provider collector or refresh function (21.457945ms)
+✔ viewport only, 200 boundary, sampling and paged street view preserve privacy (2102.389105ms)
+✔ viewport eligibility excludes blocked, unapproved, stale and disabled accounts before counts (363.644451ms)
+✔ missing production config fails closed (6.536967ms)
+✔ origin, JSON and action allowlist checked before upstream (2.553841ms)
+✔ encrypted cookie cannot be changed or used under another key (45.678096ms)
+✔ login forwards only credentials and never returns tokens to browser (6.247614ms)
+✔ nonmember login clears cookie (1.917969ms)
+✔ expired/tampered sessions cannot reach RPC (6.017396ms)
+✔ verified user request carries caller token, not service role (5.475026ms)
+✔ MFA response strips access and refresh tokens after verification (14.721963ms)
+✔ upstream failure is redacted and no token/error payload leaks (8.513458ms)
+✔ logout clears cookies even when auth provider is unreachable (9.421321ms)
+✔ an AAL1 session cannot enroll a replacement factor when MFA exists (13.57578ms)
+✔ oversized streamed input rejected before parsing or upstream (0.674289ms)
+✔ admin operational requests are still routed with caller JWT (15.823749ms)
+✔ media signing requires DB scope approval and uses a 60 second read (11.563609ms)
+ℹ tests 34
+ℹ suites 0
+ℹ pass 34
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5386.144174

@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-29",
+  "target_repository": "beautycoconat-collab/piyaso-app",
+  "github_uploaded": false,
+  "exported_branch": "audit/apple-compliance-20261029",
+  "additional_branch": "main",
+  "commit": "785b7fee0a854f17e5d36beab37ee3bca41b6bbc",
+  "commits": 227,
+  "tracked_source_files": 1048,
+  "history_bundle": "git-history/piyaso-app.bundle",
+  "history_complete": true,
+  "history_credentials_redacted": true,
+  "source_baseline": "4a6361bd0567fffe6074ce3e6f970256a82692d7",
+  "tests_passed": 391,
+  "production_deployed": false
+}

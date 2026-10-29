@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-25",
+  "baselineAndFinalEqual": true,
+  "checksums": {
+    "profiles": "4df32a38554cf6e5302c9d3992c1cc5c",
+    "vehicles": "c8c083b4ac04fb3f13e6a18d23408d5a",
+    "wallets": "32571ae0025ff9428e6b349473e2faab",
+    "customizations": "291385ca36a9aa819f7b3fdd8f6f89f3",
+    "appearance": "5e316a9fb320f0161f58284366e2283b"
+  },
+  "remainingDisposableAccounts": 0,
+  "remainingDisposableStorageObjects": 0,
+  "vehicleCatalogCount": 39,
+  "publicKiyiTablesWithoutRls": 0,
+  "authenticatedCanReadStage7Backup": false,
+  "authenticatedCanExecuteSessionLiveHelper": false,
+  "unresolvedAuthAdvisorWarning": "Leaked password protection disabled"
+}

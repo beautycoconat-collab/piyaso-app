@@ -1,0 +1,93 @@
+/* Scoped charcoal surfaces for the garage and send-gift screens. */
+.modal:has(.vehicle-garage){background:#222125}
+.membership-dialog:has(.vehicle-garage),.gift-dialog,.gift-dialog:has(.gift-shop-grid){color-scheme:dark;background:#222125;color:#f7f4fb;border-color:#39353e}
+.membership-dialog:has(.vehicle-garage)>.close,.gift-dialog>.close{background:#35313c;color:#d6b4ff;border:1px solid #4c415b}
+.vehicle-garage{color:#f7f4fb}
+.vehicle-garage .garage-heading{padding-right:0}
+.garage-title-row{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.vehicle-garage .appearance-eyebrow{color:#bc98ed;font-size:10px;letter-spacing:1.8px}
+.vehicle-garage .garage-heading h2{color:#faf7ff;font-size:25px;line-height:1.2;margin:7px 0}
+.vehicle-garage .garage-heading p{color:#aaa3b3;font-size:11px;margin-top:10px;max-width:460px}
+.garage-wallets{display:grid;gap:6px;flex:none;min-width:103px}
+.garage-coin-wallet{display:flex;gap:5px}.garage-coin-wallet button,.garage-diamond-wallet{display:flex;align-items:center;justify-content:center;gap:6px;border:1px solid #4b4040;border-radius:22px;background:#302b29;color:#f4d49a;min-height:32px;font:inherit;font-size:12px;padding:4px 9px}
+.garage-coin-wallet button{cursor:pointer}.garage-coin-wallet button:last-child{width:30px;min-height:30px;padding:0;font-size:21px;background:#352b45;border-color:#4b3b5f;color:#cfabff}
+.garage-coin-wallet .gift-gold-coin{width:21px;height:21px}.garage-diamond-wallet{background:#31283f;border-color:#57426e;color:#e1c0ff}.garage-diamond-wallet small{font-size:8px;color:#bfa7d7}.purple-diamond{width:22px;height:20px;flex:none;filter:drop-shadow(0 0 4px #a35bf34d)}
+.vehicle-garage>.garage-shared-preview{background:radial-gradient(ellipse at 24% 75%,#3d354c 0,transparent 70%),linear-gradient(130deg,#2d2a32,#27242d);border:1px solid #3b3545;padding:14px 10px}
+.vehicle-garage .garage-shared-preview .vehicle-paint-caption h3{color:#f6efff}.vehicle-garage .garage-shared-preview .vehicle-paint-caption small{color:#b89bce}.vehicle-garage .garage-shared-preview .vehicle-paint-caption span{color:#aba1b7}
+.vehicle-garage>.garage-tabs{grid-template-columns:.68fr 1.32fr 1fr .85fr;background:#2e2a34;border:1px solid #39333f;padding:4px;gap:2px;border-radius:13px}
+.vehicle-garage .garage-tabs button{font-size:10px;line-height:1.35;padding:11px 3px;color:#b7a9c5;min-width:0}.vehicle-garage .garage-tabs button[aria-current]{background:#7841b7;color:#fff;box-shadow:0 2px 8px #0002}
+.vehicle-garage .car-customizer{border:0;background:transparent;padding:0}.vehicle-garage .car-color-grid{margin-top:8px}
+.vehicle-garage .car-color-choice,.vehicle-garage .plate-style-choice,.vehicle-garage .garage-model-choice,.vehicle-garage .car-wrap-choice,.garage-accessory-card{background:#2b282f;border-color:#423b4b;color:#f0eaf6}
+.vehicle-garage .car-color-choice.selected,.vehicle-garage .plate-style-choice.selected,.vehicle-garage .garage-model-choice.selected,.vehicle-garage .car-wrap-choice.selected,.garage-accessory-card.selected{background:#372942;border-color:#b987f4;outline-color:#b987f4}
+.vehicle-garage .car-color-choice b,.vehicle-garage .plate-style-choice>b,.vehicle-garage .garage-model-choice b,.vehicle-garage .car-wrap-choice b{color:#f1ebf7}
+.vehicle-garage .car-color-choice small,.vehicle-garage .plate-style-choice>small{color:#c9b994}.vehicle-garage .car-color-choice.selected small,.vehicle-garage .car-wrap-choice small{color:#c99bff}
+.vehicle-garage .car-color-choice>i{box-shadow:0 0 0 4px #ece3f31a,0 3px 10px #0004}.vehicle-garage .custom-color-art .custom-color-plus{background:#49315e;color:#e3c6ff}
+.vehicle-garage .car-wrap-catalog{border-top-color:#423b4a}.vehicle-garage .car-wrap-heading h3{color:#f3eafa}.vehicle-garage .car-wrap-heading p,.vehicle-garage .wrap-preview-status,.vehicle-garage .garage-model-help,.vehicle-garage .garage-model-status,.vehicle-garage>small,.garage-accessory-status{color:#b5a9c0}
+.vehicle-garage .garage-model-choice small{color:#bc9add}.vehicle-garage .garage-plate-controls,.vehicle-garage .car-inline-unlock{background:#302934;color:#f5edfc;border-color:#51415d}.vehicle-garage .garage-plate-controls small{color:#bba9c9}
+.vehicle-garage input{background:#25212d;color:#fbf5ff;border:1px solid #584567}.vehicle-garage label.field{color:#d4c7df}.vehicle-garage .btn{background:#9160d6;color:#fff}.vehicle-garage :focus-visible,.gift-dialog :focus-visible{outline:2px solid #c99aff;outline-offset:3px}
+.garage-accessory-heading{display:flex;align-items:center;justify-content:space-between;margin:20px 0 10px}.garage-accessory-heading h3{font-size:15px;margin:0;color:#f2eaf8}.garage-accessory-heading .textbtn{color:#c5a0ec;font-size:11px}
+.garage-accessory-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}.garage-accessory-card{display:flex;flex-direction:column;align-items:center;min-width:0;border:1px solid #423b4b;border-radius:15px;padding:8px 5px 12px;cursor:pointer;font:inherit}.garage-accessory-card>span{display:grid;place-items:center;width:100%;height:70px;background:radial-gradient(ellipse,#6640793d,transparent 70%)}.garage-accessory-card svg{width:85px;height:70px;filter:drop-shadow(0 0 5px #b779df60)}.garage-accessory-card b{font-size:11px;line-height:1.4;text-align:center}.garage-accessory-card small{font-size:10px;margin-top:5px;color:#c59bea}.garage-led-text{margin-top:20px}.garage-led-text[hidden]{display:none!important}.garage-accessory-status{font-size:11px;line-height:1.6;margin:18px 0}
+/* Gift / music send panels share the same palette, including their footer. */
+.gift-dialog #gift-title,.gift-dialog h2,.gift-dialog h3,.gift-dialog .music-section-heading{color:#f4eff8}.gift-dialog .gift-recipient,.gift-dialog .gift-demo-note,.gift-dialog .song-send-hint,.gift-dialog .music-catalog-hint,.gift-dialog .hint{color:#aaa3b0}
+.gift-dialog .gift-shop-item{background:#29262e;border-color:#3e3747;color:#f5effb}.gift-dialog .gift-shop-item b{color:#f5effb}.gift-dialog .gift-shop-item>span{color:#bcb2c7}.gift-dialog .gift-shop-item[aria-pressed=true]{background:#382b47;border-color:#ac7de7;box-shadow:0 0 0 1px #ac7de7}
+.gift-dialog .gift-shop-checkout{background:#222125f5;border-top-color:#42394c}.gift-dialog #giftchoice{color:#c0b2cd}.gift-dialog .btn{background:#9564d9;color:#fff}.gift-dialog .btn:disabled{background:#51425f;color:#b5a5c2;opacity:.75}
+.gift-dialog .gift-art,.gift-dialog .gift-crop,.gift-dialog .gift-lighter,.gift-dialog .gift-lemon-symbol{background-color:transparent}
+.gift-dialog .wall-credit-control-balance{background:#342c2b;color:#f0ce92;border:1px solid #4b3e36}.gift-dialog .wall-credit-control-add{background:#3a2d4b;color:#cc9cff}
+.gift-dialog input,.gift-dialog select,.gift-dialog textarea,.gift-dialog .music-search{background:#302a36;color:#f7efff;border-color:#51425e}.gift-dialog .music-search button{color:#d6adff;background:#443153}.gift-dialog .gift-song-row{border-color:#403847}.gift-dialog .gift-song-select{color:#f4edf9}.gift-dialog .gift-song-select b{color:#f4edf9}.gift-dialog .gift-song-select small{color:#b6a9c1}.gift-dialog .textbtn,.gift-dialog .song-store-link{color:#c99cf6}.gift-dialog .selected-song{background:#352b40;border-color:#5a4470;color:#f7edff}
+@media(min-width:700px){.garage-accessory-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.vehicle-garage .garage-tabs button{font-size:12px}.vehicle-garage .garage-heading h2{font-size:29px}.garage-wallets{min-width:120px}}
+@media(max-width:360px){.vehicle-garage .garage-heading h2{font-size:22px}.vehicle-garage .garage-tabs button{font-size:9px}.garage-wallets{min-width:94px}.garage-accessory-card b{font-size:10px}}
+@media(prefers-reduced-motion:reduce){.vehicle-garage *,.gift-dialog *{scroll-behavior:auto!important;transition:none!important}}
+/* Blue diamonds are the garage's own currency; the former second balance is gone. */
+.garage-blue-wallet{display:flex;align-items:center;justify-content:flex-end;gap:6px}
+.garage-blue-wallet button{display:flex;align-items:center;justify-content:center;gap:7px;min-height:34px;padding:5px 11px;border:1px solid #3d667c;border-radius:22px;background:#253540;color:#c4f0ff;font:inherit;font-size:13px;cursor:pointer}
+.garage-blue-wallet button:last-child{width:32px;padding:0;font-size:23px;background:#29384a;color:#8ddcff}
+.blue-diamond{display:inline-block;width:19px;height:18px;vertical-align:middle;flex:none;filter:drop-shadow(0 0 3px #45bfff40)}
+.garage-blue-wallet .blue-diamond{width:24px;height:22px}
+.vehicle-garage .garage-tabs{grid-template-columns:.65fr 1.35fr 1.1fr .9fr .6fr}
+.vehicle-garage .garage-tabs button{font-size:9px;padding:11px 2px}
+.vehicle-garage .garage-shared-preview{position:relative}
+.garage-zoom-button{position:absolute;right:9px;bottom:9px;z-index:1;border:1px solid #746084;background:#292331e8;color:#e5d0f8;border-radius:15px;padding:5px 9px;font:inherit;font-size:9px;cursor:pointer}
+.vehicle-garage.garage-plate-zoomed>.garage-shared-preview{grid-template-columns:minmax(0,1fr);padding:12px 8px 25px}
+.garage-plate-zoomed .garage-shared-preview .vehicle-paint-caption{display:none}
+.garage-plate-zoomed .car-paint-display{max-width:480px;margin:auto}
+.vehicle-garage .garage-plate-controls{padding:0;margin:14px 0;background:none;border:0}
+.garage-rim-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.garage-rim-card{display:flex;flex-direction:column;align-items:center;min-width:0;border:1px solid #423b4b;background:#2b282f;color:#f2eaf9;border-radius:15px;padding:10px 6px 12px;font:inherit;cursor:pointer}
+.garage-rim-card>span{display:grid;place-items:center;width:100%;aspect-ratio:1;background:radial-gradient(ellipse,#50536540,transparent 70%)}.garage-rim-card svg{width:94%;height:auto;max-width:130px;filter:drop-shadow(0 5px 5px #0006)}.garage-rim-card b{font-size:11px;margin-top:5px;text-align:center}.garage-rim-card small{font-size:10px;color:#bfa0df;margin-top:5px}.garage-rim-card.selected{background:#372942;border-color:#b987f4;outline:2px solid #b987f4}
+@media(min-width:700px){.vehicle-garage .garage-tabs button{font-size:12px}.garage-rim-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+/* Discoverable plate lettering directly above the choices. */
+.vehicle-garage .garage-plate-controls:not(:empty){margin:0 0 16px;padding:13px 14px;background:#302738;border:1px solid #6f4e8e;border-radius:13px}
+.garage-plate-controls .field{display:grid;gap:8px;margin:0}.garage-plate-controls .field>b{font-size:13px;color:#f2dfff}.garage-plate-controls .field input{width:100%;box-sizing:border-box;min-height:43px;font-size:15px}.garage-plate-controls .field small{font-size:10px;color:#b6a4c3;margin:0}
+.vehicle-garage .plate-style-choice{position:relative}.plate-name-badge{position:absolute;top:6px;right:6px;font-size:8px;font-weight:650;line-height:1.3;padding:3px 5px;border-radius:7px;background:#543b6d;color:#ead3ff}
+.vehicle-garage.garage-rim-zoomed>.garage-shared-preview{grid-template-columns:minmax(0,1fr);padding:12px 8px 25px}.garage-rim-zoomed .garage-shared-preview .vehicle-paint-caption{display:none}.garage-rim-zoomed .car-paint-display{max-width:480px;margin:auto}
+/* A compact gift sheet touches both sides and the bottom of the viewport. */
+.modal:has(.gift-dialog){padding:0;align-items:flex-end;justify-content:center}
+.gift-dialog,.gift-dialog:has(.gift-shop-grid){box-sizing:border-box;width:100%;max-width:none!important;max-height:86dvh;margin:0!important;border:0;border-radius:24px 24px 0 0!important;padding:42px max(14px,env(safe-area-inset-right)) calc(10px + env(safe-area-inset-bottom)) max(14px,env(safe-area-inset-left));overflow-y:auto;box-shadow:0 -12px 50px #0005}
+.gift-dialog:has(.gift-shop-grid){display:flex;flex-direction:column;overflow:hidden}
+.gift-dialog #gift-title{font-size:19px;min-height:30px;flex:none;margin-bottom:3px}
+.gift-dialog .gift-recipient{font-size:11px;margin:3px 0 10px;flex:none}
+.gift-dialog .gift-shop-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin:8px 0 10px;overflow-y:auto;min-height:0;flex:1;align-content:start;padding:3px 1px}
+.gift-dialog .gift-shop-item{position:relative;isolation:isolate;overflow:hidden;gap:4px;border-radius:11px;padding:7px 3px 8px;min-height:102px}
+.gift-dialog .gift-shop-item>.gift-art{width:52px;height:52px;flex:none;margin:0 auto}.gift-dialog .gift-shop-item>.gift-lemon-symbol{font-size:35px}
+.gift-dialog .gift-shop-item>b{font-size:10px;line-height:1.35;min-height:15px;width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block;text-align:center}
+.gift-dialog .gift-shop-item>span:not(.gift-art):not(.gift-hot-badge){font-size:10px;gap:3px;justify-content:center}.gift-dialog .gift-shop-item .gift-gold-coin{width:13px;height:13px}
+.gift-dialog .gift-shop-item[aria-pressed=true]{padding:6px 2px 7px}.gift-dialog .gift-shop-checkout{position:relative;bottom:auto;flex:none;margin-top:0;padding:12px 1px 4px;gap:10px;border-top:1px solid #44374f}.gift-dialog .gift-shop-checkout .btn{border-radius:22px;font-size:12px;padding:11px 18px;min-height:42px}.gift-dialog #giftchoice{font-size:11px}.gift-dialog .gift-demo-note{font-size:9px;line-height:1.4;margin:8px 0 0;flex:none}
+.gift-dialog .gift-shop-item.gift-featured{background:radial-gradient(ellipse at 50% 40%,#74486680,transparent 75%),linear-gradient(140deg,#493540,#30262f);border-color:#70505f}
+.gift-dialog .gift-shop-item.gift-featured-ring{background:radial-gradient(ellipse at 50% 40%,#6252869c,transparent 75%),linear-gradient(140deg,#3f374c,#29252e);border-color:#625775}
+.gift-dialog .gift-shop-item.gift-featured-cat{background:radial-gradient(ellipse at 50% 40%,#966c3c70,transparent 75%),linear-gradient(140deg,#493728,#30272b);border-color:#73583e}
+.gift-featured::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(circle at 16% 20%,#fff8 0 1px,transparent 1.5px),radial-gradient(circle at 76% 27%,#ffe7bf 0 1px,transparent 1.7px),radial-gradient(circle at 25% 69%,#ffd9af 0 1px,transparent 1.7px),radial-gradient(circle at 83% 71%,#fff9 0 1px,transparent 1.6px),radial-gradient(circle at 58% 12%,#fff7 0 .7px,transparent 1.4px),radial-gradient(circle at 47% 83%,#ffe4c6 0 .8px,transparent 1.5px)}
+.gift-dialog .gift-shop-item>.gift-hot-badge{position:absolute;top:4px;right:4px;display:grid;place-items:center;width:17px;height:20px;z-index:2;background:#493027d9;border:1px solid #946336;border-radius:6px;padding:1px;box-sizing:border-box}.gift-hot-badge svg{width:11px;height:14px}
+@media(min-width:700px){.gift-dialog,.gift-dialog:has(.gift-shop-grid){padding-left:max(24px,calc((100vw - 700px)/2));padding-right:max(24px,calc((100vw - 700px)/2))}.gift-dialog .gift-shop-item>.gift-art{width:62px;height:62px}.gift-dialog .gift-shop-item{min-height:115px}.gift-dialog .gift-shop-item>b{font-size:11px}.gift-dialog>.gift-wallet{right:max(24px,calc((100vw - 700px)/2))}}
+@media(max-width:360px){.gift-dialog .gift-shop-grid{gap:5px}.gift-dialog .gift-shop-item>.gift-art{width:45px;height:45px}.gift-dialog .gift-shop-item{min-height:95px}.gift-dialog .gift-shop-item>b{font-size:9px}}
+
+/* Keep the live car visible while browsing every row of rims. */
+.vehicle-garage[data-garage-tab="rims"]>.garage-shared-preview{position:sticky;top:calc(48px + env(safe-area-inset-top));z-index:5;box-shadow:0 12px 24px #1119;margin-bottom:14px;grid-template-columns:minmax(0,1fr);padding:8px 8px 28px;background:#2b2733}
+.vehicle-garage[data-garage-tab="rims"] .garage-shared-preview .vehicle-paint-caption{display:none}
+.vehicle-garage[data-garage-tab="rims"] .car-paint-display{height:clamp(118px,24dvh,180px);max-width:100%;margin:0}
+.vehicle-garage[data-garage-tab="rims"] .car-paint-display .vehicle-showcase,.vehicle-garage[data-garage-tab="rims"] .vehicle-showcase-art{height:100%;width:100%;margin:0}
+.membership-dialog:has(.vehicle-garage)>.close{z-index:8}
+
+/* Edge-to-edge gift sheet, including the actual modal wrapper. */
+.modal:has(.gift-dialog),.modal-overlay:has(.gift-dialog){padding:0!important;inset:0!important;max-width:none!important;width:100%!important;align-items:flex-end!important}
+.gift-dialog,.gift-dialog:has(.gift-shop-grid){width:100vw!important;max-width:100vw!important;flex:0 0 100%;margin:0!important;border-radius:20px 20px 0 0!important}
+.vehicle-garage[data-garage-tab="accessories"]>.garage-shared-preview{position:sticky;top:48px;z-index:5;background:#2b2733;box-shadow:0 12px 24px #1119}

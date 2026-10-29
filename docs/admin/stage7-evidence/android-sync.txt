@@ -1,0 +1,21 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> kiyi-mobile@0.1.0 sync:android
+> npm run prepare:web && cap sync android
+
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> kiyi-mobile@0.1.0 prepare:web
+> node scripts/prepare-web.mjs
+
+Bundled local web assets and native lifecycle/browser/share bridge. No remote server.url.
+✔ Copying web assets from www to android/app/src/main/assets/public in 38.56ms
+✔ Creating capacitor.config.json in android/app/src/main/assets in 552.79μs
+✔ copy android in 55.64ms
+✔ Updating Android plugins in 1.42ms
+[info] Found 3 Capacitor plugins for android:
+       @capacitor/app@8.1.2
+       @capacitor/browser@8.0.5
+       @capacitor/share@8.0.3
+✔ update android in 25.83ms
+[info] Sync finished in 0.103s

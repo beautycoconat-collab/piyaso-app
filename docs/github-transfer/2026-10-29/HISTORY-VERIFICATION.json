@@ -1,0 +1,11 @@
+{
+  "source_commits": 226,
+  "safe_commits": 226,
+  "commit_topology_and_author_dates": "verified for every source commit",
+  "source_audit_commit": "4a6361bd0567fffe6074ce3e6f970256a82692d7",
+  "safe_audit_commit": "4368c99214f278c7ea3ae11e82493cf3f7612925",
+  "source_admin_commit": "cbf03621cde5a9d1ee9fbe771ca3f721cf961870",
+  "safe_admin_commit": "cbf03621cde5a9d1ee9fbe771ca3f721cf961870",
+  "removed_key_occurrences": 35,
+  "dropped_generated_bytecode_updates": 2
+}

@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-29",
+  "baseline_commit": "1ed152b63eacccaa4b949eb2deb5d6ba97d34ded",
+  "original_test_scope": 362,
+  "verified_unique_tests": 391,
+  "new_tests": 29,
+  "main_full_run": {
+    "passed": 312,
+    "failed": 0,
+    "skipped": 0,
+    "log": "final-tests.log"
+  },
+  "additional_main_tests": {
+    "edge_handler": 3,
+    "native_paywall": 1,
+    "logs": [
+      "edge-tests.log",
+      "changed-ui-tests.log"
+    ],
+    "main_total": 316
+  },
+  "admin": {
+    "passed": 34,
+    "failed": 0,
+    "skipped": 0,
+    "log": "admin-tests.log"
+  },
+  "embedded_database": {
+    "passed": 41,
+    "failed": 0,
+    "skipped": 0,
+    "log": "database.log"
+  },
+  "checks": {
+    "typescript": "passed",
+    "browser_syntax": "passed",
+    "scoped_client_secret_scan": "passed",
+    "local_build": "passed",
+    "ios_sync": "passed",
+    "apple_release_gate": "expected_exit_1_blocked"
+  },
+  "not_run": [
+    "hosted Supabase Auth deletion",
+    "real Storage deletion",
+    "iOS Xcode build/archive",
+    "physical iPhone/iPad",
+    "TestFlight",
+    "StoreKit sandbox",
+    "production rollout",
+    "live human moderation acceptance"
+  ],
+  "decision": "GÖNDERİME HAZIR DEĞİL"
+}

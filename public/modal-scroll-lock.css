@@ -1,0 +1,5 @@
+html.kiyi-modal-open{overflow:hidden!important;overscroll-behavior:none!important}
+body.kiyi-modal-open{position:fixed!important;top:var(--kiyi-modal-scroll-y,0px)!important;left:0!important;right:0!important;width:100%!important;overflow:hidden!important;overscroll-behavior:none!important}
+#modal:not([hidden]){position:fixed;inset:0;overflow:hidden;overscroll-behavior:none}
+#modal>.dialog{overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+@media(max-width:600px){#modal:has(.kiyi-premium-dialog){background:#fff!important;backdrop-filter:none}#modal:has(.jeton-wallet-dialog){background:#080914!important;backdrop-filter:none}}

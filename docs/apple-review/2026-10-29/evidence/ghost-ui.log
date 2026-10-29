@@ -1,0 +1,16 @@
+✔ Three public featured cars join existing regional roads (2.520861ms)
+✔ Ghost preview discloses initials and masks trailing plate digits (1.779174ms)
+✔ Free visitor entry opens pricing without fetching visitor identities (4.381188ms)
+✔ Premium members fetch their visitor list (1.500125ms)
+✔ Expired entitlement opens pricing when the server rejects access (1.617509ms)
+✔ An entitlement removed during a request cannot render visitor identities (1.210515ms)
+✔ Selecting and continuing a plan does not grant Premium or debit credits (1.869088ms)
+✔ Free map and legacy ghost controls open the dedicated screen without enabling ghost mode (25.292162ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 163.45616

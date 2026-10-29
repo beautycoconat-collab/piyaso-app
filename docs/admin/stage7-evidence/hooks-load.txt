@@ -1,0 +1,1 @@
+PASS React hooks rules load with patched Zod

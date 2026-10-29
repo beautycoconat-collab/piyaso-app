@@ -1,0 +1,43 @@
+/* Actor coordinates share the fixed 864×1536 background's cover geometry. */
+#piyaso-entry .dream-welcome-story .story-stage{position:absolute;inset:0;z-index:1;overflow:hidden;pointer-events:none}
+#piyaso-entry .story-world{position:absolute;left:50%;top:50%;width:864px;height:1536px;transform:translate(-50%,-50%) scale(var(--story-scale,1));transform-origin:center;pointer-events:none}
+#piyaso-entry .story-actor{position:absolute;left:0;top:0;width:0;height:0;will-change:transform}
+#piyaso-entry .story-car{position:absolute;left:0;top:0;width:190px;max-width:none;height:auto;transform:translate(-50%,-50%) rotate(-8deg);filter:drop-shadow(4px 8px 5px #131c284d)}
+#piyaso-entry .story-white .story-car{width:184px;transform:translate(-50%,-50%) rotate(3deg)}
+#piyaso-entry .story-black{transform:translate3d(-180px,1640px,0)}
+#piyaso-entry .story-white{transform:translate3d(1130px,460px,0)}
+#piyaso-entry .story-girl{position:absolute;left:0;top:-72px;width:130px;height:143px;object-fit:contain;max-width:none;transform:translate(-50%,-100%);opacity:0;filter:drop-shadow(0 0 14px #f347cf6b);will-change:transform,opacity}
+#piyaso-entry .story-tulip{position:absolute;left:0;top:0;width:0;height:0;transform:translate3d(480px,930px,0);opacity:0;will-change:transform,opacity}
+#piyaso-entry .story-tulip>img{position:absolute;left:0;top:0;width:118px;height:131px;max-width:none;object-fit:contain;transform:translate(-50%,-100%);filter:drop-shadow(0 0 14px #43c8fc8c)}
+#piyaso-entry .story-horn{position:absolute;left:0;top:0;opacity:0;transform-origin:0 0}
+#piyaso-entry .story-horn:before,#piyaso-entry .story-horn:after{content:'';position:absolute;border:3px solid #fff8a4;border-left-color:transparent;border-bottom-color:transparent;width:47px;height:47px;border-radius:50%;left:36px;top:-73px;transform:rotate(-10deg);filter:drop-shadow(0 0 7px #ffe483)}
+#piyaso-entry .story-horn:after{width:65px;height:65px;left:32px;top:-85px;border-width:2px}
+#piyaso-entry .story-heart{position:absolute;left:-76px;top:-205px;color:#ff58b5;font:38px/1 Arial,sans-serif;opacity:0;filter:drop-shadow(0 0 6px #fff)}
+#piyaso-entry .dream-welcome-story .dream-welcome-center{z-index:3;pointer-events:none}
+#piyaso-entry .dream-welcome-story .dream-welcome-logo-group,#piyaso-entry .dream-welcome-story .dream-welcome-center>p{opacity:0;will-change:transform,opacity}
+#piyaso-entry .dream-welcome-story .dream-welcome-bottom{z-index:4}
+#piyaso-entry .story-tools{position:absolute;inset:calc(env(safe-area-inset-top) + 15px) 20px auto;z-index:7;display:flex;justify-content:space-between;align-items:center;gap:12px}
+#piyaso-entry .story-tools button{height:35px;border:1px solid #ffffffb0;border-radius:24px;background:#ffffffe0;box-shadow:0 3px 14px #3431490d;color:#43325e;display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:0 12px;font:600 11px Arial,sans-serif;backdrop-filter:blur(8px)}
+#piyaso-entry .story-tools [data-story-replay]{width:35px;padding:9px}
+#piyaso-entry .story-tools svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+#piyaso-entry .story-tools [data-story-sound][aria-pressed=true]{background:#6d2cea;color:#fff;border-color:#a775f7}
+#piyaso-entry .story-reduced .dream-welcome-logo-group,#piyaso-entry .story-reduced .dream-welcome-center>p,#piyaso-entry .story-reduced .story-girl{opacity:1}
+@media(prefers-reduced-motion:reduce){#piyaso-entry .dream-welcome-story *{will-change:auto!important}}
+
+#piyaso-entry .story-playback-tools{display:flex;gap:7px;align-items:center}
+#piyaso-entry .story-tools [data-story-pause]{width:35px;padding:9px}
+#piyaso-entry .story-play-glyph{display:none}
+#piyaso-entry [data-story-pause][aria-pressed=true] .story-pause-glyph{display:none}
+#piyaso-entry [data-story-pause][aria-pressed=true] .story-play-glyph{display:block}
+
+/* A compact two-line signature, with a restrained, short reveal. */
+#piyaso-entry .dream-welcome-story .dream-welcome-center>p.story-tagline{max-width:310px;margin:10px auto 0;font-family:ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:clamp(20px,5.4vw,24px);font-weight:600;line-height:1.12;letter-spacing:-.55px;color:#111116;text-align:center;text-wrap:nowrap;text-shadow:0 1px 8px #ffffffb0;opacity:1;will-change:auto}
+#piyaso-entry .story-tagline>span{display:block;opacity:0;will-change:opacity,transform}
+#piyaso-entry .story-tagline>span+span{margin-top:2px}
+#piyaso-entry .dream-welcome-story .dream-welcome-bottom{opacity:0;visibility:hidden;will-change:opacity,transform}
+#piyaso-entry .story-cta-ready .dream-welcome-bottom,#piyaso-entry .story-reduced .dream-welcome-bottom{opacity:1;visibility:visible}
+#piyaso-entry .story-reduced .story-tagline>span{opacity:1}
+@media(max-height:710px){#piyaso-entry .dream-welcome-story .dream-welcome-center>p.story-tagline{margin-top:7px;font-size:20px}}
+
+#piyaso-entry .story-boy{position:absolute;left:0;top:-72px;width:130px;height:143px;max-width:none;object-fit:contain;transform:translate(-50%,-100%);opacity:0;filter:drop-shadow(0 0 14px #3acbff6b);will-change:transform,opacity}
+#piyaso-entry .story-reduced .story-boy{opacity:1}

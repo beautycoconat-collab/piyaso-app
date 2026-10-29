@@ -1,0 +1,24 @@
+name: Piyaso iOS unsigned simulator build
+on: workflow_dispatch
+permissions:
+  contents: read
+jobs:
+  simulator:
+    runs-on: macos-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci
+        working-directory: mobile
+      - run: npm run sync:ios
+        working-directory: mobile
+      - run: xcodebuild -version
+      - run: xcodebuild -project mobile/ios/App/App.xcodeproj -scheme App -sdk iphonesimulator -configuration Debug -destination 'generic/platform=iOS Simulator' -derivedDataPath mobile/ios/build CODE_SIGNING_ALLOWED=NO build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: piyaso-ios-unsigned-simulator
+          path: mobile/ios/build/Build/Products/Debug-iphonesimulator/*.app
+          retention-days: 7

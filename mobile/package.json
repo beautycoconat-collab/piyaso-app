@@ -1,0 +1,34 @@
+{
+  "name": "kiyi-mobile",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "prepare:web": "node scripts/prepare-web.mjs",
+    "sync:ios": "npm run prepare:web && cap sync ios",
+    "open:ios": "cap open ios",
+    "check:release": "node scripts/check-release.mjs",
+    "sync:android": "npm run prepare:web && cap sync android",
+    "open:android": "cap open android",
+    "check:ios": "node scripts/check-release.mjs ios",
+    "check:android": "node scripts/check-release.mjs android",
+    "prepare:artwork": "node scripts/prepare-artwork.mjs"
+  },
+  "dependencies": {
+    "@capacitor/android": "8.5.3",
+    "@capacitor/app": "8.1.2",
+    "@capacitor/browser": "8.0.5",
+    "@capacitor/core": "8.5.3",
+    "@capacitor/ios": "8.5.3",
+    "@capacitor/share": "8.0.3"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "8.5.3",
+    "esbuild": "0.28.2"
+  },
+  "overrides": {
+    "xcode": {
+      "uuid": "11.1.1"
+    }
+  }
+}

@@ -1,0 +1,2 @@
+`transformWithEsbuild` is deprecated and will be removed in the future. Please migrate to `transformWithOxc`.
+Startup: 38 stylesheets + 67 scripts removed from the intro critical path; 58708 bytes of self-contained entry JS.

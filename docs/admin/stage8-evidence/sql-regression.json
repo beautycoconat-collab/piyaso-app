@@ -1,0 +1,52 @@
+[
+  {
+    "name": "stage3-garage",
+    "ok": true,
+    "result": "[{\"result\":\"PASS stage3: mixed garage, count, duplicates, edit, delete, primary motorcycle, isolated appearance, atomic idempotent credits, cross-user denial\"}]"
+  },
+  {
+    "name": "stage4-social",
+    "ok": true,
+    "result": "[{\"result\":\"PASS stage4: media, edit, delete, tags, six filters, pagination, profile, social actions, privacy, cleanup, cross-user isolation\"}]"
+  },
+  {
+    "name": "stage5-social",
+    "ok": true,
+    "result": "[{\"result\":\"PASS stage5: likes, comments/moderation, follow, consent/search/tag revocation, private plates, blocking, links, direct-write denial\"}]"
+  },
+  {
+    "name": "stage5-privacy-pagination",
+    "ok": true,
+    "result": "[{\"result\":\"PASS ghost/Premium comment identities, paginated comments, consented Premium tag, block revocation\"}]"
+  },
+  {
+    "name": "stage6-social",
+    "ok": true,
+    "result": "[{\"result\":\"PASS stage6 badge/dedupe/self-like/social notifications/preferences/read/report/isolation/block/direct grants\"}]"
+  },
+  {
+    "name": "stage6-milestones",
+    "ok": true,
+    "result": "[{\"result\":\"PASS 10-post/100-follower/verified awards, verification revocation and report rate limit (all fixtures rolled back)\"}]"
+  },
+  {
+    "name": "stage6-notification-privacy",
+    "ok": true,
+    "result": "[{\"result\":\"PASS notification/badge ghost privacy and existing Premium visibility (rollback)\"}]"
+  },
+  {
+    "name": "domain-integration",
+    "ok": true,
+    "result": "[{\"test_result\":\"PASS: atomic gifts, inventory, wallet permissions, followers-only posts, votes, likes, comments, author deletion, blocking\"}]"
+  },
+  {
+    "name": "domain-location",
+    "ok": true,
+    "result": "[{\"test_result\":\"PASS: normalized search, verification, visits, Antalya geofence, ghost masking, approved access, disabled GPS, Izmir excluded\"}]"
+  },
+  {
+    "name": "stage7-security",
+    "ok": true,
+    "result": "[{\"result\":\"PASS ghost/Premium media/listing enforcement and revoked session denial\"}]"
+  }
+]

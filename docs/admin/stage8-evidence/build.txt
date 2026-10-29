@@ -1,0 +1,56 @@
+$ node scripts/run-framework.mjs build
+
+  vinext build  (Vite 8.1.6)
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mProxy environment variables detected. We'll use your proxy for fetch requests.[0m
+
+
+[1/5] analyze client references...
+[2Ktransforming...✓ 232 modules transformed.
+rendering chunks...
+[33m[PLUGIN_TIMINGS] [0mYour build spent significant time in plugins. Here is a breakdown:
+  - rsc:virtual-client-package (21%)
+  - vinext:middleware-server-only (15%)
+  - vinext:og-inline-fetch-assets (14%)
+  - alias (12%)
+  - vinext:css-data-url (8%)
+See https://rolldown.rs/reference/InputOptions.checks#plugintimings for more details.
+
+✓ built in 4.67s
+[2/5] analyze server references...
+[2Ktransforming...✓ 78 modules transformed.
+rendering chunks...
+✓ built in 387ms
+[3/5] build rsc environment...
+[2Ktransforming...✓ 229 modules transformed.
+rendering chunks...
+computing gzip size...
+[33m[PLUGIN_TIMINGS] [0mYour build spent significant time in plugins. Here is a breakdown:
+  - rsc:virtual-client-package (34%)
+  - vinext:middleware-server-only (14%)
+  - vinext:og-inline-fetch-assets (11%)
+  - alias (5%)
+  - vinext:rsc-client-reference-loaders (4%)
+See https://rolldown.rs/reference/InputOptions.checks#plugintimings for more details.
+
+✓ built in 5.00s
+[4/5] build client environment...
+[2Ktransforming...✓ 124 modules transformed.
+rendering chunks...
+computing gzip size...
+✓ built in 3.05s
+[5/5] build ssr environment...
+[2Ktransforming...✓ 84 modules transformed.
+rendering chunks...
+computing gzip size...
+✓ built in 1.73s
+[0m
+  Route (app)
+  ┌ λ /                 
+  ├ λ /api/music/:path* 
+  └ λ /api/status/:path*
+
+  λ API
+
+  Build complete. Run `vinext start` to start the production server.
+

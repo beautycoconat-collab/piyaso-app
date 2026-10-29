@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-28",
+  "main": {
+    "tests": 297,
+    "passed": 297,
+    "failed": 0,
+    "skipped": 0
+  },
+  "admin": {
+    "tests": 34,
+    "passed": 34,
+    "failed": 0,
+    "skipped": 0
+  },
+  "isolated": {
+    "sql_packages": 24,
+    "extra_scenarios": 7,
+    "passed": 31,
+    "failed": 0,
+    "skipped": 0
+  },
+  "total": 362,
+  "passed": 362,
+  "failed": 0,
+  "physical_device_tests": 0,
+  "real_auth_user_e2e_scenarios_completed": 0,
+  "ios_native_build": "not_run_xcode_unavailable",
+  "android_native_build": "attempted_blocked_gradle_network_and_toolchain",
+  "production_deployed": false
+}

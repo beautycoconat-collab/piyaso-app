@@ -1,0 +1,43 @@
+PASS: real Postgres permission, MFA, lease, role, masking, idempotency, audit, revocation, and bootstrap controls
+✔ tests/database.test.mjs (2251.31679ms)
+✔ all operational modules return bounded authorized live-schema results (60.788563ms)
+✔ role restrictions and fresh membership are enforced server-side (19.871304ms)
+✔ plate uniqueness, profile DTO, and support user privacy (19.860974ms)
+✔ catalog update controls debit atomically, is idempotent, and inactive products cannot spend (27.675919ms)
+✔ manual credits need a distinct approver and one ledger entry (14.030617ms)
+✔ moderation hides existing content, suspended accounts retain appeal path (26.28582ms)
+✔ announcements obey audience and marketing preference; maintenance blocks user writes (19.690957ms)
+✔ map uses approximate coordinates and respects active region, ghost and Premium (23.890541ms)
+✔ account deletion cannot claim completion before media erasure; shared Auth and finance remain (29.163983ms)
+✔ cleanup physically removes stale GPS; private operations cannot be directly read by users (8.453871ms)
+✔ gallery enforces max three, type, uniqueness and ownership on the server (45.720364ms)
+✔ extra photos are on-demand and observe searchability, blocks and moderation (50.333223ms)
+✔ photo posts fail while text and recorded audio remain possible (15.935384ms)
+✔ photo cleanup never suggests deleting referenced images; primary can be reordered (22.080994ms)
+✔ cached counts remain fixed until scheduled refresh; usage unknowns are explicit (59.790696ms)
+✔ 75 percent boundaries, duplicate alert prevention, recovery and stale readings (92.482783ms)
+✔ roles cannot bypass private caches, provider collector or refresh function (11.849381ms)
+✔ viewport only, 200 boundary, sampling and paged street view preserve privacy (2196.772272ms)
+✔ viewport eligibility excludes blocked, unapproved, stale and disabled accounts before counts (372.509269ms)
+✔ missing production config fails closed (7.148505ms)
+✔ origin, JSON and action allowlist checked before upstream (1.677704ms)
+✔ encrypted cookie cannot be changed or used under another key (11.370757ms)
+✔ login forwards only credentials and never returns tokens to browser (5.618388ms)
+✔ nonmember login clears cookie (1.637143ms)
+✔ expired/tampered sessions cannot reach RPC (5.390013ms)
+✔ verified user request carries caller token, not service role (4.52118ms)
+✔ MFA response strips access and refresh tokens after verification (31.538575ms)
+✔ upstream failure is redacted and no token/error payload leaks (2.952451ms)
+✔ logout clears cookies even when auth provider is unreachable (1.739769ms)
+✔ an AAL1 session cannot enroll a replacement factor when MFA exists (5.332817ms)
+✔ oversized streamed input rejected before parsing or upstream (3.066142ms)
+✔ admin operational requests are still routed with caller JWT (10.515024ms)
+✔ media signing requires DB scope approval and uses a 60 second read (9.244367ms)
+ℹ tests 34
+ℹ suites 0
+ℹ pass 34
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4969.610929

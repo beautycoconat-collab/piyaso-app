@@ -1,0 +1,32 @@
+✔ erasure defaults closed and refuses shared Auth or unapproved policy before any service call (1.747463ms)
+✔ erasure requires explicit confirmation and password (0.532076ms)
+✔ reauthenticated identity must match validated caller and never accepts a body email (0.39694ms)
+✔ all erasure stages finish before completion including actual Auth absence check (1.203968ms)
+✔ unsafe media scope never deletes objects (0.481509ms)
+✔ failure at prepare never claims deletion (0.26912ms)
+✔ failure at signOutAll never claims deletion (0.248313ms)
+✔ failure at removeObjects never claims deletion (0.517052ms)
+✔ failure at purgePersonalData never claims deletion (0.255363ms)
+✔ failure at deleteAuthUser never claims deletion (0.697439ms)
+✔ failure at authUserExists never claims deletion (1.13471ms)
+✔ Auth deletion success response alone is insufficient (0.258921ms)
+✔ native bundled legal/support links open locally and unsafe schemes are blocked (0.289423ms)
+✔ UI never treats a queued request as deletion and clears password after error (2.161991ms)
+✔ UI confirms only verified completed deletion (1.042082ms)
+✔ native build does not advertise unconfigured paid plans, purchase or StoreKit restore (1.699697ms)
+✔ Three public featured cars join existing regional roads (2.285195ms)
+✔ Ghost preview discloses initials and masks trailing plate digits (1.279064ms)
+✔ Free visitor entry opens pricing without fetching visitor identities (3.22072ms)
+✔ Premium members fetch their visitor list (1.183403ms)
+✔ Expired entitlement opens pricing when the server rejects access (1.35062ms)
+✔ An entitlement removed during a request cannot render visitor identities (0.968095ms)
+✔ Selecting and continuing a plan does not grant Premium or debit credits (1.285053ms)
+✔ Free map and legacy ghost controls open the dedicated screen without enabling ghost mode (17.550074ms)
+ℹ tests 24
+ℹ suites 0
+ℹ pass 24
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 132.998034

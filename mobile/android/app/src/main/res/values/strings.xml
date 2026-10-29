@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Piyaso</string>
+    <string name="title_activity_main">Piyaso</string>
+    <string name="package_name">com.kiyi.antalya</string>
+    <string name="custom_url_scheme">com.kiyi.antalya</string>
+</resources>

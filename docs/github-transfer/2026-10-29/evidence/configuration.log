@@ -1,0 +1,1 @@
+PASS missing key creates an empty local config; non-publishable key input is rejected; no actual credentials used.

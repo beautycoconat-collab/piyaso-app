@@ -1,0 +1,1 @@
+REFUSED: explicitly allowlisted isolated database required

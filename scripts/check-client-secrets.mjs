@@ -1,0 +1,4 @@
+import {readdirSync,readFileSync,existsSync} from 'node:fs';import path from 'node:path';
+let files=0;
+function scan(dir){if(!existsSync(dir))return;for(const e of readdirSync(dir,{withFileTypes:true})){const p=path.join(dir,e.name);if(e.isDirectory())scan(p);else if(/\.(?:js|html|json|css|map)$/.test(e.name)){const s=readFileSync(p,'utf8');files++;if(/sb_secret_[A-Za-z0-9_-]{16,}/.test(s))throw Error('Secret key found in client artifact');for(const m of s.matchAll(/eyJ[A-Za-z0-9_-]+\.([A-Za-z0-9_-]+)\.[A-Za-z0-9_-]+/g)){let payload;try{payload=JSON.parse(Buffer.from(m[1],'base64url').toString())}catch{continue}if(payload.role==='service_role')throw Error('Service-role JWT found in client artifact')}}}}
+scan('public');scan('dist/client');console.log(`PASS checked ${files} client text artifacts; no secret key/service-role JWT detected. This is a scoped pattern scan, not proof against all secret formats.`);

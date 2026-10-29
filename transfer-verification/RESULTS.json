@@ -1,0 +1,27 @@
+{
+  "zip_crc": "passed",
+  "sha256_files_verified": 1050,
+  "git_restore": "passed",
+  "git_fsck": "passed",
+  "tracked_files_verified": 1048,
+  "commit": "785b7fee0a854f17e5d36beab37ee3bca41b6bbc",
+  "tests_after_restore": {
+    "main": {
+      "passed": 316,
+      "failed": 0,
+      "skipped": 0
+    },
+    "database": {
+      "passed": 41,
+      "failed": 0,
+      "skipped": 0
+    },
+    "admin": {
+      "passed": 34,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "total_passed": 391,
+  "description": "Full test suite run from Git restored out of the source ZIP. Tracked source is unchanged in the final ZIP; this directory adds verification evidence only."
+}

@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/46ad93df1376/kiyi-stage8/tests/stage8-auth-live.py", line 21, in <module>
+    assert call('/rest/v1/kiyi_wallets?select=*',token=other['access_token'])[0]==403
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

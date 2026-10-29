@@ -1,0 +1,78 @@
+/* All visual changes are confined to Plaka Ara. */
+.search-design-page{background:#fdfaff;color:#21152f}.search-design-page main{padding-top:0}.search-design-page #app{padding:0}.search-design-page .plate-discovery{max-width:1000px;padding:0 24px 34px;background:radial-gradient(ellipse at 10% 36%,#ffe4ee80,transparent 42%),radial-gradient(ellipse at 95% 40%,#eadcff80,transparent 40%),#fff}
+.search-design-page .plate-search-card{position:relative;border:0;border-radius:0;padding:68px 0 0;box-shadow:none;background:none;isolation:isolate;min-height:310px}.search-design-page .plate-search-card:before{content:"";position:absolute;z-index:-1;inset:0 -24px -22px;background:linear-gradient(180deg,#eaf7ff30 0%,#f4eaff60 36%,#fff0 65%,#fff9 84%,#fff 100%),url('assets/antalya-discovery.jpg') center 48%/cover no-repeat}.search-design-page .discovery-kicker{color:#8a34e9;font-size:11px;letter-spacing:2px;font-weight:800}.search-design-page .plate-search-card h1{font-size:clamp(30px,4.8vw,52px);letter-spacing:-1.8px;line-height:1.04;color:#190c28;margin:12px 0 9px;font-weight:850}.search-design-page .plate-search-card>p{font-size:18px;color:#35243f;margin-bottom:80px}.discovery-city{position:absolute;right:5px;top:127px;font-family:cursive;font-style:italic;font-size:29px;color:#31203e;transform:rotate(-9deg)}.discovery-city span{font-family:system-ui;color:#9438f6}
+.search-design-page .plate-search-card .searchrow{gap:0;border:2px solid white;border-radius:26px;background:#fff;box-shadow:0 8px 28px #a653d930;overflow:hidden;position:relative;margin:0}.search-design-page .plateinput{border:0;border-radius:0;min-width:0;flex:1;align-items:stretch;box-shadow:none}.search-design-page .plateinput .tr{display:flex;align-items:center;justify-content:center;background:linear-gradient(140deg,#9b39f8,#7527ec);width:58px;padding:19px 12px;font-size:14px;color:#fff}.search-design-page .plateinput input{min-width:0;font-size:22px;font-weight:750;letter-spacing:.8px;padding:18px;color:#31233e}.search-design-page .plateinput input::placeholder{color:#aaa3ae;opacity:1}.search-design-page .searchrow>.btn{display:flex;gap:8px;align-items:center;justify-content:center;background:linear-gradient(135deg,#a43cff,#7929ec);border-radius:24px;min-width:110px;font-size:20px;padding:17px 19px;box-shadow:-4px 0 18px #a443f52a}.searchrow>.btn svg{width:25px;height:25px}.search-design-page .plate-search-note{display:none}.search-design-page #results:not(:empty){padding-top:12px}.search-design-page .community-shortcuts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:16px 0 24px}.search-design-page .community-shortcuts>a{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;min-height:123px;padding:14px 6px;border:1px solid #fff;border-radius:24px;box-shadow:0 6px 18px #a9579c12;background:linear-gradient(135deg,#fff1f4,#ffe4ec);color:#251a34;gap:9px}.search-design-page .community-shortcuts>a:nth-child(2){background:linear-gradient(135deg,#fffcec,#fff4d9)}.search-design-page .community-shortcuts>a:nth-child(3){background:linear-gradient(135deg,#f6eeff,#ede1ff)}.search-design-page .community-shortcuts>a:nth-child(4){background:linear-gradient(135deg,#e6fff7,#d5faf2)}.search-design-page .shortcut-icon{display:grid;place-items:center;width:40px;height:40px;background:none;color:#ff6587;filter:drop-shadow(0 3px 2px #ff6a8625)}.search-design-page .shortcut-icon svg{width:35px;height:35px;stroke-width:2}.search-design-page .community-shortcuts>a:nth-child(2) .shortcut-icon{color:#ffb331}.search-design-page .community-shortcuts>a:nth-child(3) .shortcut-icon{color:#9837ed}.search-design-page .community-shortcuts>a:nth-child(4) .shortcut-icon{color:#16bba4}.search-design-page .community-shortcuts b{font-size:14px;max-width:100px;line-height:1.25}.search-design-page .community-shortcuts small{display:none}
+.search-design-page .phenomenon-section .sectionhead{margin:0 0 14px}.search-design-page .phenomenon-section h2{font-size:29px;letter-spacing:-1.1px;margin:0;color:#1e132b}.discovery-crown{color:#ffbd3a;font-size:35px;vertical-align:middle}.search-design-page .phenomenon-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.discovery-person{position:relative;min-width:0}.search-design-page .phenomenon-card{display:block;position:relative;isolation:isolate;width:100%;height:100%;aspect-ratio:1.18;padding:0;border:0;border-radius:22px;text-align:left;background:#332c38;box-shadow:0 6px 16px #32203c12;overflow:hidden;color:white}.search-design-page .phenomenon-avatar{position:absolute;inset:0;width:100%;height:100%;border:0;padding:0;margin:0;border-radius:0;z-index:-2;background:#46384b}.search-design-page .phenomenon-avatar .owner-photo{width:100%;height:100%;border-radius:0;object-fit:cover;object-position:center 36%}.search-design-page .phenomenon-card:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,#15101805 18%,#15101815 36%,#0d0910b0 70%,#0d0910ef 100%)}.discovery-person-details{position:absolute;left:16px;right:12px;bottom:14px}.search-design-page .phenomenon-card h3{color:#fff;font-size:23px;margin:0 0 6px;letter-spacing:-.4px}.search-design-page .phenomenon-plate{display:inline-block;background:linear-gradient(120deg,#fff,#e7caff);color:#6624aa;border-radius:6px;font-size:13px;font-weight:750;letter-spacing:.3px;padding:3px 10px}.search-design-page .phenomenon-card p{color:#fff;font-size:14px;line-height:1.3;margin:9px 0 0;min-height:0}.search-design-page .phenomenon-followers{color:#fff;font-size:14px;margin:8px 0 0;padding:0;border:0}.search-design-page .phenomenon-followers:before{content:'♟ ';font-size:17px}.search-design-page .phenomenon-followers b{font-weight:500}.search-design-page .phenomenon-followers small{float:none;color:#e1d7e6;font-size:9px}.discovery-heart{position:absolute;right:12px;top:12px;width:39px;height:39px;border:1.5px solid #ffffffb0;border-radius:50%;background:#28202b30;color:white;display:grid;place-items:center;backdrop-filter:blur(6px);cursor:pointer}.discovery-heart svg{width:23px;height:23px}.discovery-heart[aria-pressed=true]{color:#ff557c}.discovery-heart:focus-visible{outline:3px solid #bb7aff;outline-offset:3px}.search-design-page .locked-phenomenon{min-height:230px;padding:25px;background:linear-gradient(145deg,#b48ace,#4c2765)}.search-design-page .locked-phenomenon .phenomenon-cover{display:block;background:none;height:55px}.search-design-page .locked-phenomenon h3{font-size:20px}.search-design-page .locked-phenomenon .phenomenon-profile{color:#fff;border:0}
+@media(max-width:700px){.search-design-page main{padding:0 0 95px}.search-design-page .plate-discovery{padding:0 18px 24px}.search-design-page .plate-search-card{padding-top:48px;min-height:260px}.search-design-page .plate-search-card:before{inset:0 -18px -20px}.search-design-page .plate-search-card h1{font-size:34px}.search-design-page .discovery-kicker{font-size:8px;letter-spacing:1.7px}.search-design-page .plate-search-card>p{font-size:15px;margin-bottom:77px}.discovery-city{top:133px;font-size:25px;right:2px}.search-design-page .plateinput .tr{width:43px;font-size:12px;padding:15px 8px}.search-design-page .plateinput input{font-size:17px;padding:15px 12px;letter-spacing:.5px}.search-design-page .searchrow>.btn{min-width:82px;padding:14px 12px;font-size:17px}.search-design-page .searchrow>.btn svg{width:22px}.search-design-page .community-shortcuts{gap:7px;margin:12px 0 20px}.search-design-page .community-shortcuts>a{min-height:97px;border-radius:18px;padding:10px 3px;gap:7px}.search-design-page .community-shortcuts b{font-size:11px;max-width:75px}.search-design-page .shortcut-icon{height:30px;width:30px}.search-design-page .shortcut-icon svg{width:28px;height:28px}.search-design-page .phenomenon-section h2{font-size:26px}.search-design-page .phenomenon-grid{gap:9px}.search-design-page .phenomenon-card{aspect-ratio:.99;border-radius:17px}.discovery-person-details{left:10px;right:8px;bottom:10px}.search-design-page .phenomenon-card h3{font-size:18px;margin-bottom:4px}.search-design-page .phenomenon-plate{font-size:10px;padding:3px 7px}.search-design-page .phenomenon-card p{font-size:10px;margin-top:7px}.search-design-page .phenomenon-followers{font-size:11px;margin-top:5px}.search-design-page .phenomenon-followers small{font-size:7px;margin-left:3px}.discovery-heart{width:29px;height:29px;right:9px;top:9px}.discovery-heart svg{width:18px;height:18px}.search-design-page #nav a.active{background:#ead8ff;color:#8a2fe9;border-radius:25px}.search-design-page #nav{background:#fffffff5;border-radius:25px 25px 0 0;box-shadow:0 -4px 24px #9c68cb0a}}
+@media(prefers-reduced-motion:no-preference){.discovery-heart,.search-design-page .community-shortcuts>a{transition:transform .18s ease}.discovery-heart:active,.search-design-page .community-shortcuts>a:active{transform:scale(.96)}}
+
+/* Compact search and community controls. */
+.search-design-page .plate-search-card>p{margin-bottom:52px}
+.search-design-page .plate-search-card{min-height:282px}
+.search-design-page .community-shortcuts{gap:10px;margin:14px 0 20px}
+.search-design-page .community-shortcuts>a{min-height:105px;padding:11px 5px;border-radius:21px;gap:7px}
+.search-design-page .shortcut-icon{width:33px;height:33px}
+.search-design-page .shortcut-icon svg{width:30px;height:30px}
+.search-design-page .community-shortcuts b{font-size:13px}
+.search-design-page .phenomenon-section .sectionhead{margin-bottom:13px}
+.discovery-crown{display:inline-flex;align-items:center;margin-left:4px;vertical-align:-3px}
+.discovery-crown svg{width:29px;height:27px;filter:drop-shadow(0 2px 2px #edb33820)}
+.map-page .map-credit-balance{top:80px;right:30px;min-width:0;height:auto;padding:0;border:0;background:none;box-shadow:none;gap:6px}
+.map-page .map-credit-balance button{display:flex;align-items:center;justify-content:center;border:0;height:36px;background:#fffdf7eb;color:#8c5b13;box-shadow:0 3px 12px #66538a12;cursor:pointer}
+.map-page .map-credit-balance .wall-credit-control-balance{gap:7px;padding:4px 10px;border-radius:22px;font-size:14px}
+.map-page .map-credit-balance .gift-gold-coin{width:24px;height:24px}
+.map-page .map-credit-balance .wall-credit-control-add{width:36px;padding:0;border-radius:50%;background:#fffffff0;color:#7024d8;font-size:26px;line-height:1}
+@media(max-width:700px){
+ .search-design-page .plate-search-card>p{margin-bottom:49px}
+ .search-design-page .plate-search-card{min-height:232px}
+ .search-design-page .community-shortcuts{gap:8px;margin:12px 0 18px}
+ .search-design-page .community-shortcuts>a{min-height:85px;padding:9px 3px;border-radius:17px;gap:6px}
+ .search-design-page .shortcut-icon{width:27px;height:27px}
+ .search-design-page .shortcut-icon svg{width:25px;height:25px}
+ .search-design-page .community-shortcuts b{font-size:10px}
+ .discovery-crown svg{width:26px;height:25px}
+ .map-page .map-credit-balance{top:60px;right:15px}
+ .map-page .map-credit-balance button{height:34px}
+ .map-page .map-credit-balance .wall-credit-control-add{width:34px}
+}
+
+/* Final spacing and consistent social icons. */
+.search-design-page .plate-search-card h1{margin-bottom:46px}
+.search-design-page .plate-search-card{min-height:248px}
+.search-design-page .community-shortcuts{margin-top:40px}
+.search-design-page .community-shortcuts>a:first-child{background:linear-gradient(135deg,#fffcec,#fff4d9)}
+.search-design-page .community-shortcuts>a:nth-child(2){background:linear-gradient(135deg,#fff1f4,#ffe4ec)}
+.search-design-page .community-shortcuts>a:first-child .shortcut-icon{color:#ffb331;filter:drop-shadow(0 3px 2px #ffb33125)}
+.search-design-page .community-shortcuts>a:nth-child(2) .shortcut-icon{color:#ff6587;filter:drop-shadow(0 3px 2px #ff658725)}
+.search-design-page .phenomenon-followers:before{content:none}
+.search-design-page .phenomenon-followers{display:flex;align-items:center;gap:5px;flex-wrap:wrap}
+.discovery-people-icon{width:22px;height:19px;flex:none;display:block;margin-right:2px}
+.search-design-page .phenomenon-followers small{margin-left:1px}
+.search-design-page .discovery-heart{padding:0;box-sizing:border-box;display:flex;align-items:center;justify-content:center;line-height:1;right:12px;top:12px;z-index:2}
+.search-design-page .discovery-heart svg{display:block;flex:none;overflow:visible}
+@media(max-width:700px){
+ .search-design-page .plate-search-card h1{margin-bottom:40px}
+ .search-design-page .plate-search-card{min-height:203px}
+ .search-design-page .community-shortcuts{margin-top:38px}
+ .search-design-page .discovery-heart{right:10px;top:10px;width:30px;height:30px}
+ .search-design-page .discovery-heart svg{width:18px;height:18px}
+ .discovery-people-icon{width:19px;height:17px;margin-right:1px}
+ .search-design-page .phenomenon-followers{gap:3px}
+}
+
+/* Use the same selected plate renderer as the profile, including paid frames. */
+.discovery-profile-plate{display:block;width:min(100%,190px);margin:1px 0 2px}
+.discovery-profile-plate .custom-plate{width:100%;max-width:none;aspect-ratio:2138/735;container-type:inline-size}
+.discovery-profile-plate .plate-classic{position:relative;padding:0;background:none;box-shadow:none;border-radius:0}
+.discovery-profile-plate .plate-classic .custom-plate-face{position:absolute;left:2.5%;right:2.5%;top:19%;bottom:17%;height:auto;border:1.5px solid #a7a8b0;border-radius:5px;box-shadow:0 0 0 1px #d3d4db}
+.discovery-profile-plate .plate-classic .custom-plate-face>strong{font-size:clamp(7px,8cqw,24px);letter-spacing:.02em;padding:0 2%}
+.discovery-profile-plate .plate-classic .custom-plate-face>i{width:10%}
+.discovery-profile-plate .plate-classic .custom-plate-face>i b{font-size:clamp(4px,4cqw,11px);letter-spacing:0}
+@media(max-width:700px){.discovery-profile-plate{width:min(100%,145px);margin:0 0 1px}.search-design-page .discovery-person-details{bottom:9px}}
+
+/* Small plate badges leave the portrait and name in focus. */
+.discovery-profile-plate{width:min(100%,112px);margin:0 0 2px}
+.search-design-page .phenomenon-card h3{display:flex;align-items:center;gap:5px}
+.discovery-verified{display:inline-flex;align-items:center;justify-content:center;flex:none;width:19px;height:19px;line-height:1}
+.discovery-verified svg{display:block;width:100%;height:100%}
+@media(max-width:700px){.discovery-profile-plate{width:min(100%,95px);margin:0 0 2px}.discovery-verified{width:16px;height:16px}.search-design-page .phenomenon-card h3{gap:4px}}

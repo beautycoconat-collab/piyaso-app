@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-29",
+  "timezone": "Europe/Istanbul",
+  "source_branch": "audit/apple-compliance-20261029",
+  "source_commit": "4a6361bd0567fffe6074ce3e6f970256a82692d7",
+  "github_push": false,
+  "production_deployment": false,
+  "music_repository_modified": false,
+  "tests": {
+    "main": {"passed": 316, "failed": 0, "skipped": 0, "log": "evidence/main-tests.log"},
+    "admin": {"passed": 34, "failed": 0, "skipped": 0, "log": "evidence/admin-tests.log"},
+    "embedded_database": {"passed": 41, "failed": 0, "skipped": 0, "log": "evidence/database.log"},
+    "total_passed": 391
+  },
+  "checks": {
+    "web_build": "passed",
+    "typescript": "passed",
+    "admin_build": "passed",
+    "admin_artifact": "passed",
+    "browser_and_python_syntax": "passed",
+    "ios_sync": "passed",
+    "configuration_rejects_non_publishable_input": "passed",
+    "client_service_secret_pattern_scan": "passed",
+    "apple_release_gate": "expected_exit_1_blocked"
+  },
+  "not_run": ["GitHub Actions", "hosted Supabase acceptance", "physical iOS device", "Xcode archive", "TestFlight", "production rollout"]
+}

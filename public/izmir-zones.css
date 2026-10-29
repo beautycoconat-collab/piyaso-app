@@ -1,0 +1,49 @@
+.map-page .map-top .region-chips{display:flex;flex-direction:column;align-items:flex-start;max-width:calc(100% - 110px)}
+.city-picker{display:flex;background:#fff;border:1px solid #e5dbf3;border-radius:24px;padding:3px;box-shadow:0 3px 12px #35264510}
+.city-picker button{border:0;border-radius:20px;background:transparent;color:#7241bb;font-family:inherit;font-size:12px;font-weight:600;padding:9px 17px;cursor:pointer}
+.city-picker button.active{background:#8a42ef;color:white}
+.city-regions{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.izmir-region-select{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid #e5dbf3;border-radius:24px;padding:8px 13px;color:#8240ce;font-size:12px}
+.izmir-region-select select{border:0;background:white;color:#6d27bc;font:inherit;font-weight:700;max-width:155px;padding:3px;outline-offset:3px}
+.izmir-area-note{position:absolute;left:16px;bottom:140px;z-index:400;background:#fffffff2;border:1px solid #e5dbf3;border-radius:15px;padding:11px 14px;max-width:min(330px,calc(100% - 110px));pointer-events:none;color:#49385a;box-shadow:0 3px 15px #302a3410}
+.izmir-area-note strong{display:block;font-size:12px;line-height:1.5;font-weight:600}.izmir-area-note span{display:block;font-size:10px;color:#887793;margin-top:3px}.izmir-area-note[hidden]{display:none}
+@media(max-width:700px){.map-page .map-top .region-chips{max-width:calc(100% - 80px)}.city-picker button{padding:7px 15px;font-size:11px}.izmir-area-note{bottom:140px}}
+
+
+/* City selection: one compact, native dropdown in the discovery hero. */
+.search-design-page .plate-search-card .discovery-city-picker{position:absolute;top:12px;left:50%;transform:translateX(-50%);z-index:2;display:flex;align-items:center;gap:7px;background:#fff;border:0;border-radius:24px;box-shadow:0 3px 12px #35264518;padding:0 13px;height:40px;min-height:40px;box-sizing:border-box;white-space:nowrap;color:#302c40}
+.discovery-city-location{display:flex;color:#9345ef;pointer-events:none}.discovery-city-location svg{width:19px;height:19px}
+.discovery-city-picker select{appearance:none;-webkit-appearance:none;border:0;background:transparent;color:#373043;font:600 13px Manrope,sans-serif;letter-spacing:.1px;min-width:82px;height:40px;padding:0 20px 0 0;cursor:pointer;outline-offset:4px}
+.discovery-city-chevron{position:absolute;right:12px;width:16px;height:16px;color:#9c94a8;pointer-events:none}
+.map-page .city-regions{margin-top:0}
+/* Match the reference's white pills, dark text and vivid violet selection. */
+.map-page .map-top .region-chip{background:linear-gradient(145deg,#fff,#fcfaff);color:#211c3d;border:1px solid #e7def6;box-shadow:0 4px 12px #42306316;font-weight:750}
+.map-page .map-top .region-chip svg{color:#9137ed;stroke-width:2}
+.map-page .map-top .region-chip.active{background:linear-gradient(120deg,#781bea,#a143f5);color:#fff;border-color:#f3eaff;box-shadow:0 4px 15px #8e36e840}
+.map-page .map-top .region-chip.active svg{color:#fff}
+.map-page .ghost-toggle{background:#fff;color:#211c3d;border-color:#f2edf8;box-shadow:0 4px 12px #42306312}
+.map-page .ghost-toggle .toggle-track{background:#d7d6dc}.map-page .ghost-toggle.is-on .toggle-track{background:#9140ee}
+.map-page .map-credit-balance{background:transparent;border:0;box-shadow:none;color:#211c3d}
+.map-page .map-credit-balance .wall-credit-control-balance{background:#fff;border-color:#f1edf7;color:#211c3d;box-shadow:0 4px 12px #42306312}
+.map-page .map-credit-balance .wall-credit-control-balance b{color:#211c3d}
+.map-page .map-credit-balance .wall-credit-control-add{background:#fff;color:#9038ed;box-shadow:0 4px 12px #42306312}
+@media(max-width:375px){.discovery-city-picker select{font-size:13px;min-width:85px}}
+
+/* Reference icon colors: lilac-to-purple pins, white selected pin, navy ghost. */
+.map-page .map-top .region-chip.active svg{stroke:#fff}
+.map-page .map-top #ghostbtn>svg{color:#20213c;stroke-width:1.9}
+.map-page .map-top #ghostbtn>svg circle{fill:#20213c}
+
+/* Bottom controls share the same purple/navy system as the top controls. */
+.map-page .map-meetup-link,.map-page .map-layers-button,.map-page .inbox-launch{background:#fff;border:1px solid #e7def6;box-shadow:0 4px 16px #3e28531a;color:#8130dc}
+.map-page .map-meetup-link{color:#302741}.map-page .map-meetup-link .soon-label{background:#f3edfb;color:#8c6aa7}
+.map-page .map-meetup-link>svg,.map-page .map-layers-button>svg{stroke:var(--reference-stroke,#8b35e9)}
+.sidebar #nav a{color:#66647a}.sidebar #nav a .navicon svg{stroke:#66647a}
+.sidebar #nav a.active,.map-page .sidebar #nav a.active{color:#812fdb}
+.sidebar #nav a.active .navicon svg,.map-page .sidebar #nav a.active .navicon svg{stroke:var(--reference-stroke,#812fdb)}
+
+/* Reserve a separate compact row above the discovery headline. */
+.search-design-page .plate-search-card .discovery-city-picker{top:9px;left:auto;right:0;transform:none;height:30px;min-height:30px;padding:0 10px;gap:5px;border-radius:18px}
+.search-design-page .discovery-city-picker select{height:30px;font-size:11px;min-width:68px;padding-right:15px}
+.search-design-page .discovery-city-location svg{width:14px;height:14px}
+.search-design-page .discovery-city-chevron{right:9px;width:12px;height:12px}

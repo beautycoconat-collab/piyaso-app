@@ -1,0 +1,6 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {verifyStorePurchase,StoreUnavailable} from '../lib/store-purchase.mjs';
+import {reviewText,reviewMedia} from '../lib/content-review.mjs';
+test('disconnected stores fail closed and sandbox cannot fund production',async()=>{await assert.rejects(verifyStorePurchase({provider:'apple',environment:'production',receipt:'x'}),StoreUnavailable);await assert.rejects(verifyStorePurchase({provider:'google',environment:'sandbox',receipt:'x'}),/Sandbox/)});
+test('store adapter ignores caller credits and rejects revoked/wrong environment',async()=>{const args={provider:'apple',environment:'sandbox',receipt:'signed',credits:999};const signed={provider:'apple',environment:'sandbox',transactionId:'t1',accountId:'a',productId:'p'};const options={deployment:'test',catalog:{p:{credits:50}},verifiers:{apple:async()=>signed}};assert.equal((await verifyStorePurchase(args,options)).credits,50);signed.revoked=true;await assert.rejects(verifyStorePurchase(args,options),/Untrusted/)});
+test('uncertain moderation never claims content is safe',()=>{assert.equal(reviewText('merhaba').decision,'undetermined');assert.equal(reviewText('seni öldüreceğim').decision,'review');assert.equal(reviewText('0532 123 45 67').decision,'review');assert.equal(reviewMedia().decision,'review')});

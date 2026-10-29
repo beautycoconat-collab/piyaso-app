@@ -1,0 +1,28 @@
+/* Compact, plate-only profile. The whole plate is an accessible garage button. */
+button.garage-plate-entry{position:relative;display:inline-flex;background:none;border:0;padding:0;margin:0;cursor:pointer;color:inherit;text-align:inherit;font:inherit;max-width:100%}
+.garage-plate-entry:focus-visible{outline:3px solid #8b4cf6;outline-offset:7px;border-radius:9px}
+.garage-plate-entry .showcase-edit{display:grid;place-items:center;pointer-events:none}
+.vehicle-garage{width:min(100%,760px);margin:auto}
+.garage-heading{padding-right:34px}.garage-heading h2{margin:5px 0 7px;font-size:25px;color:#271b37}.garage-heading p{margin:0;color:#8c8098;font-size:12px;line-height:1.5}
+.garage-tabs{display:grid;grid-template-columns:.8fr 1.3fr 1fr;gap:4px;margin:19px 0 20px;background:#f4effa;padding:4px;border-radius:13px;position:sticky;top:0;z-index:3}
+.garage-tabs button{font:inherit;font-size:12px;font-weight:650;border:0;background:transparent;border-radius:10px;color:#8b789c;padding:11px 4px;cursor:pointer;min-height:44px}
+.garage-tabs button[aria-current]{background:white;color:#7c24df;box-shadow:0 2px 8px #4422690c}.garage-tabs button:focus-visible{outline:2px solid #8b4cf6;outline-offset:1px}
+.vehicle-garage .customizer-heading h2{font-size:19px}.vehicle-garage .customizer-heading .discovery-kicker{display:none}.vehicle-garage .customizer-heading p{font-size:11px}
+.vehicle-garage .car-customizer{padding:0!important;margin:0!important;border:0!important;background:transparent!important;box-shadow:none!important}
+.garage-model-preview{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(90px,1fr);gap:10px;align-items:center;background:linear-gradient(130deg,#fbf9ff,#f2eafa);border-radius:17px;padding:12px;margin:0 0 16px}
+.garage-model-preview small{font-size:8px;letter-spacing:.7px;color:#a18cb5}.garage-model-preview h3{font-size:15px;margin:5px 0;color:#3c2b50}.garage-model-preview span{display:block;font-size:10px;line-height:1.5;color:#94849f}
+.garage-model-help{font-size:12px;line-height:1.5;color:#8b7a97;margin:0 0 14px}.garage-model-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.garage-model-choice{font:inherit;padding:8px 6px 11px;border:1px solid #e8dfef;border-radius:15px;background:white;display:flex;flex-direction:column;gap:4px;align-items:center;cursor:pointer;min-width:0;color:#3d2b4e}
+.garage-model-choice img{display:block;width:100%;height:auto;aspect-ratio:1.5;object-fit:contain;margin:-8px 0 -11px;pointer-events:none}.garage-model-choice b{font-size:12px;line-height:1.4}.garage-model-choice small{font-size:10px;color:#9c85b0}.garage-model-choice.selected{outline:2px solid #8b4cf6;background:#f8f3ff}.garage-model-choice.selected small{color:#8b4cf6}.garage-model-choice:focus-visible{outline:3px solid #8b4cf6;outline-offset:2px}.garage-model-choice:disabled{cursor:wait;opacity:.65}.garage-model-status{font-size:12px;line-height:1.5;color:#8a4b87;min-height:18px}
+@media(min-width:700px){.garage-model-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.garage-model-preview{grid-template-columns:minmax(0,300px) 1fr}}
+@media(max-width:360px){.garage-tabs button{font-size:10px}.garage-model-choice b{font-size:11px}.garage-heading h2{font-size:22px}}
+/* One shared preview above the tabs on all three garage pages. */
+.vehicle-garage > .garage-shared-preview{display:grid;grid-template-columns:minmax(0,1.8fr) minmax(90px,1fr);align-items:center;gap:10px;background:linear-gradient(130deg,#fbf9ff,#f2eafa);border-radius:18px;padding:12px 10px;margin:17px 0 10px;overflow:hidden}
+.vehicle-garage > .garage-shared-preview .car-paint-display{width:100%;min-width:0}
+.vehicle-garage > .garage-shared-preview .vehicle-paint-caption small{display:block;font-size:8px;color:#9b87ad;letter-spacing:.5px;line-height:1.4}
+.vehicle-garage > .garage-shared-preview .vehicle-paint-caption h3{font-size:16px;margin:5px 0;color:#342242}
+.vehicle-garage > .garage-shared-preview .vehicle-paint-caption span{display:block;font-size:10px;color:#94849f;line-height:1.5}
+.vehicle-garage > .garage-tabs{position:static;margin:0 0 19px}
+@media(min-width:700px){.vehicle-garage > .garage-shared-preview{grid-template-columns:minmax(0,300px) 1fr}}
+
+.garage-plate-controls{margin:16px 0;padding:14px;background:#f8f4fc;border-radius:13px}.garage-plate-controls:empty{display:none}.garage-plate-controls p{font-size:12px}.garage-plate-controls small{display:block;margin-top:10px;font-size:10px;color:#8c8098}.garage-plate-controls .btn{width:100%}

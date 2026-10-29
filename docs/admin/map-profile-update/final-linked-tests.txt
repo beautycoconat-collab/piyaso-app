@@ -1,0 +1,16 @@
+✔ owner garage selection uses distinct saved car and motorcycle appearances (3.302525ms)
+✔ missing vehicle kind is not silently replaced with another owned vehicle (1.38718ms)
+✔ profile tabs are also installed for local profiles, real garage stays authenticated (0.321224ms)
+✔ self icon preference is local; automatic preserves actual vehicle type (2.566376ms)
+✔ arrow renders actual marker SVG, persists locally, and validates stored values (2.896424ms)
+✔ live map applies override only to current account and profile garage includes management (1.020367ms)
+✔ only self-icon choices remain and arrow defaults to purple (1.390184ms)
+✔ appearance tabs share card layout and omit explanatory copy (0.356828ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 125.136895

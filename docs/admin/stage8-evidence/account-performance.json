@@ -1,0 +1,13 @@
+{
+  "method": "20 sequential mock-HTTP hydration runs, no real network/device/LCP claim",
+  "results": {
+    "stage7": {
+      "meanMockRequests": 3,
+      "meanCpuMs": 4.08921345
+    },
+    "stage8": {
+      "meanMockRequests": 2,
+      "meanCpuMs": 3.487034399999999
+    }
+  }
+}

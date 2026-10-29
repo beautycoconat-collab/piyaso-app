@@ -1,0 +1,9 @@
+V18 — Araç üzerinde yuvarlak profil fotoğrafları
+
+Beyaz çerçeve, yeşil ışık halkası ve konum paylaşım noktası eklendi.
+İlk fotoğraf: 33 AYC 048
+İkinci fotoğraf: 07 F 7755
+Profil sayfasında ayrı profil fotoğrafı yükleme alanı var.
+Üyelik ve hareketler mevcut prototipte olduğu gibi yerel demodur.
+
+Netlify: ZIP içeriğini açıp index.html dosyasının bulunduğu klasörü yükleyin.

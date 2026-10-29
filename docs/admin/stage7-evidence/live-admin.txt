@@ -1,0 +1,3 @@
+PASS real moderator membership, AAL1 denial, real TOTP AAL2 and admin lease
+PASS real admin report details/status, comment/post hiding, correct counts, suppressed hidden notifications, audit history, normal-user denial, suspension enforced
+PASS Stage 6 real MFA moderation checks complete; exact fixture cleanup required.

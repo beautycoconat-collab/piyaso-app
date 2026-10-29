@@ -1,0 +1,11 @@
+✔ server identifies supported file headers and rejects disguised content (188.838257ms)
+✔ media edge rejects no session, unknown type, oversized bodies and invalid bytes before reserving storage (158.200085ms)
+✔ media edge reserves, uploads and confirms valid bytes with server-only credentials (93.916552ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1692.474602

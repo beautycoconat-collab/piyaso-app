@@ -1,0 +1,29 @@
+name: Kiyi checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  application:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: corepack enable
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm exec tsc --noEmit
+      - run: pnpm exec eslint app lib --max-warnings 0
+      - run: npx --yes deno@2.9.6 check supabase/functions/kiyi-media/index.ts supabase/functions/kiyi-delivery/index.ts
+      - run: node scripts/check-browser-syntax.mjs
+      - run: node --test --test-concurrency=1 tests/*.test.*
+      - run: pnpm audit --audit-level=low
+      - run: pnpm run build
+      - run: node scripts/check-client-secrets.mjs
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: test-diagnostics
+          path: docs/admin/stage8-evidence
+          retention-days: 7

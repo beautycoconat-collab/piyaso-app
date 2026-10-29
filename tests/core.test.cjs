@@ -1,0 +1,6 @@
+const {test}=require('node:test');const a=require('node:assert/strict');const c=require('../public/core.js');
+test('plaka boşluk/büyük küçük harf normalizasyonu',()=>a.equal(c.normalize(' 07 dem 001 '),'07DEM001'));
+test('arama gizlilik ve engel filtreleri',()=>{const ps=[{id:'a',plate:'07 DEM 001',searchable:true}];a.equal(c.search(ps,'07dem001',[]).length,1);a.equal(c.search(ps,'07dem001',['a']).length,0);ps[0].searchable=false;a.equal(c.search(ps,'07dem001',[]).length,0)});
+test('tur bölgeleri ve alan dışı',()=>{a.ok(c.onRoad([36.862329,30.63914]));a.ok(c.onRoad([36.859614,30.730927]));a.ok(!c.onRoad([36.92,30.7]))});
+test('Premium, eski konum, onaylı takipçi ve engel denetimi',()=>{let p={id:'a',pos:[36.862329,30.63914],sharing:true,visibility:'all',updated:100000,approved:[]};let s={premium:true,blocked:[]};a.ok(c.eligible(p,s,100001));a.ok(!c.eligible(p,{...s,premium:false},100001));a.ok(!c.eligible(p,s,220001));a.ok(!c.eligible({...p,visibility:'approved'},s,100001));a.ok(c.eligible({...p,visibility:'approved',approved:['me']},s,100001));a.ok(!c.eligible(p,{...s,blocked:['a']},100001));a.ok(!c.eligible({...p,sharing:false},s,100001))});
+test('yaklaşık konum',()=>a.deepEqual(c.approximate([36.8723,30.6507]),[36.872,30.65]));

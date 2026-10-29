@@ -1,0 +1,6 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> kiyi-admin-foundation@2.0.0 build
+> bash scripts/build.sh
+
+Built /workspace/scratch/177563e8401e/piyaso-app/admin/dist

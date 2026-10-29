@@ -1,0 +1,14 @@
+✔ disconnected stores fail closed and sandbox cannot fund production (6.563017ms)
+✔ store adapter ignores caller credits and rejects revoked/wrong environment (1.539386ms)
+✔ uncertain moderation never claims content is safe (2.971262ms)
+✔ recovery rejects missing/expired tokens and clears address (15.196477ms)
+✔ recovery verifies token then changes password and revokes sessions (5.500388ms)
+✔ recovery never sends unequal passwords (7.095595ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 537.256086

@@ -1,0 +1,77 @@
+begin;
+insert into auth.users(id) values('a5555555-5555-4555-8555-555555555555'),('b5555555-5555-4555-8555-555555555555');
+select set_config('request.jwt.claim.sub','',true);
+select set_config('request.jwt.claims','{"sub":"a5555555-5555-4555-8555-555555555555"}',true);
+set local role authenticated;
+do $$declare x jsonb;y jsonb;pid uuid;cid uuid;vid uuid;rid uuid=gen_random_uuid();bad boolean;begin
+ perform public.kiyi_command('profile','{"username":"stage5_a","searchable":true}');
+ x=public.kiyi_command('post_create','{"text":"Stage 5"}');pid=(x->'post'->>'id')::uuid;
+ perform set_config('request.jwt.claims','{"sub":"b5555555-5555-4555-8555-555555555555"}',true);
+ perform public.kiyi_command('profile','{"username":"stage5_b","searchable":true}');
+ x=public.kiyi_command('vehicle_create','{"model":"honda-pcx-125","plate":"07 SOC 501"}');vid=(x->>'id')::uuid;
+ perform public.kiyi_command('vehicle_update',jsonb_build_object('vehicle_id',vid,'visibility','public'));
+ x=public.kiyi_command('like',jsonb_build_object('id',pid,'like',true));assert x->'post'->>'likes'='1' and (x->'post'->>'liked')::boolean,'Like failed';
+ x=public.kiyi_command('like',jsonb_build_object('id',pid,'like',true));assert x->'post'->>'likes'='1','Duplicate like';
+ x=public.kiyi_command('post_get',jsonb_build_object('id',pid));assert (x->'post'->>'liked')::boolean,'Reload lost like';
+ x=public.kiyi_command('like',jsonb_build_object('id',pid,'like',false));assert x->'post'->>'likes'='0','Unlike';
+ bad=false;begin perform public.kiyi_command('comment',jsonb_build_object('id',pid,'text',E' \n\t'));exception when raise_exception then bad=true;end;assert bad,'Whitespace comment';
+ x=public.kiyi_command('comment',jsonb_build_object('id',pid,'text','Merhaba','request_id',rid));cid=(x->'post'->'comments'->0->>'id')::uuid;assert (x->'post'->>'commentCount')::int=1,'Count';
+ x=public.kiyi_command('comment',jsonb_build_object('id',pid,'text','Merhaba','request_id',rid));assert (x->'post'->>'commentCount')::int=1,'Duplicate retry';
+ bad=false;begin perform public.kiyi_command('comment',jsonb_build_object('id',pid,'text',' MERHABA '));exception when sqlstate 'PT429' then bad=true;end;assert bad,'Duplicate spam';
+ x=public.kiyi_command('comment_edit',jsonb_build_object('comment_id',cid,'version',1,'text','Düzenlenmiş yorum'));assert x->'post'->'comments'->0->>'text'='Düzenlenmiş yorum','Edit';
+ bad=false;begin perform public.kiyi_command('comment_edit',jsonb_build_object('comment_id',cid,'version',1,'text','Stale'));exception when sqlstate 'PT409' then bad=true;end;assert bad,'Stale edit';
+ x=public.kiyi_command('comments',jsonb_build_object('id',pid,'limit',1));assert jsonb_array_length(x->'comments')=1 and (x->'comments'->0->>'canEdit')::boolean,'Comment list permission';
+ perform set_config('request.jwt.claims','{"sub":"a5555555-5555-4555-8555-555555555555"}',true);
+ bad=false;begin perform public.kiyi_command('comment_edit',jsonb_build_object('comment_id',cid,'version',2,'text','Owner rewrite'));exception when insufficient_privilege then bad=true;end;assert bad,'Post owner rewrote foreign comment';
+ x=public.kiyi_command('comment_delete',jsonb_build_object('comment_id',cid));assert (x->'post'->>'commentCount')::int=0,'Owner moderation count';
+ x=public.kiyi_command('comment',jsonb_build_object('id',pid,'text','Kendi yorumum'));cid=(x->'post'->'comments'->0->>'id')::uuid;
+ perform set_config('request.jwt.claims','{"sub":"b5555555-5555-4555-8555-555555555555"}',true);
+ bad=false;begin perform public.kiyi_command('comment_delete',jsonb_build_object('comment_id',cid));exception when insufficient_privilege then bad=true;end;assert bad,'Foreign comment removal';
+ perform public.kiyi_command('follow','{"target":"a5555555-5555-4555-8555-555555555555","enabled":true}');
+ x=public.kiyi_command('posts','{"filter":"following"}');assert jsonb_array_length(x->'posts')=1 and (x->'posts'->0->>'following')::boolean,'Follow feed';
+ perform public.kiyi_command('follow','{"target":"a5555555-5555-4555-8555-555555555555","enabled":false}');
+ x=public.kiyi_command('posts','{"filter":"following"}');assert jsonb_array_length(x->'posts')=0,'Unfollow feed';
+ perform set_config('request.jwt.claims','{"sub":"a5555555-5555-4555-8555-555555555555"}',true);
+ x=public.kiyi_command('tag_search','{"plate":"07soc501"}');assert jsonb_array_length(x->'vehicles')=0,'Consent off search';
+ bad=false;begin perform public.kiyi_command('post_edit',jsonb_build_object('id',pid,'version',1,'vehicle_id',vid));exception when insufficient_privilege then bad=true;end;assert bad,'Unconsented tag';
+ perform set_config('request.jwt.claims','{"sub":"b5555555-5555-4555-8555-555555555555"}',true);perform public.kiyi_command('tag_settings','{"enabled":true}');
+ perform set_config('request.jwt.claims','{"sub":"a5555555-5555-4555-8555-555555555555"}',true);
+ x=public.kiyi_command('tag_search','{"plate":"07 soc 501"}');assert jsonb_array_length(x->'vehicles')=1,'Consented search';
+ x=public.kiyi_command('post_edit',jsonb_build_object('id',pid,'version',1,'vehicle_id',vid));assert x->'post'->'vehicle'->>'plate'='07 SOC 501','Permitted tag';
+ x=public.kiyi_command('post_edit',jsonb_build_object('id',pid,'version',2,'text','Etiket korunur'));assert x->'post'->'vehicle'->>'id'=vid::text,'Edit lost tag';
+ perform set_config('request.jwt.claims','{"sub":"b5555555-5555-4555-8555-555555555555"}',true);
+ x=public.kiyi_command('tagged_posts');assert jsonb_array_length(x->'posts')=1 and (x->'posts'->0->>'canUntag')::boolean,'Owner tag management';
+ perform public.kiyi_command('post_untag',jsonb_build_object('id',pid));
+ perform set_config('request.jwt.claims','{"sub":"a5555555-5555-4555-8555-555555555555"}',true);
+ x=public.kiyi_command('post_get',jsonb_build_object('id',pid));assert x->'post'->'vehicle'='null'::jsonb,'Untag failed';
+ x=public.kiyi_command('post_edit',jsonb_build_object('id',pid,'version',x->'post'->>'version','vehicle_id',vid));
+ perform set_config('request.jwt.claims','{"sub":"b5555555-5555-4555-8555-555555555555"}',true);perform public.kiyi_command('tag_settings','{"enabled":false}');perform public.kiyi_command('tag_settings','{"enabled":true}');
+ perform set_config('request.jwt.claims','{"sub":"a5555555-5555-4555-8555-555555555555"}',true);
+ x=public.kiyi_command('post_get',jsonb_build_object('id',pid));assert x->'post'->'vehicle'='null'::jsonb,'Revoked tag resurrected';
+ x=public.kiyi_command('post_edit',jsonb_build_object('id',pid,'version',x->'post'->>'version','vehicle_id',vid));
+ perform set_config('request.jwt.claims','{"sub":"b5555555-5555-4555-8555-555555555555"}',true);perform public.kiyi_command('vehicle_update',jsonb_build_object('vehicle_id',vid,'visibility','private'));
+ perform set_config('request.jwt.claims','{"sub":"a5555555-5555-4555-8555-555555555555"}',true);
+ x=public.kiyi_command('tag_search','{"plate":"07soc501"}');assert jsonb_array_length(x->'vehicles')=0,'Private plate leak';
+ x=public.kiyi_command('directory','{"plate":"07soc501"}');assert jsonb_array_length(x->'profiles')=0,'Directory private plate leak';
+ perform set_config('request.jwt.claims','{"sub":"b5555555-5555-4555-8555-555555555555"}',true);perform public.kiyi_command('block','{"target":"a5555555-5555-4555-8555-555555555555","enabled":true}');
+ bad=false;begin perform public.kiyi_command('post_get',jsonb_build_object('id',pid));exception when insufficient_privilege then bad=true;end;assert bad,'Share link bypasses block';
+ bad=false;begin update public.kiyi_likes set person='a5555555-5555-4555-8555-555555555555';exception when insufficient_privilege then bad=true;end;assert bad,'Direct like write';
+ bad=false;begin update public.kiyi_comments set text='Attack';exception when insufficient_privilege then bad=true;end;assert bad,'Direct comment write';
+end$$;
+reset role;
+insert into kiyi_private.social_limits(actor,kind,bucket,hits) values
+('a5555555-5555-4555-8555-555555555555','like',date_trunc('minute',clock_timestamp()),60),
+('a5555555-5555-4555-8555-555555555555','comment',date_trunc('minute',clock_timestamp()),20),
+('a5555555-5555-4555-8555-555555555555','follow',date_trunc('minute',clock_timestamp()),30)
+on conflict(actor,kind) do update set bucket=excluded.bucket,hits=excluded.hits;
+select set_config('request.jwt.claims','{"sub":"a5555555-5555-4555-8555-555555555555"}',true);
+set local role authenticated;
+do $$declare p uuid;x jsonb;bad boolean;begin
+ x=public.kiyi_command('posts');p=(x->'posts'->0->>'id')::uuid;
+ bad=false;begin perform public.kiyi_command('like',jsonb_build_object('id',p,'like',false));exception when sqlstate 'PT429' then bad=true;end;assert bad,'Like rate bypass';
+ bad=false;begin perform public.kiyi_command('comment',jsonb_build_object('id',p,'text','Rate limit fixture'));exception when sqlstate 'PT429' then bad=true;end;assert bad,'Comment rate bypass';
+ bad=false;begin perform public.kiyi_command('follow','{"target":"b5555555-5555-4555-8555-555555555555","enabled":true}');exception when sqlstate 'PT429' then bad=true;end;assert bad,'Follow rate bypass';
+end$$;
+reset role;
+select 'PASS stage5: likes, comments/moderation, follow, consent/search/tag revocation, private plates, blocking, links, direct-write denial' as result;
+rollback;

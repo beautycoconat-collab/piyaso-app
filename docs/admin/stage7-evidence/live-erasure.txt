@@ -1,0 +1,2 @@
+PASS actual user deletion request -> MFA admin erasure -> Storage API cleanup -> completed status; deleted-account writes denied
+PASS logged-out access token replay rejected before JWT expiry

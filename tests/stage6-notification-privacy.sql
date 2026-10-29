@@ -1,0 +1,23 @@
+begin;
+insert into auth.users(id) values('a9999999-9999-4999-8999-999999999999'),('b9999999-9999-4999-8999-999999999999');
+select set_config('request.jwt.claim.sub','',true);
+select set_config('request.jwt.claims','{"sub":"a9999999-9999-4999-8999-999999999999"}',true);
+select public.kiyi_command('profile','{"username":"stage6_privacy_a"}');
+select public.kiyi_command('post_create','{"text":"Notification privacy"}');
+select set_config('request.jwt.claims','{"sub":"b9999999-9999-4999-8999-999999999999"}',true);
+select public.kiyi_command('profile','{"username":"stage6_privacy_b"}');
+select public.kiyi_command('like',jsonb_build_object('id',(select id from public.kiyi_posts where author='a9999999-9999-4999-8999-999999999999'),'like',true));
+select public.kiyi_command('sharing','{"ghost":true}');
+select set_config('request.jwt.claims','{"sub":"a9999999-9999-4999-8999-999999999999"}',true);
+set local role authenticated;
+do $$declare x jsonb;bad boolean=false;begin
+ x=public.kiyi_command('bundle');assert not x->'notifications' @> '[{"kind":"like"}]','Ghost actor leaked through notifications';
+ begin perform public.kiyi_command('badges','{"target":"b9999999-9999-4999-8999-999999999999"}');exception when insufficient_privilege then bad=true;end;assert bad,'Ghost badge profile leak';
+end$$;
+reset role;
+insert into public.kiyi_entitlements(user_id,premium_until) values('a9999999-9999-4999-8999-999999999999',now()+interval '1 day') on conflict(user_id) do update set premium_until=excluded.premium_until;
+set local role authenticated;
+do $$declare x jsonb;begin x=public.kiyi_command('bundle');assert x->'notifications' @> '[{"kind":"like"}]','Existing Premium visibility lost';end$$;
+reset role;
+select 'PASS notification/badge ghost privacy and existing Premium visibility (rollback)' as result;
+rollback;

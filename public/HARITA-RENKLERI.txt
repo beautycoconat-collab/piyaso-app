@@ -1,0 +1,22 @@
+Piyaso v17 – OpenFreeMap Bright (şehir krem, kırsal yeşil)
+
+Taban: Gerçek OpenFreeMap Bright. Görsel ayarlar custom-map-style.js içindedir.
+Deniz: #9EDAF4 (önceki renk, değişmedi)
+Kırsal/doğal alan arka planı: #DAEFAF açık yeşil
+Şehirleşme/yerleşim alanları: #F8F6EC beyazımsı-krem
+Ticari alanlar: #F8F6EC
+Sanayi alanları: #F4F2EA
+Orman: #A9D88D (görünürlük %82)
+Park: #C3E6A0 (görünürlük %80)
+Çim: #D0EBAA
+Ana yollar: #DEE0E4, kenarları #B8BDC4
+Küçük yollar: #FFFFFF, kenarları #D6D9DD
+
+ÖNEMLİ: Şehir ve kırsal ayrımı OpenFreeMap'in OpenStreetMap tabanlı
+landuse-residential / landuse-suburb / landuse-commercial / landuse-industrial
+poligonlarıyla yapılır. Verisi olmayan bir bölgede yerleşim de yeşil
+görünebilir; haritanın her yerinde birebir fotoğraf sonucu garanti edilmez.
+Bu sürümde harita motoru ve işlevler korunmuş, yalnızca renkler değişmiştir.
+
+Netlify: Bu ZIP içindeki index.html kök dizindedir; Netlify Drop'a doğrudan
+yüklenebilir. Haritanın açılması için internete erişim gereklidir.

@@ -1,0 +1,18 @@
+✔ setup two isolated review identities with garage, post and map data (239.118005ms)
+✔ Premium cannot unmask ghost identity or reveal exact location (20.765877ms)
+✔ blocking removes ghost location for both users (40.173811ms)
+✔ normal authenticated/anonymous roles cannot invoke erasure worker (7.016332ms)
+✔ cross-app references reject deletion before changing visibility (16.291755ms)
+✔ legal hold prevents erasure (5.052161ms)
+✔ pending upload prevents deletion racing a media upload (8.383107ms)
+✔ paid-order retention blocks deletion before hiding the profile (5.403982ms)
+✔ map pagination hides real user UUIDs and returns every ghost once (124.932177ms)
+✔ isolated full erasure removes Auth row, media, profile, garage, posts and wallet; peer remains (56.226863ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 9662.954102

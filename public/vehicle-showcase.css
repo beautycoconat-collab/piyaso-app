@@ -1,0 +1,33 @@
+.vehicle-showcase{position:relative;width:100%;min-width:0;isolation:isolate;aspect-ratio:1536/740}
+.vehicle-showcase-art{display:block;width:100%;height:auto;aspect-ratio:1536/740;overflow:hidden}
+.reference-vehicle-card .vehicle-card-showcase{width:min(100%,248px);margin:-5px auto 6px;pointer-events:none;background:none}
+.reference-vehicle-card .vehicle-person{--portrait-size:76px;column-gap:14px;margin:8px 0 4px}
+.reference-vehicle-card .vehicle-identity h2{font-size:19px}
+.reference-vehicle-card .vehicle-plate-row{min-height:0}
+.reference-vehicle-card .vehicle-verified{width:18px;height:18px}
+.reference-vehicle-card .vehicle-about-primary{margin-bottom:8px;padding:9px 12px}
+.reference-vehicle-card .vehicle-about-primary p{margin:5px 0;line-height:1.4}
+.car-appearance-dialog .car-color-preview,.car-customizer .car-color-preview{display:grid;grid-template-columns:minmax(0,1.8fr) minmax(75px,.8fr);align-items:center;gap:8px;padding:12px 10px;margin:14px 0;overflow:hidden;border-radius:18px}
+.car-appearance-dialog .car-paint-display,.car-customizer .car-paint-display{width:100%;height:auto;display:block;min-width:0}
+.car-color-preview .car-paint-display+.vehicle-paint-caption{text-align:left;margin:0;min-width:0}
+.car-color-preview .vehicle-paint-caption small{display:block;font-size:8px;letter-spacing:.5px;line-height:1.4}
+.car-color-preview .vehicle-paint-caption h3{margin:5px 0;font-size:16px}
+.car-color-preview .vehicle-paint-caption span{font-size:10px;line-height:1.4;display:block}
+@media(min-width:700px){.reference-vehicle-card .vehicle-card-showcase{max-width:270px}.car-customizer .car-color-preview{grid-template-columns:minmax(0,250px) 1fr}}
+@media(max-width:360px){.reference-vehicle-card .vehicle-card-showcase{max-width:230px}.reference-vehicle-card .vehicle-person{--portrait-size:68px}.reference-vehicle-card .vehicle-identity h2{font-size:18px}.car-color-preview .vehicle-paint-caption h3{font-size:14px}}
+/* Smaller map card: keep the vehicle secondary to the person and actions. */
+.reference-vehicle-card .vehicle-card-showcase{width:min(100%,194px);margin:-7px auto 4px}
+@media(max-width:360px){.reference-vehicle-card .vehicle-card-showcase{max-width:184px}}
+@media(min-width:700px){.reference-vehicle-card .vehicle-card-showcase{max-width:210px}}
+.car-wrap-catalog{margin:22px 0 0;padding-top:16px;border-top:1px solid #eee7f5}
+.car-wrap-heading h3{font-size:17px;margin:0 0 5px;color:#3c2a50}
+.car-wrap-heading p,.wrap-preview-status{font-size:11px;line-height:1.5;color:#82718f;margin:0 0 13px}
+.car-wrap-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.car-wrap-choice{display:flex;flex-direction:column;min-width:0;gap:5px;align-items:stretch;padding:5px 5px 8px;background:#fff;border:1px solid #e9e1f1;border-radius:14px;color:#3b2a4b;cursor:pointer}
+.car-wrap-swatch{display:block;width:100%;aspect-ratio:1;border-radius:9px;background-image:url('assets/car-wrap-atlas-v1.webp');background-size:300% 300%;background-repeat:no-repeat}
+.car-wrap-choice b{font-size:11px;line-height:1.3;text-align:center;margin:2px 0 0;overflow-wrap:anywhere}
+.car-wrap-choice small{font-size:10px;text-align:center;color:#8b4cf6}
+.car-wrap-choice.selected{outline:2px solid #8b4cf6;outline-offset:0;background:#f7f1ff}
+.car-wrap-choice:focus-visible{outline:3px solid #8b4cf6;outline-offset:2px}
+.wrap-preview-status{margin:12px 0 0}
+@media(min-width:700px){.car-wrap-grid{grid-template-columns:repeat(5,minmax(0,1fr))}}

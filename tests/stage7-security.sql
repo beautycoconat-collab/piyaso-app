@@ -1,0 +1,25 @@
+begin;
+insert into auth.users(id) values('a7777777-7777-4777-8777-777777777778'),('b7777777-7777-4777-8777-777777777778');
+select set_config('request.jwt.claim.sub','',true);
+select set_config('request.jwt.claims','{"sub":"a7777777-7777-4777-8777-777777777778"}',true);
+select public.kiyi_command('profile','{"username":"stage7_private_a","searchable":true}');
+update public.kiyi_profiles set profile=profile||'{"avatar":"a7777777-7777-4777-8777-777777777778/profile/private.jpg"}'::jsonb where user_id='a7777777-7777-4777-8777-777777777778';
+select public.kiyi_command('sharing','{"ghost":true}');
+select set_config('request.jwt.claims','{"sub":"b7777777-7777-4777-8777-777777777778"}',true);
+select public.kiyi_command('profile','{"username":"stage7_private_b"}');
+set local role authenticated;
+do $$declare bad boolean=false;begin
+ assert not kiyi_private.media_allowed('a7777777-7777-4777-8777-777777777778/profile/private.jpg',auth.uid()),'Ghost media signing bypass';
+ begin perform public.kiyi_command('profile_photos','{"target":"a7777777-7777-4777-8777-777777777778"}');exception when insufficient_privilege then bad=true;end;assert bad,'Ghost photo listing bypass';
+end$$;
+reset role;
+insert into public.kiyi_entitlements(user_id,premium_until) values('b7777777-7777-4777-8777-777777777778',now()+interval '1 day') on conflict(user_id) do update set premium_until=excluded.premium_until;
+set local role authenticated;
+do $$begin assert kiyi_private.media_allowed('a7777777-7777-4777-8777-777777777778/profile/private.jpg',auth.uid()),'Premium access lost';end$$;
+reset role;
+select set_config('request.jwt.claims','{"sub":"b7777777-7777-4777-8777-777777777778","role":"authenticated","session_id":"c7777777-7777-4777-8777-777777777778"}',true);
+set local role authenticated;
+do $$declare bad boolean=false;begin begin perform public.kiyi_command('bundle');exception when insufficient_privilege then bad=true;end;assert bad,'Revoked session allowed';assert not kiyi_private.media_allowed('b7777777-7777-4777-8777-777777777778/private.jpg',auth.uid()),'Revoked own media allowed';end$$;
+reset role;
+select 'PASS ghost/Premium media/listing enforcement and revoked session denial' result;
+rollback;

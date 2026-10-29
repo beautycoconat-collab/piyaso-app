@@ -1,0 +1,1714 @@
+TAP version 13
+# Subtest: a failed old refresh cannot sign out the newly selected account
+ok 1 - a failed old refresh cannot sign out the newly selected account
+  ---
+  duration_ms: 5.433436
+  type: 'test'
+  ...
+# Subtest: an old successful refresh cannot send the prior account payload with a new token
+ok 2 - an old successful refresh cannot send the prior account payload with a new token
+  ---
+  duration_ms: 2.11475
+  type: 'test'
+  ...
+# Subtest: an expired response from the previous user cannot clear the current session
+ok 3 - an expired response from the previous user cannot clear the current session
+  ---
+  duration_ms: 14.60441
+  type: 'test'
+  ...
+# Subtest: legacy server restriction text remains recognized during brand rollout
+ok 4 - legacy server restriction text remains recognized during brand rollout
+  ---
+  duration_ms: 5.915182
+  type: 'test'
+  ...
+# Subtest: late private profile media cannot overwrite another account bundle
+ok 5 - late private profile media cannot overwrite another account bundle
+  ---
+  duration_ms: 4.884288
+  type: 'test'
+  ...
+# Subtest: late directory media cannot append the previous account profiles
+ok 6 - late directory media cannot append the previous account profiles
+  ---
+  duration_ms: 4.962365
+  type: 'test'
+  ...
+# Subtest: server catalog replaces displayed prices and effective campaign bonuses
+ok 7 - server catalog replaces displayed prices and effective campaign bonuses
+  ---
+  duration_ms: 24.073242
+  type: 'test'
+  ...
+# Subtest: an empty live catalog clears inactive gifts and packs without stale options
+ok 8 - an empty live catalog clears inactive gifts and packs without stale options
+  ---
+  duration_ms: 1.61102
+  type: 'test'
+  ...
+# Subtest: disabled gifts and songs are blocked in the user interface
+ok 9 - disabled gifts and songs are blocked in the user interface
+  ---
+  duration_ms: 1.335744
+  type: 'test'
+  ...
+# Subtest: Demo deletion clears Piyaso keys but preserves unrelated applications
+ok 10 - Demo deletion clears Piyaso keys but preserves unrelated applications
+  ---
+  duration_ms: 3.701333
+  type: 'test'
+  ...
+# Subtest: Native pause stops device location but does not start or resume sharing
+ok 11 - Native pause stops device location but does not start or resume sharing
+  ---
+  duration_ms: 1.477429
+  type: 'test'
+  ...
+# Subtest: Hidden web view stops device location; demonstration route is unaffected
+ok 12 - Hidden web view stops device location; demonstration route is unaffected
+  ---
+  duration_ms: 1.143185
+  type: 'test'
+  ...
+# Subtest: App Store readiness remains blocked until external requirements are completed
+ok 13 - App Store readiness remains blocked until external requirements are completed
+  ---
+  duration_ms: 18.507988
+  type: 'test'
+  ...
+# Subtest: iOS bundles local assets and grants no background location mode
+ok 14 - iOS bundles local assets and grants no background location mode
+  ---
+  duration_ms: 1.701166
+  type: 'test'
+  ...
+# Subtest: exact four thresholds and no additional coin rewards
+ok 15 - exact four thresholds and no additional coin rewards
+  ---
+  duration_ms: 2.271977
+  type: 'test'
+  ...
+# Subtest: 42 supplied files are optimized, with missing art explicitly absent
+ok 16 - 42 supplied files are optimized, with missing art explicitly absent
+  ---
+  duration_ms: 0.861029
+  type: 'test'
+  ...
+# Subtest: progress is clamped and unsafe assets rejected
+ok 17 - progress is clamped and unsafe assets rejected
+  ---
+  duration_ms: 2.016011
+  type: 'test'
+  ...
+# Subtest: family summaries show next tier and preserve earlier levels in details
+ok 18 - family summaries show next tier and preserve earlier levels in details
+  ---
+  duration_ms: 0.869932
+  type: 'test'
+  ...
+# Subtest: existing badges and requested single achievements are retained
+ok 19 - existing badges and requested single achievements are retained
+  ---
+  duration_ms: 0.328636
+  type: 'test'
+  ...
+# Subtest: native calendar scrolling updates the selected dot without rebuilding cards
+ok 20 - native calendar scrolling updates the selected dot without rebuilding cards
+  ---
+  duration_ms: 3.344305
+  type: 'test'
+  ...
+# Subtest: calendar dots, keyboard and restored page share bounded scrolling
+ok 21 - calendar dots, keyboard and restored page share bounded scrolling
+  ---
+  duration_ms: 0.975992
+  type: 'test'
+  ...
+# Subtest: all milestones are ordered within each family and named by thresholds
+ok 22 - all milestones are ordered within each family and named by thresholds
+  ---
+  duration_ms: 20.727826
+  type: 'test'
+  ...
+# Subtest: locked badge keeps a progress bar, overlay lock and numeric zero reward
+ok 23 - locked badge keeps a progress bar, overlay lock and numeric zero reward
+  ---
+  duration_ms: 2.288262
+  type: 'test'
+  ...
+# Subtest: earned badge removes overlay and displays its actual reward amount
+ok 24 - earned badge removes overlay and displays its actual reward amount
+  ---
+  duration_ms: 1.747656
+  type: 'test'
+  ...
+# Subtest: locked badge keeps progress, overlay lock and zero reward
+ok 25 - locked badge keeps progress, overlay lock and zero reward
+  ---
+  duration_ms: 0.951775
+  type: 'test'
+  ...
+# Subtest: earned badge removes overlay and keeps real reward
+ok 26 - earned badge removes overlay and keeps real reward
+  ---
+  duration_ms: 0.972316
+  type: 'test'
+  ...
+# Subtest: five-day pages place the current reward in its correct group through day thirty
+ok 27 - five-day pages place the current reward in its correct group through day thirty
+  ---
+  duration_ms: 5.544183
+  type: 'test'
+  ...
+# Subtest: White and black are free, paid colors require ownership
+ok 28 - White and black are free, paid colors require ownership
+  ---
+  duration_ms: 3.69285
+  type: 'test'
+  ...
+# Subtest: Unlock costs 500 credits once; switching back to owned paint is free
+ok 29 - Unlock costs 500 credits once; switching back to owned paint is free
+  ---
+  duration_ms: 1.570158
+  type: 'test'
+  ...
+# Subtest: Insufficient funds and invalid values cannot unlock paint
+ok 30 - Insufficient funds and invalid values cannot unlock paint
+  ---
+  duration_ms: 1.255765
+  type: 'test'
+  ...
+# Subtest: Failed storage rolls back debit, paint and ownership
+ok 31 - Failed storage rolls back debit, paint and ownership
+  ---
+  duration_ms: 1.457389
+  type: 'test'
+  ...
+# Subtest: a quiet geolocation watch requests a fresh reading instead of replaying a stale position
+ok 32 - a quiet geolocation watch requests a fresh reading instead of replaying a stale position
+  ---
+  duration_ms: 8.056573
+  type: 'test'
+  ...
+# Subtest: stopping clears fresh-reading timer and rejects late GPS callbacks
+ok 33 - stopping clears fresh-reading timer and rejects late GPS callbacks
+  ---
+  duration_ms: 1.667616
+  type: 'test'
+  ...
+# Subtest: buluşma tarih, bölge ve kontenjan doğrulaması
+ok 34 - buluşma tarih, bölge ve kontenjan doğrulaması
+  ---
+  duration_ms: 2.874586
+  type: 'test'
+  ...
+# Subtest: katılım dolu kontenjanı aşmaz; ayrılınca yer açılır
+ok 35 - katılım dolu kontenjanı aşmaz; ayrılınca yer açılır
+  ---
+  duration_ms: 1.168272
+  type: 'test'
+  ...
+# Subtest: düzenleyici ayrılamaz, geçmiş ve iptal buluşmaya katılım kapalı
+ok 36 - düzenleyici ayrılamaz, geçmiş ve iptal buluşmaya katılım kapalı
+  ---
+  duration_ms: 0.197888
+  type: 'test'
+  ...
+# Subtest: doğrulama aynı plaka, açıklama ve onay ister; yalnızca taslak üretir
+ok 37 - doğrulama aynı plaka, açıklama ve onay ister; yalnızca taslak üretir
+  ---
+  duration_ms: 0.562388
+  type: 'test'
+  ...
+# Subtest: eski hediyeler gönderilenlerde, alıcısı ben olanlar gelenlerde
+ok 38 - eski hediyeler gönderilenlerde, alıcısı ben olanlar gelenlerde
+  ---
+  duration_ms: 0.31804
+  type: 'test'
+  ...
+# Subtest: current composer retains media, plate, location and explicit audience controls
+ok 39 - current composer retains media, plate, location and explicit audience controls
+  ---
+  duration_ms: 3.456514
+  type: 'test'
+  ...
+# Subtest: current composer preserves edited text, audience, media, music and poll draft
+ok 40 - current composer preserves edited text, audience, media, music and poll draft
+  ---
+  duration_ms: 1.051516
+  type: 'test'
+  ...
+# Subtest: plaka boşluk/büyük küçük harf normalizasyonu
+ok 41 - plaka boşluk/büyük küçük harf normalizasyonu
+  ---
+  duration_ms: 4.824216
+  type: 'test'
+  ...
+# Subtest: arama gizlilik ve engel filtreleri
+ok 42 - arama gizlilik ve engel filtreleri
+  ---
+  duration_ms: 0.249577
+  type: 'test'
+  ...
+# Subtest: tur bölgeleri ve alan dışı
+ok 43 - tur bölgeleri ve alan dışı
+  ---
+  duration_ms: 12.119542
+  type: 'test'
+  ...
+# Subtest: Premium, eski konum, onaylı takipçi ve engel denetimi
+ok 44 - Premium, eski konum, onaylı takipçi ve engel denetimi
+  ---
+  duration_ms: 3.782611
+  type: 'test'
+  ...
+# Subtest: yaklaşık konum
+ok 45 - yaklaşık konum
+  ---
+  duration_ms: 1.278358
+  type: 'test'
+  ...
+# Subtest: unconfigured transport never claims work or claims delivery
+ok 46 - unconfigured transport never claims work or claims delivery
+  ---
+  duration_ms: 1.00141
+  type: 'test'
+  ...
+# Subtest: provider acceptance, rejection, timeout have distinct durable ACK outcomes
+ok 47 - provider acceptance, rejection, timeout have distinct durable ACK outcomes
+  ---
+  duration_ms: 0.292651
+  type: 'test'
+  ...
+# Subtest: ACK failure is left pending without marking provider delivery
+ok 48 - ACK failure is left pending without marking provider delivery
+  ---
+  duration_ms: 0.280483
+  type: 'test'
+  ...
+# Subtest: revoked work is not sent
+ok 49 - revoked work is not sent
+  ---
+  duration_ms: 0.152811
+  type: 'test'
+  ...
+# Subtest: webhook disallows unsafe destinations and preserves idempotency across retries
+ok 50 - webhook disallows unsafe destinations and preserves idempotency across retries
+  ---
+  duration_ms: 1.911383
+  type: 'test'
+  ...
+# Subtest: edge worker rejects user credentials and remains pending without configuration
+ok 51 - edge worker rejects user credentials and remains pending without configuration
+  ---
+  duration_ms: 95.289492
+  type: 'test'
+  ...
+# Subtest: preferences UI distinguishes providers, app preferences and OS permission
+ok 52 - preferences UI distinguishes providers, app preferences and OS permission
+  ---
+  duration_ms: 1.553764
+  type: 'test'
+  ...
+# Subtest: preference updates send only changed field and restore failed toggle
+ok 53 - preference updates send only changed field and restore failed toggle
+  ---
+  duration_ms: 1.821537
+  type: 'test'
+  ...
+# Subtest: image/video validation enforces actual allowed MIME and size bounds
+ok 54 - image/video validation enforces actual allowed MIME and size bounds
+  ---
+  duration_ms: 3.156772
+  type: 'test'
+  ...
+# Subtest: empty composer and in-flight submissions disabled; persisted media remains valid
+ok 55 - empty composer and in-flight submissions disabled; persisted media remains valid
+  ---
+  duration_ms: 1.14644
+  type: 'test'
+  ...
+# Subtest: social card preserves legacy polls, body, actions and owner menu
+ok 56 - social card preserves legacy polls, body, actions and owner menu
+  ---
+  duration_ms: 16.495442
+  type: 'test'
+  ...
+# Subtest: verification mark only reflects existing server entitlement
+ok 57 - verification mark only reflects existing server entitlement
+  ---
+  duration_ms: 1.71676
+  type: 'test'
+  ...
+# Subtest: video uses escaped signed URL, inline metadata load and no autoplay
+ok 58 - video uses escaped signed URL, inline metadata load and no autoplay
+  ---
+  duration_ms: 2.840575
+  type: 'test'
+  ...
+# Subtest: visible vehicle opens permission checked detail; hidden vehicle has no plate
+ok 59 - visible vehicle opens permission checked detail; hidden vehicle has no plate
+  ---
+  duration_ms: 1.568696
+  type: 'test'
+  ...
+# Subtest: HTML text escaped and full server comment count displayed
+ok 60 - HTML text escaped and full server comment count displayed
+  ---
+  duration_ms: 1.319931
+  type: 'test'
+  ...
+# Subtest: owner edit/delete and foreign report/block menus stay separate
+ok 61 - owner edit/delete and foreign report/block menus stay separate
+  ---
+  duration_ms: 1.53114
+  type: 'test'
+  ...
+# Subtest: six filters query real command and stale results cannot overwrite selection
+ok 62 - six filters query real command and stale results cannot overwrite selection
+  ---
+  duration_ms: 20.068452
+  type: 'test'
+  ...
+# Subtest: signed-out feed never fabricates posts; composer requires real account
+ok 63 - signed-out feed never fabricates posts; composer requires real account
+  ---
+  duration_ms: 2.53933
+  type: 'test'
+  ...
+# Subtest: new post editor keeps live count, media and audience controls with a header submit button
+ok 64 - new post editor keeps live count, media and audience controls with a header submit button
+  ---
+  duration_ms: 1.864683
+  type: 'test'
+  ...
+# Subtest: explore opens full real feed without slogans, categories or composer banner
+ok 65 - explore opens full real feed without slogans, categories or composer banner
+  ---
+  duration_ms: 2.960075
+  type: 'test'
+  ...
+# Subtest: first plate empty card opens the existing first-vehicle form only on click
+ok 66 - first plate empty card opens the existing first-vehicle form only on click
+  ---
+  duration_ms: 1.42558
+  type: 'test'
+  ...
+# Subtest: disabled providers never navigate or create a pending OAuth request
+ok 67 - disabled providers never navigate or create a pending OAuth request
+  ---
+  duration_ms: 5.636402
+  type: 'test'
+  ...
+# Subtest: OAuth starts with SHA-256 PKCE, same-origin callback and random state, never a client secret
+ok 68 - OAuth starts with SHA-256 PKCE, same-origin callback and random state, never a client secret
+  ---
+  duration_ms: 13.974665
+  type: 'test'
+  ...
+# Subtest: valid callback consumes one verifier, cleans URL and hydrates the existing server wallet
+ok 69 - valid callback consumes one verifier, cleans URL and hydrates the existing server wallet
+  ---
+  duration_ms: 4.472317
+  type: 'test'
+  ...
+# Subtest: mismatched or expired callbacks do not exchange a code or accept a session
+ok 70 - mismatched or expired callbacks do not exchange a code or accept a session
+  ---
+  duration_ms: 2.550788
+  type: 'test'
+  ...
+# Subtest: signup requiring email confirmation never fakes a signed-in account
+ok 71 - signup requiring email confirmation never fakes a signed-in account
+  ---
+  duration_ms: 1.342635
+  type: 'test'
+  ...
+# Subtest: profile preparation sends a narrow profile update and never demo balances or permissions
+ok 72 - profile preparation sends a narrow profile update and never demo balances or permissions
+  ---
+  duration_ms: 3.285716
+  type: 'test'
+  ...
+# Subtest: fresh device sees welcome and unavailable providers remain disabled
+ok 73 - fresh device sees welcome and unavailable providers remain disabled
+  ---
+  duration_ms: 5.658817
+  type: 'test'
+  ...
+# Subtest: guest flow is welcome, plate, paint, map and login without an extra completion page
+ok 74 - guest flow is welcome, plate, paint, map and login without an extra completion page
+  ---
+  duration_ms: 2.288072
+  type: 'test'
+  ...
+# Subtest: a delayed account bootstrap never resets an explicitly requested preview
+ok 75 - a delayed account bootstrap never resets an explicitly requested preview
+  ---
+  duration_ms: 1.269816
+  type: 'test'
+  ...
+# Subtest: late account failure after entering the app reports a message without reopening onboarding
+ok 76 - late account failure after entering the app reports a message without reopening onboarding
+  ---
+  duration_ms: 8.279232
+  type: 'test'
+  ...
+# Subtest: navigation while an account is loading does not hijack the new route with profile preparation
+ok 77 - navigation while an account is loading does not hijack the new route with profile preparation
+  ---
+  duration_ms: 2.335753
+  type: 'test'
+  ...
+# Subtest: a completed introduction stays completed when the current account identity changes
+ok 78 - a completed introduction stays completed when the current account identity changes
+  ---
+  duration_ms: 1.078226
+  type: 'test'
+  ...
+# Subtest: new account profile preparation has no fabricated username or demo plate
+ok 79 - new account profile preparation has no fabricated username or demo plate
+  ---
+  duration_ms: 1.39889
+  type: 'test'
+  ...
+# Subtest: paint loop updates existing color filters rather than rebuilding the car DOM
+ok 80 - paint loop updates existing color filters rather than rebuilding the car DOM
+  ---
+  duration_ms: 1.643629
+  type: 'test'
+  ...
+# Subtest: standalone welcome waits for decoded images and never waits for app globals
+ok 81 - standalone welcome waits for decoded images and never waits for app globals
+  ---
+  duration_ms: 3.08917
+  type: 'test'
+  ...
+# Subtest: an older scene cannot replace the most recently requested slide when image loading finishes late
+ok 82 - an older scene cannot replace the most recently requested slide when image loading finishes late
+  ---
+  duration_ms: 2.528053
+  type: 'test'
+  ...
+# Subtest: leaving the introduction retains the complete entry until the application is ready
+ok 83 - leaving the introduction retains the complete entry until the application is ready
+  ---
+  duration_ms: 1.395775
+  type: 'test'
+  ...
+# Subtest: owner garage selection uses distinct saved car and motorcycle appearances
+ok 84 - owner garage selection uses distinct saved car and motorcycle appearances
+  ---
+  duration_ms: 6.356267
+  type: 'test'
+  ...
+# Subtest: missing vehicle kind is not silently replaced with another owned vehicle
+ok 85 - missing vehicle kind is not silently replaced with another owned vehicle
+  ---
+  duration_ms: 1.874598
+  type: 'test'
+  ...
+# Subtest: profile tabs are also installed for local profiles, real garage stays authenticated
+ok 86 - profile tabs are also installed for local profiles, real garage stays authenticated
+  ---
+  duration_ms: 0.379543
+  type: 'test'
+  ...
+# Subtest: map uses overhead silhouettes with saved paint; picker keeps standard icons
+ok 87 - map uses overhead silhouettes with saved paint; picker keeps standard icons
+  ---
+  duration_ms: 1.290136
+  type: 'test'
+  ...
+# Subtest: icon choice has no ownership gate and creates no fabricated demo position
+ok 88 - icon choice has no ownership gate and creates no fabricated demo position
+  ---
+  duration_ms: 0.344599
+  type: 'test'
+  ...
+# Subtest: saved motorcycle wrap is represented on the overhead body while tires remain original
+ok 89 - saved motorcycle wrap is represented on the overhead body while tires remain original
+  ---
+  duration_ms: 2.736203
+  type: 'test'
+  ...
+# Subtest: garage filters mixed real vehicle data without discarding records
+ok 90 - garage filters mixed real vehicle data without discarding records
+  ---
+  duration_ms: 6.208335
+  type: 'test'
+  ...
+# Subtest: empty garage presents first vehicle action and existing credit wallet is the only currency
+ok 91 - empty garage presents first vehicle action and existing credit wallet is the only currency
+  ---
+  duration_ms: 0.933157
+  type: 'test'
+  ...
+# Subtest: motorcycle marker uses a distinct glyph and leaves car marker unchanged
+ok 92 - motorcycle marker uses a distinct glyph and leaves car marker unchanged
+  ---
+  duration_ms: 1.346802
+  type: 'test'
+  ...
+# Subtest: Three public featured cars join existing regional roads
+ok 93 - Three public featured cars join existing regional roads
+  ---
+  duration_ms: 7.000189
+  type: 'test'
+  ...
+# Subtest: Ghost preview discloses initials and masks trailing plate digits
+ok 94 - Ghost preview discloses initials and masks trailing plate digits
+  ---
+  duration_ms: 2.098015
+  type: 'test'
+  ...
+# Subtest: featured gifts keep their prices and selecting still requires an explicit send
+ok 95 - featured gifts keep their prices and selecting still requires an explicit send
+  ---
+  duration_ms: 3.901866
+  type: 'test'
+  ...
+# Subtest: profile menu preserves favorite, report and block commands; close restores trigger focus
+ok 96 - profile menu preserves favorite, report and block commands; close restores trigger focus
+  ---
+  duration_ms: 3.895005
+  type: 'test'
+  ...
+# Subtest: profile menu cannot bypass blocked or locked profile checks
+ok 97 - profile menu cannot bypass blocked or locked profile checks
+  ---
+  duration_ms: 3.551397
+  type: 'test'
+  ...
+# Subtest: search inbox replaces gift shortcut without changing gift actions in profiles
+ok 98 - search inbox replaces gift shortcut without changing gift actions in profiles
+  ---
+  duration_ms: 2.330195
+  type: 'test'
+  ...
+# Subtest: closing options opened from a profile restores the existing profile nodes and trigger
+ok 99 - closing options opened from a profile restores the existing profile nodes and trigger
+  ---
+  duration_ms: 1.751131
+  type: 'test'
+  ...
+# Subtest: Kültür cars use sourced 3805 and northern roads, not library loop
+ok 100 - Kültür cars use sourced 3805 and northern roads, not library loop
+  ---
+  duration_ms: 80.306221
+  type: 'test'
+  ...
+# Subtest: moving vehicles keep the existing five second cadence
+ok 101 - moving vehicles keep the existing five second cadence
+  ---
+  duration_ms: 1.00111
+  type: 'test'
+  ...
+# Subtest: several stable observations slow stationary writes to thirty seconds
+ok 102 - several stable observations slow stationary writes to thirty seconds
+  ---
+  duration_ms: 1.10674
+  type: 'test'
+  ...
+# Subtest: movement resumes sending without waiting for the stationary interval
+ok 103 - movement resumes sending without waiting for the stationary interval
+  ---
+  duration_ms: 0.184528
+  type: 'test'
+  ...
+# Subtest: uncertain GPS never enters stationary mode; stale or repeated readings do not refresh presence
+ok 104 - uncertain GPS never enters stationary mode; stale or repeated readings do not refresh presence
+  ---
+  duration_ms: 0.524111
+  type: 'test'
+  ...
+# Subtest: failed writes revert to the short retry interval
+ok 105 - failed writes revert to the short retry interval
+  ---
+  duration_ms: 1.529197
+  type: 'test'
+  ...
+# Subtest: all three calendar segments match exact agreed totals and milestones
+ok 106 - all three calendar segments match exact agreed totals and milestones
+  ---
+  duration_ms: 4.780757
+  type: 'test'
+  ...
+# Subtest: next big reward advances correctly across claimed milestones and the cycle boundary
+ok 107 - next big reward advances correctly across claimed milestones and the cycle boundary
+  ---
+  duration_ms: 1.407132
+  type: 'test'
+  ...
+# Subtest: only a validated referral token is captured; no registration, claim or balance write occurs
+ok 108 - only a validated referral token is captured; no registration, claim or balance write occurs
+  ---
+  duration_ms: 1.800135
+  type: 'test'
+  ...
+# Subtest: existing verified badge artwork is retained while garage milestones stop at three
+ok 109 - existing verified badge artwork is retained while garage milestones stop at three
+  ---
+  duration_ms: 1.315414
+  type: 'test'
+  ...
+# Subtest: logout replaces reward views so a previous account response cannot populate a new session
+ok 110 - logout replaces reward views so a previous account response cannot populate a new session
+  ---
+  duration_ms: 1.042563
+  type: 'test'
+  ...
+# Subtest: manual song form sends trimmed text once and never queries a catalog
+ok 111 - manual song form sends trimmed text once and never queries a catalog
+  ---
+  duration_ms: 8.995909
+  type: 'test'
+  ...
+# Subtest: Sokak: countryside is green and cities have an opaque white backdrop below roads
+ok 112 - Sokak: countryside is green and cities have an opaque white backdrop below roads
+  ---
+  duration_ms: 1.960747
+  type: 'test'
+  ...
+# Subtest: Style change keeps previous mode on failure and reports the error
+ok 113 - Style change keeps previous mode on failure and reports the error
+  ---
+  duration_ms: 2.601103
+  type: 'test'
+  ...
+# Subtest: Fiord uses the official style endpoint and persists only after it is applied
+ok 114 - Fiord uses the official style endpoint and persists only after it is applied
+  ---
+  duration_ms: 2.322243
+  type: 'test'
+  ...
+# Subtest: Concurrent and repeated style requests share one fetch and return independent copies
+ok 115 - Concurrent and repeated style requests share one fetch and return independent copies
+  ---
+  duration_ms: 1.422937
+  type: 'test'
+  ...
+# Subtest: A failed style request can be retried
+ok 116 - A failed style request can be retried
+  ---
+  duration_ms: 1.649659
+  type: 'test'
+  ...
+# Subtest: Fresh persistent style cache avoids the network after reload
+ok 117 - Fresh persistent style cache avoids the network after reload
+  ---
+  duration_ms: 3.429283
+  type: 'test'
+  ...
+# Subtest: Saved 3D starts directly without creating a second flat basemap
+ok 118 - Saved 3D starts directly without creating a second flat basemap
+  ---
+  duration_ms: 2.166097
+  type: 'test'
+  ...
+# Subtest: WebGL failure falls back to bounded raster tiles without replacing regions or markers
+ok 119 - WebGL failure falls back to bounded raster tiles without replacing regions or markers
+  ---
+  duration_ms: 1.350216
+  type: 'test'
+  ...
+# Subtest: self icon preference is local; automatic preserves actual vehicle type
+ok 120 - self icon preference is local; automatic preserves actual vehicle type
+  ---
+  duration_ms: 3.584788
+  type: 'test'
+  ...
+# Subtest: arrow renders actual marker SVG, persists locally, and validates stored values
+ok 121 - arrow renders actual marker SVG, persists locally, and validates stored values
+  ---
+  duration_ms: 4.114917
+  type: 'test'
+  ...
+# Subtest: live map applies override only to current account and profile garage includes management
+ok 122 - live map applies override only to current account and profile garage includes management
+  ---
+  duration_ms: 0.598993
+  type: 'test'
+  ...
+# Subtest: only self-icon choices remain and arrow defaults to purple
+ok 123 - only self-icon choices remain and arrow defaults to purple
+  ---
+  duration_ms: 3.058773
+  type: 'test'
+  ...
+# Subtest: appearance tabs share card layout and omit explanatory copy
+ok 124 - appearance tabs share card layout and omit explanatory copy
+  ---
+  duration_ms: 1.861548
+  type: 'test'
+  ...
+# Subtest: requests carry viewport and page cursors; all street pages are shown
+ok 125 - requests carry viewport and page cursors; all street pages are shown
+  ---
+  duration_ms: 8.204837
+  type: 'test'
+  ...
+# Subtest: panning discards an outstanding old viewport response and reloads the new one
+ok 126 - panning discards an outstanding old viewport response and reloads the new one
+  ---
+  duration_ms: 9.556666
+  type: 'test'
+  ...
+# Subtest: startup media module references cacheable files instead of embedding image bytes
+ok 127 - startup media module references cacheable files instead of embedding image bytes
+  ---
+  duration_ms: 2.362523
+  type: 'test'
+  ...
+# Subtest: media observer checks added images without rescanning existing page content
+ok 128 - media observer checks added images without rescanning existing page content
+  ---
+  duration_ms: 2.98322
+  type: 'test'
+  ...
+# Subtest: Premium areas lock profile and photo but retain the car
+ok 129 - Premium areas lock profile and photo but retain the car
+  ---
+  duration_ms: 7.799996
+  type: 'test'
+  ...
+# Subtest: Gift deducts exact credits once and logs the same transaction
+ok 130 - Gift deducts exact credits once and logs the same transaction
+  ---
+  duration_ms: 8.517228
+  type: 'test'
+  ...
+# Subtest: Insufficient credits, blocked recipient and locked profile cannot spend
+ok 131 - Insufficient credits, blocked recipient and locked profile cannot spend
+  ---
+  duration_ms: 3.985532
+  type: 'test'
+  ...
+# Subtest: Storage failure rolls back both gift and credit debit
+ok 132 - Storage failure rolls back both gift and credit debit
+  ---
+  duration_ms: 3.431016
+  type: 'test'
+  ...
+# Subtest: Saved credit changes refresh the visible map balance
+ok 133 - Saved credit changes refresh the visible map balance
+  ---
+  duration_ms: 1.163586
+  type: 'test'
+  ...
+# Subtest: Explicit public profiles remain accessible in Premium areas
+ok 134 - Explicit public profiles remain accessible in Premium areas
+  ---
+  duration_ms: 8.967637
+  type: 'test'
+  ...
+# Subtest: Ghost Premium profiles are anonymous to free viewers and visible to Premium viewers
+ok 135 - Ghost Premium profiles are anonymous to free viewers and visible to Premium viewers
+  ---
+  duration_ms: 5.105532
+  type: 'test'
+  ...
+# Subtest: All eleven catalog gifts debit their configured exact price
+ok 136 - All eleven catalog gifts debit their configured exact price
+  ---
+  duration_ms: 14.895599
+  type: 'test'
+  ...
+# Subtest: Expensive gifts cannot overspend balance; unknown gift cannot debit
+ok 137 - Expensive gifts cannot overspend balance; unknown gift cannot debit
+  ---
+  duration_ms: 2.712651
+  type: 'test'
+  ...
+# Subtest: Song creates one recipient notification with sender and song name
+ok 138 - Song creates one recipient notification with sender and song name
+  ---
+  duration_ms: 4.36213
+  type: 'test'
+  ...
+# Subtest: A dialog freezes the existing page position and closing restores it
+ok 139 - A dialog freezes the existing page position and closing restores it
+  ---
+  duration_ms: 5.50912
+  type: 'test'
+  ...
+# Subtest: Replacing a dialog retains the original position and prior inline variables
+ok 140 - Replacing a dialog retains the original position and prior inline variables
+  ---
+  duration_ms: 1.210596
+  type: 'test'
+  ...
+# Subtest: Closing a dialog during route navigation starts the new route at the top
+ok 141 - Closing a dialog during route navigation starts the new route at the top
+  ---
+  duration_ms: 1.192588
+  type: 'test'
+  ...
+# Subtest: all 18 motorcycle source assets are distinct, transparent, mobile-sized and have reviewed body/wheel fits
+ok 142 - all 18 motorcycle source assets are distinct, transparent, mobile-sized and have reviewed body/wheel fits
+  ---
+  duration_ms: 60.046731
+  type: 'test'
+  ...
+# Subtest: each supported layer changes rendered motorcycle pixels; unavailable layers remain absent
+ok 143 - each supported layer changes rendered motorcycle pixels; unavailable layers remain absent
+  ---
+  duration_ms: 22699.639858
+  type: 'test'
+  ...
+# Subtest: unreviewed model cannot render a fake customization preview
+ok 144 - unreviewed model cannot render a fake customization preview
+  ---
+  duration_ms: 3.117011
+  type: 'test'
+  ...
+# Subtest: all nine car wraps render on every motorcycle and leave axle centers unchanged
+ok 145 - all nine car wraps render on every motorcycle and leave axle centers unchanged
+  ---
+  duration_ms: 62147.512167
+  type: 'test'
+  ...
+# Subtest: persisted wrap IDs render after reload and selection only changes the draft quote
+ok 146 - persisted wrap IDs render after reload and selection only changes the draft quote
+  ---
+  duration_ms: 4.378563
+  type: 'test'
+  ...
+# Subtest: Kinder and Race 95 use single original graphics; Barbie and spider retain the existing texture
+ok 147 - Kinder and Race 95 use single original graphics; Barbie and spider retain the existing texture
+  ---
+  duration_ms: 2.185897
+  type: 'test'
+  ...
+# Subtest: all 18 reviewed panel sets cover body samples while protecting lamps, seat and mechanical surfaces
+ok 148 - all 18 reviewed panel sets cover body samples while protecting lamps, seat and mechanical surfaces
+  ---
+  duration_ms: 17218.302903
+  type: 'test'
+  ...
+# Subtest: catalog model opens the unified garage and color/wrap clicks update the existing preview only
+ok 149 - catalog model opens the unified garage and color/wrap clicks update the existing preview only
+  ---
+  duration_ms: 10.596855
+  type: 'test'
+  ...
+# Subtest: tabs retain the selected motorcycle and arrows stay in their category without purchasing
+ok 150 - tabs retain the selected motorcycle and arrows stay in their category without purchasing
+  ---
+  duration_ms: 10.440328
+  type: 'test'
+  ...
+# Subtest: owned motorcycle draft survives category changes; quote uses existing inventory and product prices
+ok 151 - owned motorcycle draft survives category changes; quote uses existing inventory and product prices
+  ---
+  duration_ms: 11.716273
+  type: 'test'
+  ...
+# Subtest: returning to finish resumes arrows at its last wrap, independently of rim previews
+ok 152 - returning to finish resumes arrows at its last wrap, independently of rim previews
+  ---
+  duration_ms: 4.477754
+  type: 'test'
+  ...
+# Subtest: Free visitor entry opens pricing without fetching visitor identities
+ok 153 - Free visitor entry opens pricing without fetching visitor identities
+  ---
+  duration_ms: 4.371694
+  type: 'test'
+  ...
+# Subtest: Premium members fetch their visitor list
+ok 154 - Premium members fetch their visitor list
+  ---
+  duration_ms: 1.38517
+  type: 'test'
+  ...
+# Subtest: Expired entitlement opens pricing when the server rejects access
+ok 155 - Expired entitlement opens pricing when the server rejects access
+  ---
+  duration_ms: 1.304978
+  type: 'test'
+  ...
+# Subtest: An entitlement removed during a request cannot render visitor identities
+ok 156 - An entitlement removed during a request cannot render visitor identities
+  ---
+  duration_ms: 1.249585
+  type: 'test'
+  ...
+# Subtest: Selecting and continuing a plan does not grant Premium or debit credits
+ok 157 - Selecting and continuing a plan does not grant Premium or debit credits
+  ---
+  duration_ms: 1.52478
+  type: 'test'
+  ...
+# Subtest: Free map and legacy ghost controls open the dedicated screen without enabling ghost mode
+ok 158 - Free map and legacy ghost controls open the dedicated screen without enabling ghost mode
+  ---
+  duration_ms: 20.640033
+  type: 'test'
+  ...
+# Subtest: profile viewer loads just the selected photo and next/previous navigation is bounded
+ok 159 - profile viewer loads just the selected photo and next/previous navigation is bounded
+  ---
+  duration_ms: 14.859435
+  type: 'test'
+  ...
+# Subtest: locked or blocked profiles cannot open the extra-photo viewer
+ok 160 - locked or blocked profiles cannot open the extra-photo viewer
+  ---
+  duration_ms: 4.087425
+  type: 'test'
+  ...
+# Subtest: profile avatars open the photo viewer while preserving their existing markup
+ok 161 - profile avatars open the photo viewer while preserving their existing markup
+  ---
+  duration_ms: 1.687465
+  type: 'test'
+  ...
+# Subtest: profile drawer is removed but its controls remain reachable from settings
+ok 162 - profile drawer is removed but its controls remain reachable from settings
+  ---
+  duration_ms: 3.379988
+  type: 'test'
+  ...
+# Subtest: removed profile copy is not replaced by a gallery request or a preview caption
+ok 163 - removed profile copy is not replaced by a gallery request or a preview caption
+  ---
+  duration_ms: 0.56361
+  type: 'test'
+  ...
+# Subtest: visitors require authenticated account
+ok 164 - visitors require authenticated account
+  ---
+  duration_ms: 5.647959
+  type: 'test'
+  ...
+# Subtest: visitor list is bound to authenticated owner, never supplied query
+ok 165 - visitor list is bound to authenticated owner, never supplied query
+  ---
+  duration_ms: 1.49788
+  type: 'test'
+  ...
+# Subtest: self visits do not insert records
+ok 166 - self visits do not insert records
+  ---
+  duration_ms: 1.474494
+  type: 'test'
+  ...
+# Subtest: visits use authenticated viewer and valid target
+ok 167 - visits use authenticated viewer and valid target
+  ---
+  duration_ms: 0.824804
+  type: 'test'
+  ...
+# Subtest: closed profile receives no visit
+ok 168 - closed profile receives no visit
+  ---
+  duration_ms: 0.779275
+  type: 'test'
+  ...
+# Subtest: Konyaaltı gerçek yol noktaları kaynak GeoJSON ile birebir aynı
+ok 169 - Konyaaltı gerçek yol noktaları kaynak GeoJSON ile birebir aynı
+  ---
+  duration_ms: 2.722728
+  type: 'test'
+  ...
+# Subtest: Her demo döngüsü saklanan kaynak geometriyle eşleşir
+ok 170 - Her demo döngüsü saklanan kaynak geometriyle eşleşir
+  ---
+  duration_ms: 3.093527
+  type: 'test'
+  ...
+# Subtest: Yol kıvrımında uç noktalar arasında kestirme yapılmaz
+ok 171 - Yol kıvrımında uç noktalar arasında kestirme yapılmaz
+  ---
+  duration_ms: 0.452522
+  type: 'test'
+  ...
+# Subtest: Simülasyon zaman yerine mesafeyi izler; sıfır uzunluklu düğümler ve döngü geçişi güvenli
+ok 172 - Simülasyon zaman yerine mesafeyi izler; sıfır uzunluklu düğümler ve döngü geçişi güvenli
+  ---
+  duration_ms: 8.745852
+  type: 'test'
+  ...
+# Subtest: Genişleyen bölgeler gerçek yol düğümlerini kapsar; deniz alan dışında
+ok 173 - Genişleyen bölgeler gerçek yol düğümlerini kapsar; deniz alan dışında
+  ---
+  duration_ms: 86.088608
+  type: 'test'
+  ...
+# Subtest: Yön 359° → 1° geçişinde araç tam tur dönmez
+ok 174 - Yön 359° → 1° geçişinde araç tam tur dönmez
+  ---
+  duration_ms: 0.517942
+  type: 'test'
+  ...
+# Subtest: Ev blokları ve önceki geniş alanlar yol güzergâhına dahil edilmez
+ok 175 - Ev blokları ve önceki geniş alanlar yol güzergâhına dahil edilmez
+  ---
+  duration_ms: 0.487775
+  type: 'test'
+  ...
+# Subtest: Kapalı yol döngüsünün ortasındaki evler dışlanır
+ok 176 - Kapalı yol döngüsünün ortasındaki evler dışlanır
+  ---
+  duration_ms: 0.257648
+  type: 'test'
+  ...
+# Subtest: Seçim dolgusu ayrı ve yol çizgilerinin altında tutulur
+ok 177 - Seçim dolgusu ayrı ve yol çizgilerinin altında tutulur
+  ---
+  duration_ms: 1.147611
+  type: 'test'
+  ...
+# Subtest: Soluk yollar yalnızca kaynak caddeleri ve bulvarları kapsar
+ok 178 - Soluk yollar yalnızca kaynak caddeleri ve bulvarları kapsar
+  ---
+  duration_ms: 5.014904
+  type: 'test'
+  ...
+# Subtest: Konyaaltı çizgileri kaldırılır, alan belirgin yeşil dolgu ile gösterilir
+ok 179 - Konyaaltı çizgileri kaldırılır, alan belirgin yeşil dolgu ile gösterilir
+  ---
+  duration_ms: 0.276707
+  type: 'test'
+  ...
+# Subtest: Lara tam yol ağının her düğümü yeşil alanın içinde; iki uç da erişilebilir
+ok 180 - Lara tam yol ağının her düğümü yeşil alanın içinde; iki uç da erişilebilir
+  ---
+  duration_ms: 417.277136
+  type: 'test'
+  ...
+# Subtest: first vehicle form contains only type and necessary model/plate questions
+ok 181 - first vehicle form contains only type and necessary model/plate questions
+  ---
+  duration_ms: 2.620192
+  type: 'test'
+  ...
+# Subtest: empty real garage shows first-plate card before the form
+ok 182 - empty real garage shows first-plate card before the form
+  ---
+  duration_ms: 1.238789
+  type: 'test'
+  ...
+# Subtest: profile summary combines art and one management button without a separate plate
+ok 183 - profile summary combines art and one management button without a separate plate
+  ---
+  duration_ms: 1.241613
+  type: 'test'
+  ...
+# Subtest: share URLs use a stable post hash and strip current query parameters
+ok 184 - share URLs use a stable post hash and strip current query parameters
+  ---
+  duration_ms: 4.013724
+  type: 'test'
+  ...
+# Subtest: share route rejects malformed IDs and script fragments
+ok 185 - share route rejects malformed IDs and script fragments
+  ---
+  duration_ms: 1.445029
+  type: 'test'
+  ...
+# Subtest: comment normalization rejects whitespace and keeps readable words
+ok 186 - comment normalization rejects whitespace and keeps readable words
+  ---
+  duration_ms: 1.45195
+  type: 'test'
+  ...
+# Subtest: comment rendering escapes text and offers only authorized actions
+ok 187 - comment rendering escapes text and offers only authorized actions
+  ---
+  duration_ms: 23.439577
+  type: 'test'
+  ...
+# Subtest: own comment gets edit/delete controls only when server permits them
+ok 188 - own comment gets edit/delete controls only when server permits them
+  ---
+  duration_ms: 2.07535
+  type: 'test'
+  ...
+# Subtest: cards keep share action and server following state without own-follow button
+ok 189 - cards keep share action and server following state without own-follow button
+  ---
+  duration_ms: 10.912901
+  type: 'test'
+  ...
+# Subtest: rapid repeated likes coalesce into a single in-flight request
+ok 190 - rapid repeated likes coalesce into a single in-flight request
+  ---
+  duration_ms: 1.970101
+  type: 'test'
+  ...
+# Subtest: follow updates every cached post consistently and refreshes following feed
+ok 191 - follow updates every cached post consistently and refreshes following feed
+  ---
+  duration_ms: 3.761404
+  type: 'test'
+  ...
+# Subtest: all five achievements render from awarded data and unknown awards are ignored
+ok 192 - all five achievements render from awarded data and unknown awards are ignored
+  ---
+  duration_ms: 41.418738
+  type: 'test'
+  ...
+# Subtest: verified achievement uses existing purple styling without inventing a verification state
+ok 193 - verified achievement uses existing purple styling without inventing a verification state
+  ---
+  duration_ms: 1.129975
+  type: 'test'
+  ...
+# Subtest: social descriptions cover follow, like, comment, tag and earned badge
+ok 194 - social descriptions cover follow, like, comment, tag and earned badge
+  ---
+  duration_ms: 1.145117
+  type: 'test'
+  ...
+# Subtest: missing actor identity is rendered generically and badge HTML never includes arbitrary source fields
+ok 195 - missing actor identity is rendered generically and badge HTML never includes arbitrary source fields
+  ---
+  duration_ms: 0.951015
+  type: 'test'
+  ...
+# Subtest: notification settings save only the changed in-app preference
+ok 196 - notification settings save only the changed in-app preference
+  ---
+  duration_ms: 1.785964
+  type: 'test'
+  ...
+# Subtest: failed preference writes restore the switch and surface server errors
+ok 197 - failed preference writes restore the switch and surface server errors
+  ---
+  duration_ms: 1.074311
+  type: 'test'
+  ...
+# Subtest: notification navigation uses fresh server-authorized target instead of stale client target
+ok 198 - notification navigation uses fresh server-authorized target instead of stale client target
+  ---
+  duration_ms: 1.171217
+  type: 'test'
+  ...
+# Subtest: denied notification opens neither navigate nor mark the local record read
+ok 199 - denied notification opens neither navigate nor mark the local record read
+  ---
+  duration_ms: 3.082139
+  type: 'test'
+  ...
+# Subtest: report UI offers all six reasons, escapes no arbitrary subject, and rejects invalid IDs
+ok 200 - report UI offers all six reasons, escapes no arbitrary subject, and rejects invalid IDs
+  ---
+  duration_ms: 1.228373
+  type: 'test'
+  ...
+# Subtest: closing the settings sheet during a successful save does not revert the saved switch
+ok 201 - closing the settings sheet during a successful save does not revert the saved switch
+  ---
+  duration_ms: 1.025727
+  type: 'test'
+  ...
+# Subtest: missing Spotify setup returns explicit unavailable state without fake songs
+ok 202 - missing Spotify setup returns explicit unavailable state without fake songs
+  ---
+  duration_ms: 6.140672
+  type: 'test'
+  ...
+# Subtest: server obtains and reuses token; songs retain source, cover and Spotify link
+ok 203 - server obtains and reuses token; songs retain source, cover and Spotify link
+  ---
+  duration_ms: 3.287469
+  type: 'test'
+  ...
+# Subtest: rate limit and rejected developer access show distinct Turkish errors
+ok 204 - rate limit and rejected developer access show distinct Turkish errors
+  ---
+  duration_ms: 1.878444
+  type: 'test'
+  ...
+# Subtest: new Spotify song attaches to a status; invalid IDs and script URLs rejected
+ok 205 - new Spotify song attaches to a status; invalid IDs and script URLs rejected
+  ---
+  duration_ms: 0.786747
+  type: 'test'
+  ...
+# Subtest: server identifies supported file headers and rejects disguised content
+ok 206 - server identifies supported file headers and rejects disguised content
+  ---
+  duration_ms: 102.4648
+  type: 'test'
+  ...
+# Subtest: media edge rejects no session, unknown type, oversized bodies and invalid bytes before reserving storage
+ok 207 - media edge rejects no session, unknown type, oversized bodies and invalid bytes before reserving storage
+  ---
+  duration_ms: 43.882298
+  type: 'test'
+  ...
+# Subtest: media edge reserves, uploads and confirms valid bytes with server-only credentials
+ok 208 - media edge reserves, uploads and confirms valid bytes with server-only credentials
+  ---
+  duration_ms: 24.378403
+  type: 'test'
+  ...
+# Subtest: only exact native origins receive music API CORS access
+ok 209 - only exact native origins receive music API CORS access
+  ---
+  duration_ms: 6.373665
+  type: 'test'
+  ...
+# Subtest: native CORS wrapper preserves failures and response payload
+ok 210 - native CORS wrapper preserves failures and response payload
+  ---
+  duration_ms: 2.171755
+  type: 'test'
+  ...
+# Subtest: release gate refuses unverified credentials, payments, privacy and devices
+ok 211 - release gate refuses unverified credentials, payments, privacy and devices
+  ---
+  duration_ms: 0.58367
+  type: 'test'
+  ...
+# Subtest: deletion confirmation never submits an unconfirmed or empty request
+ok 212 - deletion confirmation never submits an unconfirmed or empty request
+  ---
+  duration_ms: 1.819194
+  type: 'test'
+  ...
+# Subtest: a confirmed deletion creates a server privacy request and does not claim completion
+ok 213 - a confirmed deletion creates a server privacy request and does not claim completion
+  ---
+  duration_ms: 1.142273
+  type: 'test'
+  ...
+# Subtest: disconnected stores fail closed and sandbox cannot fund production
+ok 214 - disconnected stores fail closed and sandbox cannot fund production
+  ---
+  duration_ms: 1.644481
+  type: 'test'
+  ...
+# Subtest: store adapter ignores caller credits and rejects revoked/wrong environment
+ok 215 - store adapter ignores caller credits and rejects revoked/wrong environment
+  ---
+  duration_ms: 0.359803
+  type: 'test'
+  ...
+# Subtest: uncertain moderation never claims content is safe
+ok 216 - uncertain moderation never claims content is safe
+  ---
+  duration_ms: 0.806837
+  type: 'test'
+  ...
+# Subtest: push waits for consent and real credentials without pretending delivery
+ok 217 - push waits for consent and real credentials without pretending delivery
+  ---
+  duration_ms: 1.18665
+  type: 'test'
+  ...
+# Subtest: push requires durable dedupe boundary and sends only allowlisted fields
+ok 218 - push requires durable dedupe boundary and sends only allowlisted fields
+  ---
+  duration_ms: 0.822621
+  type: 'test'
+  ...
+# Subtest: recovery rejects missing/expired tokens and clears address
+ok 219 - recovery rejects missing/expired tokens and clears address
+  ---
+  duration_ms: 3.435052
+  type: 'test'
+  ...
+# Subtest: recovery verifies token then changes password and revokes sessions
+ok 220 - recovery verifies token then changes password and revokes sessions
+  ---
+  duration_ms: 1.043454
+  type: 'test'
+  ...
+# Subtest: recovery never sends unequal passwords
+ok 221 - recovery never sends unequal passwords
+  ---
+  duration_ms: 0.869441
+  type: 'test'
+  ...
+# Subtest: first response includes its intro code and CSS without external runtime or font dependencies
+ok 222 - first response includes its intro code and CSS without external runtime or font dependencies
+  ---
+  duration_ms: 7.772013
+  type: 'test'
+  ...
+# Subtest: an intro waits for both its image resources without loading the main application
+ok 223 - an intro waits for both its image resources without loading the main application
+  ---
+  duration_ms: 2.209583
+  type: 'test'
+  ...
+# Subtest: main runtime is requested once and initialization runs only after both script and styles are ready
+ok 224 - main runtime is requested once and initialization runs only after both script and styles are ready
+  ---
+  duration_ms: 2.283915
+  type: 'test'
+  ...
+# Subtest: input limits and invalid poll/unsupported file fail
+ok 225 - input limits and invalid poll/unsupported file fail
+  ---
+  duration_ms: 1.54432
+  type: 'test'
+  ...
+# Subtest: anonymous cannot write; authenticated profile IDs cannot be spoofed
+ok 226 - anonymous cannot write; authenticated profile IDs cannot be spoofed
+  ---
+  duration_ms: 8.239318
+  type: 'test'
+  ...
+# Subtest: image magic validation and ownership enforced
+ok 227 - image magic validation and ownership enforced
+  ---
+  duration_ms: 32.140902
+  type: 'test'
+  ...
+# Subtest: new image posts are rejected even when the uploader owns the image
+ok 228 - new image posts are rejected even when the uploader owns the image
+  ---
+  duration_ms: 1.257527
+  type: 'test'
+  ...
+# Subtest: private posts and their images are denied to non-followers
+ok 229 - private posts and their images are denied to non-followers
+  ---
+  duration_ms: 1.98889
+  type: 'test'
+  ...
+# Subtest: server follows grant and revoke access to private post and media
+ok 230 - server follows grant and revoke access to private post and media
+  ---
+  duration_ms: 2.292948
+  type: 'test'
+  ...
+# Subtest: poll only counts each authenticated voter once and shows percentages inputs
+ok 231 - poll only counts each authenticated voter once and shows percentages inputs
+  ---
+  duration_ms: 8.601024
+  type: 'test'
+  ...
+# Subtest: likes are idempotent, comments persist, unauthorized delete denied
+ok 232 - likes are idempotent, comments persist, unauthorized delete denied
+  ---
+  duration_ms: 5.914792
+  type: 'test'
+  ...
+# Subtest: cross-origin writes are rejected
+ok 233 - cross-origin writes are rejected
+  ---
+  duration_ms: 0.57707
+  type: 'test'
+  ...
+# Subtest: account hydration isolates demo credits and reads only server wallet
+ok 234 - account hydration isolates demo credits and reads only server wallet
+  ---
+  duration_ms: 5.440326
+  type: 'test'
+  ...
+# Subtest: cloud saves never upload credits, premium or paid inventory
+ok 235 - cloud saves never upload credits, premium or paid inventory
+  ---
+  duration_ms: 603.834597
+  type: 'test'
+  ...
+# Subtest: real accounts do not inherit the demo plate
+ok 236 - real accounts do not inherit the demo plate
+  ---
+  duration_ms: 1.866455
+  type: 'test'
+  ...
+# Subtest: revoked server session clears private state and emits account-out
+ok 237 - revoked server session clears private state and emits account-out
+  ---
+  duration_ms: 4.233075
+  type: 'test'
+  ...
+# Subtest: Vehicles spread over full route with independent speeds, phases and directions
+ok 238 - Vehicles spread over full route with independent speeds, phases and directions
+  ---
+  duration_ms: 1.343827
+  type: 'test'
+  ...
+# Subtest: Independent pause holds position, restart is continuous and speed never reverses
+ok 239 - Independent pause holds position, restart is continuous and speed never reverses
+  ---
+  duration_ms: 7.686844
+  type: 'test'
+  ...
+# Subtest: demo model choice persists without changing credits, paint, plate or inventory
+ok 240 - demo model choice persists without changing credits, paint, plate or inventory
+  ---
+  duration_ms: 6.778906
+  type: 'test'
+  ...
+# Subtest: failed local persistence rolls back the model and existing car information
+ok 241 - failed local persistence rolls back the model and existing car information
+  ---
+  duration_ms: 3.719971
+  type: 'test'
+  ...
+# Subtest: cloud save uses authenticated command and refresh; errors never fall back to local success
+ok 242 - cloud save uses authenticated command and refresh; errors never fall back to local success
+  ---
+  duration_ms: 2.056482
+  type: 'test'
+  ...
+# Subtest: all three garage tabs share a car preview above the navigation
+ok 243 - all three garage tabs share a car preview above the navigation
+  ---
+  duration_ms: 3.826161
+  type: 'test'
+  ...
+# Subtest: plate click only previews on the vehicle and never opens a name/purchase modal or charges
+ok 244 - plate click only previews on the vehicle and never opens a name/purchase modal or charges
+  ---
+  duration_ms: 6.004698
+  type: 'test'
+  ...
+# Subtest: accessory previews keep cam/roof slots independent and never change money or the profile
+ok 245 - accessory previews keep cam/roof slots independent and never change money or the profile
+  ---
+  duration_ms: 2.210655
+  type: 'test'
+  ...
+# Subtest: plate tab zooms to the front plate and restores the whole car without changing the profile
+ok 246 - plate tab zooms to the front plate and restores the whole car without changing the profile
+  ---
+  duration_ms: 2.160499
+  type: 'test'
+  ...
+# Subtest: rim preview applies and removes independently of accessories, plate, credits and model
+ok 247 - rim preview applies and removes independently of accessories, plate, credits and model
+  ---
+  duration_ms: 1.812373
+  type: 'test'
+  ...
+# Subtest: garage diamond actions never debit the gold wallet, and other screens retain their original handler
+ok 248 - garage diamond actions never debit the gold wallet, and other screens retain their original handler
+  ---
+  duration_ms: 1.711561
+  type: 'test'
+  ...
+# Subtest: rim tab starts zoomed and the user can restore the whole vehicle
+ok 249 - rim tab starts zoomed and the user can restore the whole vehicle
+  ---
+  duration_ms: 2.110803
+  type: 'test'
+  ...
+# Subtest: rim closeup contains both complete wheel faces on every model
+ok 250 - rim closeup contains both complete wheel faces on every model
+  ---
+  duration_ms: 2.559871
+  type: 'test'
+  ...
+# Subtest: model browser separates 21 cars and existing 18 motorcycles without recreating records
+ok 251 - model browser separates 21 cars and existing 18 motorcycles without recreating records
+  ---
+  duration_ms: 3.225897
+  type: 'test'
+  ...
+# Subtest: model page renders search and brand filters without changing balances
+ok 252 - model page renders search and brand filters without changing balances
+  ---
+  duration_ms: 2.234721
+  type: 'test'
+  ...
+# Subtest: motorcycle model browser includes the same search and brand filtering fields
+ok 253 - motorcycle model browser includes the same search and brand filtering fields
+  ---
+  duration_ms: 1.605472
+  type: 'test'
+  ...
+# Subtest: plate arrows cycle the six styles, wrap in both directions, and keep the model/profile unchanged
+ok 254 - plate arrows cycle the six styles, wrap in both directions, and keep the model/profile unchanged
+  ---
+  duration_ms: 2.291948
+  type: 'test'
+  ...
+# Subtest: rim and accessory arrows keep independent appearance slots and never select a new vehicle
+ok 255 - rim and accessory arrows keep independent appearance slots and never select a new vehicle
+  ---
+  duration_ms: 9.6732
+  type: 'test'
+  ...
+# Subtest: model arrows follow displayed car order and preview without persisting a model choice
+ok 256 - model arrows follow displayed car order and preview without persisting a model choice
+  ---
+  duration_ms: 2.109562
+  type: 'test'
+  ...
+# Subtest: finish arrows move through color and wrap previews without calling the purchase/save handlers
+ok 257 - finish arrows move through color and wrap previews without calling the purchase/save handlers
+  ---
+  duration_ms: 2.308763
+  type: 'test'
+  ...
+# Subtest: garage-only plate fitting covers each measured model mount for all six designs without modifying the shared renderer
+ok 258 - garage-only plate fitting covers each measured model mount for all six designs without modifying the shared renderer
+  ---
+  duration_ms: 14.469666
+  type: 'test'
+  ...
+# Subtest: actual script order preserves both renderers and the paint preview uses the sedan
+ok 259 - actual script order preserves both renderers and the paint preview uses the sedan
+  ---
+  duration_ms: 76.627397
+  type: 'test'
+  ...
+# Subtest: paint supports colors, unique SVG ids and escapes plate HTML
+ok 260 - paint supports colors, unique SVG ids and escapes plate HTML
+  ---
+  duration_ms: 27.500403
+  type: 'test'
+  ...
+# Subtest: nine swatches render with individual reference liveries or distinct atlas cells
+ok 261 - nine swatches render with individual reference liveries or distinct atlas cells
+  ---
+  duration_ms: 32.38523
+  type: 'test'
+  ...
+# Subtest: wrap selection changes preview, never charges/saves; a color restores solid preview
+ok 262 - wrap selection changes preview, never charges/saves; a color restores solid preview
+  ---
+  duration_ms: 19.099901
+  type: 'test'
+  ...
+# Subtest: own profile contains one plate-only garage button and no top-down vehicle
+ok 263 - own profile contains one plate-only garage button and no top-down vehicle
+  ---
+  duration_ms: 32.17267
+  type: 'test'
+  ...
+# Subtest: seven model geometries keep the selected silhouette for all nine wraps and colors
+ok 264 - seven model geometries keep the selected silhouette for all nine wraps and colors
+  ---
+  duration_ms: 29.488481
+  type: 'test'
+  ...
+# Subtest: reference liveries stay distinct: large single 95, vector Barbie and explicit red/blue web
+ok 265 - reference liveries stay distinct: large single 95, vector Barbie and explicit red/blue web
+  ---
+  duration_ms: 24.00521
+  type: 'test'
+  ...
+# Subtest: color and wrap actions update the shared preview outside the finish panel
+ok 266 - color and wrap actions update the shared preview outside the finish panel
+  ---
+  duration_ms: 17.713139
+  type: 'test'
+  ...
+# Subtest: hood flag has forty projected checks and eye pair uses the common hood plane
+ok 267 - hood flag has forty projected checks and eye pair uses the common hood plane
+  ---
+  duration_ms: 21.971452
+  type: 'test'
+  ...
+# Subtest: all catalog plates render their selected frame and custom text on every vehicle
+ok 268 - all catalog plates render their selected frame and custom text on every vehicle
+  ---
+  duration_ms: 20.270143
+  type: 'test'
+  ...
+# Subtest: window and roof accessory art fits every model, escapes LED text and rejects unknown items
+ok 269 - window and roof accessory art fits every model, escapes LED text and rejects unknown items
+  ---
+  duration_ms: 41.969376
+  type: 'test'
+  ...
+# Subtest: twelve rim styles replace both wheel faces on all vehicles without changing model or plate
+ok 270 - twelve rim styles replace both wheel faces on all vehicles without changing model or plate
+  ---
+  duration_ms: 30.921346
+  type: 'test'
+  ...
+# Subtest: expanded models support every wrap, both sport rims and combined lights
+ok 271 - expanded models support every wrap, both sport rims and combined lights
+  ---
+  duration_ms: 41.617962
+  type: 'test'
+  ...
+# Subtest: model plate overlay uses proportional scale and the measured plate center
+ok 272 - model plate overlay uses proportional scale and the measured plate center
+  ---
+  duration_ms: 24.611943
+  type: 'test'
+  ...
+# Subtest: decorated plates keep natural artwork and text proportions in every surface
+ok 273 - decorated plates keep natural artwork and text proportions in every surface
+  ---
+  duration_ms: 17.703672
+  type: 'test'
+  ...
+# Subtest: expanded model rims use their measured wheel faces and never a third wheel
+ok 274 - expanded model rims use their measured wheel faces and never a third wheel
+  ---
+  duration_ms: 18.102864
+  type: 'test'
+  ...
+# Subtest: map-card plate enlargement preserves aspect ratio and leaves the default unchanged
+ok 275 - map-card plate enlargement preserves aspect ratio and leaves the default unchanged
+  ---
+  duration_ms: 16.821712
+  type: 'test'
+  ...
+# Subtest: the story attempts autoplay and orders horn, tulip, smile and brand
+ok 276 - the story attempts autoplay and orders horn, tulip, smile and brand
+  ---
+  duration_ms: 5.236149
+  type: 'test'
+  ...
+# Subtest: automatic music keeps looping through guide pages and is released on exit
+ok 277 - automatic music keeps looping through guide pages and is released on exit
+  ---
+  duration_ms: 1.376787
+  type: 'test'
+  ...
+# Subtest: blocked autoplay retries on an ordinary page interaction without a dedicated start button
+ok 278 - blocked autoplay retries on an ordinary page interaction without a dedicated start button
+  ---
+  duration_ms: 1.151477
+  type: 'test'
+  ...
+# Subtest: explicit mute survives later gestures and replay
+ok 279 - explicit mute survives later gestures and replay
+  ---
+  duration_ms: 1.14652
+  type: 'test'
+  ...
+# Subtest: continue stays inert before departure, then reveals and resets on replay
+ok 280 - continue stays inert before departure, then reveals and resets on replay
+  ---
+  duration_ms: 4.828864
+  type: 'test'
+  ...
+# Subtest: hidden tabs pause motion and cues then resume from the remaining timeline
+ok 281 - hidden tabs pause motion and cues then resume from the remaining timeline
+  ---
+  duration_ms: 1.330748
+  type: 'test'
+  ...
+# Subtest: reduced motion shows the completed story without travel and keeps continue accessible
+ok 282 - reduced motion shows the completed story without travel and keeps continue accessible
+  ---
+  duration_ms: 4.178913
+  type: 'test'
+  ...
+# Subtest: manual pause survives tab hiding and the replay control starts a fresh timeline
+ok 283 - manual pause survives tab hiding and the replay control starts a fresh timeline
+  ---
+  duration_ms: 1.17307
+  type: 'test'
+  ...
+# Subtest: the male smile follows the girl and appears before the brand
+ok 284 - the male smile follows the girl and appears before the brand
+  ---
+  duration_ms: 1.096784
+  type: 'test'
+  ...
+1..284
+# tests 284
+# suites 0
+# pass 284
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 103281.525707

@@ -1,0 +1,36 @@
+-- Execute in a single transaction; all fixtures roll back, including on assertion failure.
+begin;
+insert into auth.users(id,email) values('a1111111-1111-4111-8111-111111111111','kiyi-test-a@example.invalid'),('b2222222-2222-4222-8222-222222222222','kiyi-test-b@example.invalid');
+set local role authenticated;
+select set_config('request.jwt.claim.sub','b2222222-2222-4222-8222-222222222222',true);
+select public.kiyi_command('profile','{"username":"kiyi_test_b","searchable":true,"profile":{"plate":"07 TEST 002"}}');
+select set_config('request.jwt.claim.sub','a1111111-1111-4111-8111-111111111111',true);
+select public.kiyi_command('bundle');
+reset role;
+update public.kiyi_wallets set balance=1000 where user_id='a1111111-1111-4111-8111-111111111111';
+set local role authenticated;
+do $$declare x jsonb;pid uuid;denied boolean;begin
+ perform public.kiyi_command('gift','{"target":"b2222222-2222-4222-8222-222222222222","product":"rose","request_id":"c3333333-3333-4333-8333-333333333333"}');
+ perform public.kiyi_command('gift','{"target":"b2222222-2222-4222-8222-222222222222","product":"rose","request_id":"c3333333-3333-4333-8333-333333333333"}');
+ perform public.kiyi_command('appearance','{"kind":"plate","value":"diamond","request_id":"d4444444-4444-4444-8444-444444444444"}');
+ perform public.kiyi_command('appearance','{"kind":"plate","value":"diamond","request_id":"e5555555-5555-4555-8555-555555555555"}');
+ x=public.kiyi_command('bundle');assert (x->>'balance')::int=880,'Duplicate charge';assert jsonb_array_length(x->'gifts')=1,'Duplicate gift';assert jsonb_array_length(x->'ledger')=2,'Incorrect ledger';
+ denied=false;begin update public.kiyi_wallets set balance=999999;exception when insufficient_privilege then denied=true;end;assert denied,'Direct wallet update allowed';
+ perform public.kiyi_command('follow','{"target":"b2222222-2222-4222-8222-222222222222","enabled":true}');
+ perform public.kiyi_command('favorite','{"target":"b2222222-2222-4222-8222-222222222222","enabled":true}');
+ x=public.kiyi_command('post_create','{"text":"Test paylaşımı","visibility":"followers","poll":{"question":"Seçim?","options":["A","B"]}}');pid=(x->'post'->>'id')::uuid;
+ perform set_config('request.jwt.claim.sub','b2222222-2222-4222-8222-222222222222',true);
+ x=public.kiyi_command('posts');assert jsonb_array_length(x->'posts')=0,'Private post leaked';
+ perform public.kiyi_command('follow','{"target":"a1111111-1111-4111-8111-111111111111","enabled":true}');
+ x=public.kiyi_command('vote',jsonb_build_object('id',pid,'choice',1));assert (x->'post'->'poll'->'counts'->>1)::int=1,'Vote missing';
+ x=public.kiyi_command('like',jsonb_build_object('id',pid,'like',true));assert (x->'post'->>'likes')::int=1,'Like missing';
+ x=public.kiyi_command('comment',jsonb_build_object('id',pid,'text','Merhaba'));assert jsonb_array_length(x->'post'->'comments')=1,'Comment missing';
+ denied=false;begin perform public.kiyi_command('post_delete',jsonb_build_object('id',pid));exception when raise_exception then denied=true;end;assert denied,'Other author deletion allowed';
+ perform public.kiyi_command('block','{"target":"a1111111-1111-4111-8111-111111111111","enabled":true}');
+ x=public.kiyi_command('bundle');assert jsonb_array_length(x->'followers')=0 and jsonb_array_length(x->'following')=0,'Blocked follows remain';assert not exists(select 1 from jsonb_array_elements(x->'notifications')n where n->>'sender'='a1111111-1111-4111-8111-111111111111'),'Blocked notifications visible';
+ x=public.kiyi_command('posts');assert jsonb_array_length(x->'posts')=0,'Blocked posts visible';
+ denied=false;begin perform public.kiyi_command('gift','{"target":"a1111111-1111-4111-8111-111111111111","product":"rose","request_id":"f6666666-6666-4666-8666-666666666666"}');exception when raise_exception then denied=true;end;assert denied,'Blocked gift allowed';
+end $$;
+reset role;
+select 'PASS: atomic gifts, inventory, wallet permissions, followers-only posts, votes, likes, comments, author deletion, blocking' as test_result;
+rollback;

@@ -1,0 +1,80 @@
+✔ erasure defaults closed and refuses shared Auth or unapproved policy before any service call (2.135825ms)
+✔ erasure requires explicit confirmation and password (0.437003ms)
+✔ reauthenticated identity must match validated caller and never accepts a body email (0.38991ms)
+✔ all erasure stages finish before completion including actual Auth absence check (1.395187ms)
+✔ unsafe media scope never deletes objects (0.391328ms)
+✔ failure at prepare never claims deletion (0.330038ms)
+✔ failure at signOutAll never claims deletion (0.235534ms)
+✔ failure at removeObjects never claims deletion (0.305265ms)
+✔ failure at purgePersonalData never claims deletion (0.349802ms)
+✔ failure at deleteAuthUser never claims deletion (5.029626ms)
+✔ failure at authUserExists never claims deletion (1.065445ms)
+✔ Auth deletion success response alone is insufficient (0.63607ms)
+✔ native bundled legal/support links open locally and unsafe schemes are blocked (0.444844ms)
+✔ UI never treats a queued request as deletion and clears password after error (2.799898ms)
+✔ UI confirms only verified completed deletion (1.500603ms)
+✔ a quiet geolocation watch requests a fresh reading instead of replaying a stale position (4.816235ms)
+✔ stopping clears fresh-reading timer and rejects late GPS callbacks (1.451625ms)
+✔ Three public featured cars join existing regional roads (4.311837ms)
+✔ Ghost preview discloses initials and masks trailing plate digits (1.784931ms)
+✔ Premium areas lock profile and photo but retain the car (4.427452ms)
+✔ Gift deducts exact credits once and logs the same transaction (1.719988ms)
+✔ Insufficient credits, blocked recipient and locked profile cannot spend (4.108147ms)
+✔ Storage failure rolls back both gift and credit debit (1.52557ms)
+✔ Saved credit changes refresh the visible map balance (1.639247ms)
+✔ Explicit public profiles remain accessible in Premium areas (2.652853ms)
+✔ Ghost Premium profiles are anonymous to free viewers and visible to Premium viewers (1.541907ms)
+✔ All eleven catalog gifts debit their configured exact price (15.013054ms)
+✔ Expensive gifts cannot overspend balance; unknown gift cannot debit (8.207369ms)
+✔ Song creates one recipient notification with sender and song name (2.804704ms)
+✔ Free visitor entry opens pricing without fetching visitor identities (3.990492ms)
+✔ Premium members fetch their visitor list (1.728929ms)
+✔ Expired entitlement opens pricing when the server rejects access (2.584213ms)
+✔ An entitlement removed during a request cannot render visitor identities (1.314025ms)
+✔ Selecting and continuing a plan does not grant Premium or debit credits (1.5029ms)
+✖ Free map and legacy ghost controls open the dedicated screen without enabling ghost mode (16.279952ms)
+✔ all five achievements render from awarded data and unknown awards are ignored (20.347815ms)
+✔ verified achievement uses existing purple styling without inventing a verification state (1.986625ms)
+✔ social descriptions cover follow, like, comment, tag and earned badge (1.585396ms)
+✔ missing actor identity is rendered generically and badge HTML never includes arbitrary source fields (1.463699ms)
+✔ notification settings save only the changed in-app preference (2.884626ms)
+✔ failed preference writes restore the switch and surface server errors (1.686577ms)
+✔ notification navigation uses fresh server-authorized target instead of stale client target (1.541265ms)
+✔ denied notification opens neither navigate nor mark the local record read (1.916318ms)
+✔ report UI offers all six reasons, escapes no arbitrary subject, and rejects invalid IDs (2.834397ms)
+✔ closing the settings sheet during a successful save does not revert the saved switch (1.367923ms)
+✔ account hydration isolates demo credits and reads only server wallet (8.686799ms)
+✔ cloud saves never upload credits, premium or paid inventory (605.027434ms)
+✔ real accounts do not inherit the demo plate (2.195067ms)
+✔ revoked server session clears private state and emits account-out (2.580007ms)
+ℹ tests 49
+ℹ suites 0
+ℹ pass 48
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 782.683067
+
+✖ failing tests:
+
+test at tests/premium-visitors.test.cjs:8:1
+✖ Free map and legacy ghost controls open the dedicated screen without enabling ghost mode (16.279952ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /Premium hesaplar profilini görebilir/. Input:
+  
+  `<section class="kiyi-premium-paywall premium-ghost-paywall" aria-labelledby="premium-title"><div class="premium-hero"><div class="premium-ghost-scene premium-artwork"><img src="assets/premium/piyaso-ghost-car-v184.webp" data-fallback="assets/premium/piyaso-ghost-car-v182.jpeg" onerror="kiyiPremiumImageFallback(this)" width="1312" height="1200" alt="Pastel mor şehir haritasında, üzerinde hayalet profil bulunan araba ve çevresinde gizli profil işaretleri" fetchpriority="high" decoding="async"></div><div class="premium-wordmark"><span class="premium-logo" role="img" aria-label="Piyaso"></span><span class="premium-label">premium</span></div></div><div class="premium-paywall-body"><div class="premium-feature-kicker"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg> <span>hayalet moduyla</span></div><h2 id="premium-title">stalk’a biraz gizem kat.</h2><p class="premium-feature-copy">Haritada kendi tarzında gez. Arabanın üzerinde hayalet profilin görünsün.</p><div class="premium-plan-list" role="radiogroup" aria-label="Premium planı"><button class="premium-plan selected" type="button" role="radio" aria-checked="true" data-premium-plan="yearly" onclick="selectKiyiPremiumPlan('yearly')"><span class="premium-plan-radio"></span><span class="premium-plan-text"><b>yıllık</b><small>yılda ₺499,90</small></span><span class="premium-plan-price"><b>₺41,66</b><small>/ay</small></span><span class="premium-saving">%17 daha avantajlı</span></button><button class="premium-plan" type="button" role="radio" aria-checked="false" data-premium-plan="monthly" onclick="selectKiyiPremiumPlan('monthly')"><span class="premium-plan-radio"></span><span class="premium-plan-text"><b>aylık</b><small>Aylık Premium planı</small></span><span class="premium-plan-price"><b>₺49,90</b><small>/ay</small></span></button></div><p class="premium-includes"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg> Hayalet mod ve profil ziyaretçileri Premium’a dahil.</p><p class="premium-ghost-detail">Hayalet modda haritadaki kimliğin gizlenir; yaklaşık konum işareti görünür.</p><div class="premium-paywall-action"><p class="premium-plan-status" role="status" aria-live="polite"></p><button type="button" class="premium-continue" onclick="continueKiyiPremium()">Premium ile keşfet</button><p class="premium-billing-note">Plan önizlemesidir. Şu an ücret alınmaz ve abonelik başlatılmaz.</p><div class="premium-legal"><a href="terms.html" target="_blank" rel="noopener">kullanım koşulları</a><a href="privacy.html" target="_blank" rel="noopener">gizlilik politikası</a><button type="button" onclick="restoreKiyiPremium()">geri yükle</button></div></div></div></section>`
+  
+      at TestContext.<anonymous> (/workspace/scratch/c75624140386/.sites-checkout/tests/premium-visitors.test.cjs:8:648)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: `<section class="kiyi-premium-paywall premium-ghost-paywall" aria-labelledby="premium-title"><div class="premium-hero"><div class="premium-ghost-scene premium-artwork"><img src="assets/premium/piyaso-ghost-car-v184.webp" data-fallback="assets/premium/piyaso-ghost-car-v182.jpeg" onerror="kiyiPremiumImageFallback(this)" width="1312" height="1200" alt="Pastel mor şehir haritasında, üzerinde hayalet profil bulunan araba ve çevresinde gizli profil işaretleri" fetchpriority="high" decoding="async"></div><div class="premium-wordmark"><span class="premium-logo" role="img" aria-label="Piyaso"></span><span class="premium-label">premium</span></div></div><div class="premium-paywall-body"><div class="premium-feature-kicker"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg> <span>hayalet moduyla</span></div><h2 id="premium-title">stalk’a biraz gizem kat.</h2><p class="premium-feature-copy">Haritada kendi tarzında gez. Arabanın üzerinde hayalet profilin görünsün.</p><div class="premium-plan-list" role="radiogroup" aria-label="Premium planı"><button class="premium-plan selected" type="button" role="radio" aria-checked="true" data-premium-plan="yearly" onclick="selectKiyiPremiumPlan('yearly')"><span class="premium-plan-radio"></span><span class="premium-plan-text"><b>yıllık</b><small>yılda ₺499,90</small></span><span class="premium-plan-price"><b>₺41,66</b><small>/ay</small></span><span class="premium-saving">%17 daha avantajlı</span></button><button class="premium-plan" type="button" role="radio" aria-checked="false" data-premium-plan="monthly" onclick="selectKiyiPremiumPlan('monthly')"><span class="premium-plan-radio"></span><span class="premium-plan-text"><b>aylık</b><small>Aylık Premium planı</small></span><span class="premium-plan-price"><b>₺49,90</b><small>/ay</small></span></button></div><p class="premium-includes"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg> Hayalet mod ve profil ziyaretçileri Premium’a dahil.</p><p class="premium-ghost-detail">Hayalet modda haritadaki kimliğin gizlenir; yaklaşık konum işareti görünür.</p><div class="premium-paywall-action"><p class="premium-plan-status" role="status" aria-live="polite"></p><button type="button" class="premium-continue" onclick="continueKiyiPremium()">Premium ile keşfet</button><p class="premium-billing-note">Plan önizlemesidir. Şu an ücret alınmaz ve abonelik başlatılmaz.</p><div class="premium-legal"><a href="terms.html" target="_blank" rel="noopener">kullanım koşulları</a><a href="privacy.html" target="_blank" rel="noopener">gizlilik politikası</a><button type="button" onclick="restoreKiyiPremium()">geri yükle</button></div></div></div></section>`,
+    expected: /Premium hesaplar profilini görebilir/,
+    operator: 'match',
+    diff: 'simple'
+  }

@@ -1,0 +1,57 @@
+{
+  "status": "draft_not_registered_with_apple",
+  "bundleId": "com.kiyi.antalya",
+  "products": [
+    {
+      "id": "com.kiyi.antalya.credits100",
+      "type": "consumable",
+      "credits": 100,
+      "draftTRY": 49.9
+    },
+    {
+      "id": "com.kiyi.antalya.credits250",
+      "type": "consumable",
+      "credits": 250,
+      "draftTRY": 99.9
+    },
+    {
+      "id": "com.kiyi.antalya.credits600",
+      "type": "consumable",
+      "credits": 600,
+      "draftTRY": 199.9
+    },
+    {
+      "id": "com.kiyi.antalya.premium.monthly",
+      "type": "auto_renewable_subscription",
+      "period": "P1M",
+      "draftTRY": 49.9
+    }
+  ],
+  "spending": {
+    "songLink": 60,
+    "carColorPermanentUnlock": 500,
+    "gifts": {
+      "rose": 20,
+      "tulip": 20,
+      "evil-eye": 20,
+      "bouquet": 40,
+      "friendship": 10,
+      "coffee": 40,
+      "tea": 50,
+      "ring": 300,
+      "cat": 222,
+      "lemon": 40,
+      "lighter": 50
+    }
+  },
+  "requirements": [
+    "Read localized display prices from StoreKit, not this JSON",
+    "Server-verified Apple transaction bound to signed-in account",
+    "Idempotent transaction ID before crediting balance",
+    "No client-side balance or Premium authorization",
+    "Credits have no expiry",
+    "Restore Premium and sync server wallet",
+    "Handle renewals, cancellations, expiry and refunds",
+    "Do not grant credits for pending/cancelled/unverified purchases"
+  ]
+}

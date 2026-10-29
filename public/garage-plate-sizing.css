@@ -1,0 +1,16 @@
+/* Only the customization screen: keep every plate centered in an equal card slot. */
+.vehicle-garage[data-garage-tab="plate"] .plate-style-grid{align-items:stretch;gap:12px}
+.vehicle-garage[data-garage-tab="plate"] .plate-style-choice,
+.vehicle-garage[data-garage-tab="plate"] .plate-style-choice.selected{display:grid;grid-template-rows:clamp(42px,8vw,70px) minmax(18px,auto) minmax(18px,auto);align-content:start;justify-items:center;gap:12px;min-width:0;min-height:148px;padding:20px 9px 15px;border-width:1px}
+.vehicle-garage[data-garage-tab="plate"] .plate-style-choice .custom-plate.shared-plate-art{display:block;position:relative;width:100%;height:100%;max-width:290px;min-width:0;aspect-ratio:auto;margin:0!important;padding:0!important;border:0!important;overflow:hidden}
+.vehicle-garage[data-garage-tab="plate"] .plate-style-choice .custom-plate.shared-plate-art>.vehicle-plate-style{display:block;width:100%;height:100%;max-width:100%;max-height:100%;aspect-ratio:auto;overflow:hidden}
+.vehicle-garage[data-garage-tab="plate"] .plate-style-choice>b{align-self:center;margin:0;font-size:13px;line-height:1.3}
+.vehicle-garage[data-garage-tab="plate"] .plate-style-choice>small{align-self:start;margin:0;min-height:20px;font-size:12px;line-height:1.4}
+.vehicle-garage[data-garage-tab="plate"] .plate-name-badge{top:5px;right:5px;font-size:8px;line-height:1.2;padding:3px 5px;pointer-events:none}
+.vehicle-garage .garage-model-choice.garage-model-previewing{box-shadow:0 0 0 2px #c58aff,inset 0 0 20px #8b2ce833}
+.vehicle-garage .garage-hero-count{min-width:52px;text-align:center;font-variant-numeric:tabular-nums}
+.vehicle-garage .garage-hero-prev:disabled,.vehicle-garage .garage-hero-next:disabled{opacity:.3;cursor:default}
+.vehicle-garage .garage-bike-preview{width:100%;height:100%;display:grid;place-items:center}.vehicle-garage .garage-bike-preview>img{width:100%;height:100%;object-fit:contain;min-height:0}
+@media(max-width:480px){.vehicle-garage[data-garage-tab="plate"] .plate-style-grid{gap:10px}.vehicle-garage[data-garage-tab="plate"] .plate-style-choice,.vehicle-garage[data-garage-tab="plate"] .plate-style-choice.selected{grid-template-rows:42px minmax(18px,auto) minmax(18px,auto);min-height:136px;padding:17px 7px 13px;gap:9px}.vehicle-garage[data-garage-tab="plate"] .plate-style-choice>b{font-size:12px}.vehicle-garage[data-garage-tab="plate"] .plate-name-badge{font-size:7px}}
+/* Larger readable plate choices on phones, with the same centerline in every slot. */
+@media(max-width:600px){.vehicle-garage[data-garage-tab="plate"] .plate-style-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.vehicle-garage[data-garage-tab="plate"] .plate-style-choice,.vehicle-garage[data-garage-tab="plate"] .plate-style-choice.selected{grid-template-rows:64px minmax(20px,auto) minmax(20px,auto);min-height:156px;padding:15px 9px 13px;gap:8px}.vehicle-garage[data-garage-tab="plate"] .plate-style-choice>b{font-size:14px}.vehicle-garage[data-garage-tab="plate"] .plate-style-choice>small{font-size:13px}.vehicle-garage[data-garage-tab="plate"] .plate-name-badge{font-size:8px;top:5px;right:6px}}

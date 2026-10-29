@@ -1,0 +1,16 @@
+✔ unconfigured transport never claims work or claims delivery (0.872595ms)
+✔ provider acceptance, rejection, timeout have distinct durable ACK outcomes (0.329907ms)
+✔ ACK failure is left pending without marking provider delivery (0.283677ms)
+✔ revoked work is not sent (0.151558ms)
+✔ webhook disallows unsafe destinations and preserves idempotency across retries (1.233949ms)
+✔ edge worker rejects user credentials and remains pending without configuration (51.992128ms)
+✔ preferences UI distinguishes providers, app preferences and OS permission (1.010723ms)
+✔ preference updates send only changed field and restore failed toggle (1.513701ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 337.319763

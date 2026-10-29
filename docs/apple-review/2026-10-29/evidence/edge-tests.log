@@ -1,0 +1,11 @@
+✔ deletion Edge stays disabled without server-only config and never contacts Auth (78.546627ms)
+✔ deletion Edge rejects wrong method, MIME, malformed JSON and null input (14.752982ms)
+✔ deletion Edge caps streamed request size before parsing or contacting services (12.255065ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 445.541949

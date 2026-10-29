@@ -1,0 +1,2 @@
+/* Display handles preserve the underlying profile names and account records. */
+function kiyiHandle(profile){const raw=typeof profile==='string'?profile:(profile?.username||profile?.handle||profile?.ownerName||profile?.name||'kiyiyolcusu');const handle=String(raw).replace(/^@+/,'').toLocaleLowerCase('tr-TR').replace(/ı/g,'i').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9_.]/g,'').slice(0,30);return '@'+(handle||'kiyiyolcusu')}

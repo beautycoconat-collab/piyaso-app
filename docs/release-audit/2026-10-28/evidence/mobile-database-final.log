@@ -1,0 +1,196 @@
+TAP version 13
+# Subtest: stage3-garage
+ok 1 - stage3-garage
+  ---
+  duration_ms: 481.872343
+  type: 'test'
+  ...
+# Subtest: stage4-social
+ok 2 - stage4-social
+  ---
+  duration_ms: 511.077352
+  type: 'test'
+  ...
+# Subtest: stage5-social
+ok 3 - stage5-social
+  ---
+  duration_ms: 529.32803
+  type: 'test'
+  ...
+# Subtest: stage5-privacy-pagination
+ok 4 - stage5-privacy-pagination
+  ---
+  duration_ms: 790.870734
+  type: 'test'
+  ...
+# Subtest: stage6-social
+ok 5 - stage6-social
+  ---
+  duration_ms: 238.127369
+  type: 'test'
+  ...
+# Subtest: stage6-milestones
+ok 6 - stage6-milestones
+  ---
+  duration_ms: 408.805439
+  type: 'test'
+  ...
+# Subtest: stage6-notification-privacy
+ok 7 - stage6-notification-privacy
+  ---
+  duration_ms: 68.987806
+  type: 'test'
+  ...
+# Subtest: domain-integration
+ok 8 - domain-integration
+  ---
+  duration_ms: 170.651295
+  type: 'test'
+  ...
+# Subtest: domain-location
+ok 9 - domain-location
+  ---
+  duration_ms: 182.936196
+  type: 'test'
+  ...
+# Subtest: stage7-security
+ok 10 - stage7-security
+  ---
+  duration_ms: 113.528493
+  type: 'test'
+  ...
+# Subtest: stage8-access
+ok 11 - stage8-access
+  ---
+  duration_ms: 200.432347
+  type: 'test'
+  ...
+# Subtest: stage8-review
+ok 12 - stage8-review
+  ---
+  duration_ms: 9.957096
+  type: 'test'
+  ...
+# Subtest: stage8-delivery
+ok 13 - stage8-delivery
+  ---
+  duration_ms: 27.908408
+  type: 'test'
+  ...
+# Subtest: stage8-delivery-erasure
+ok 14 - stage8-delivery-erasure
+  ---
+  duration_ms: 17.464319
+  type: 'test'
+  ...
+# Subtest: stage8-delivery-retention
+ok 15 - stage8-delivery-retention
+  ---
+  duration_ms: 15.05242
+  type: 'test'
+  ...
+# Subtest: loyalty-rewards
+ok 16 - loyalty-rewards
+  ---
+  duration_ms: 360.796004
+  type: 'test'
+  ...
+# Subtest: loyalty-eligibility
+ok 17 - loyalty-eligibility
+  ---
+  duration_ms: 84.842003
+  type: 'test'
+  ...
+# Subtest: loyalty-thresholds
+ok 18 - loyalty-thresholds
+  ---
+  duration_ms: 202.735419
+  type: 'test'
+  ...
+# Subtest: loyalty-vehicle-identity
+ok 19 - loyalty-vehicle-identity
+  ---
+  duration_ms: 30.972511
+  type: 'test'
+  ...
+# Subtest: loyalty-settlement
+ok 20 - loyalty-settlement
+  ---
+  duration_ms: 142.604735
+  type: 'test'
+  ...
+# Subtest: loyalty-config
+ok 21 - loyalty-config
+  ---
+  duration_ms: 2.684318
+  type: 'test'
+  ...
+# Subtest: badge-levels
+ok 22 - badge-levels
+  ---
+  duration_ms: 1121.519927
+  type: 'test'
+  ...
+# Subtest: referral-plate
+ok 23 - referral-plate
+  ---
+  duration_ms: 34.223642
+  type: 'test'
+  ...
+# Subtest: manual-song-dedications
+ok 24 - manual-song-dedications
+  ---
+  duration_ms: 66.25745
+  type: 'test'
+  ...
+# Subtest: A — isolated profile, garage, map, post and earned badge
+ok 25 - A — isolated profile, garage, map, post and earned badge
+  ---
+  duration_ms: 269.522075
+  type: 'test'
+  ...
+# Subtest: B — second isolated user follows, likes and comments; owner sees notification
+ok 26 - B — second isolated user follows, likes and comments; owner sees notification
+  ---
+  duration_ms: 87.307565
+  type: 'test'
+  ...
+# Subtest: C — daily reward and burst duplicate gift requests settle only once
+ok 27 - C — daily reward and burst duplicate gift requests settle only once
+  ---
+  duration_ms: 159.862529
+  type: 'test'
+  ...
+# Subtest: D — another account cannot edit a private vehicle, wallet or forge a purchase
+ok 28 - D — another account cannot edit a private vehicle, wallet or forge a purchase
+  ---
+  duration_ms: 43.201497
+  type: 'test'
+  ...
+# Subtest: E — backend re-identification preserves profile, garage, wallet and badge
+ok 29 - E — backend re-identification preserves profile, garage, wallet and badge
+  ---
+  duration_ms: 53.718314
+  type: 'test'
+  ...
+# Subtest: media Edge handler + actual registry accepts valid owned upload and rejects bypasses
+ok 30 - media Edge handler + actual registry accepts valid owned upload and rejects bypasses
+  ---
+  duration_ms: 148.108052
+  type: 'test'
+  ...
+# Subtest: encrypted isolated database and media backup restores data and detects tampering
+ok 31 - encrypted isolated database and media backup restores data and detects tampering
+  ---
+  duration_ms: 3201.811197
+  type: 'test'
+  ...
+1..31
+# tests 31
+# suites 0
+# pass 31
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 13340.605819

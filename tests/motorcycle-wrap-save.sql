@@ -1,0 +1,34 @@
+begin;
+do $test$
+declare u uuid=gen_random_uuid(); outsider uuid=gen_random_uuid(); v uuid; r uuid=gen_random_uuid(); x jsonb; ver int; before_balance int; denied boolean; plate text;
+begin
+ insert into auth.users(id) values(u),(outsider);
+ perform set_config('request.jwt.claims',jsonb_build_object('sub',u)::text,true);
+ perform public.kiyi_command('bundle');
+ update public.kiyi_wallets set balance=1000 where user_id=u;
+ plate='07 WRP '||substr(replace(gen_random_uuid()::text,'-',''),1,6);
+ x=public.kiyi_command('vehicle_create',jsonb_build_object('model','honda-pcx-125','plate',plate));v=(x->>'id')::uuid;
+ x=public.kiyi_command('garage_list');select (g->>'version')::int into ver from jsonb_array_elements(x->'vehicles')g where g->>'id'=v::text;
+ select balance into before_balance from public.kiyi_wallets where user_id=u;
+ x=public.kiyi_command('motorcycle_customize',jsonb_build_object('vehicle_id',v,'version',ver,'request_id',r,'appearance','{"wrap":"milk-wave"}'::jsonb));
+ assert (x->>'charged')::int=200,'Wrong wrap price';
+ assert (select balance from public.kiyi_wallets where user_id=u)=before_balance-200,'Wrong debit';
+ x=public.kiyi_command('motorcycle_customize',jsonb_build_object('vehicle_id',v,'version',ver,'request_id',r,'appearance','{"wrap":"milk-wave"}'::jsonb));
+ assert x->>'replayed'='true','Request not idempotent';
+ assert (select balance from public.kiyi_wallets where user_id=u)=before_balance-200,'Replay charged twice';
+ x=public.kiyi_command('garage_list');select (g->>'version')::int into ver from jsonb_array_elements(x->'vehicles')g where g->>'id'=v::text;
+ assert exists(select 1 from jsonb_array_elements(x->'vehicles')g where g->>'id'=v::text and g->'appearance'->>'wrap'='milk-wave'),'Saved wrap absent on reload';
+ x=public.kiyi_command('motorcycle_customize',jsonb_build_object('vehicle_id',v,'version',ver,'request_id',gen_random_uuid(),'appearance','{"wrap":"milk-wave"}'::jsonb));
+ assert (x->>'charged')::int=0,'Owned wrap charged twice';
+ denied=false;begin perform public.kiyi_command('motorcycle_customize',jsonb_build_object('vehicle_id',v,'version',ver,'request_id',gen_random_uuid(),'appearance','{"wrap":"race-95"}'::jsonb));exception when others then denied=true;end;assert denied,'Stale version accepted';
+ x=public.kiyi_command('garage_list');select (g->>'version')::int into ver from jsonb_array_elements(x->'vehicles')g where g->>'id'=v::text;
+ update public.kiyi_wallets set balance=0 where user_id=u;
+ denied=false;begin perform public.kiyi_command('motorcycle_customize',jsonb_build_object('vehicle_id',v,'version',ver,'request_id',gen_random_uuid(),'appearance','{"wrap":"race-95"}'::jsonb));exception when others then denied=true;end;assert denied,'Insufficient balance accepted';
+ assert (select appearance->>'wrap' from public.kiyi_vehicle_customizations where vehicle_id=v)='milk-wave','Failed purchase changed appearance';
+ assert (select balance from public.kiyi_wallets where user_id=u)=0,'Failed purchase changed balance';
+ perform set_config('request.jwt.claims',jsonb_build_object('sub',outsider)::text,true);perform public.kiyi_command('bundle');
+ denied=false;begin perform public.kiyi_command('motorcycle_customize',jsonb_build_object('vehicle_id',v,'version',ver,'request_id',gen_random_uuid(),'appearance','{"wrap":"milk-wave"}'::jsonb));exception when others then denied=true;end;assert denied,'Foreign vehicle updated';
+ assert exists(select 1 from public.kiyi_inventory where owner=u and sku='motorcycle:wrap:milk-wave'),'Entitlement not retained';
+end $test$;
+select 'PASS: wrap save, reload, price, ownership, replay, owned reuse, stale version and insufficient balance' as result;
+rollback;

@@ -1,0 +1,13 @@
+PASS real mixed garage, independent paid customization, idempotent debit, foreign denial, profile/REST credit and Premium forgery denied
+PASS actual image upload, MIME/signature rejection and ghost profile image signing/listing denial
+Traceback (most recent call last):
+  File "/workspace/scratch/46ad93df1376/kiyi-app/tests/stage7-live.py", line 86, in <module>
+    status,d=raw('POST','/functions/v1/kiyi-media',a,Path('/tmp/stage7-clip.mp4').read_bytes(),'video/mp4');assert status==200,('video upload',status,d)
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1019, in read_bytes
+    with self.open(mode='rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/stage7-clip.mp4'

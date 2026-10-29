@@ -1,0 +1,66 @@
+[
+  {
+    "name": "stage3-garage",
+    "passed": true
+  },
+  {
+    "name": "stage4-social",
+    "passed": true
+  },
+  {
+    "name": "stage5-social",
+    "passed": true
+  },
+  {
+    "name": "stage5-privacy-pagination",
+    "passed": true
+  },
+  {
+    "name": "stage6-social",
+    "passed": true
+  },
+  {
+    "name": "stage6-milestones",
+    "passed": true
+  },
+  {
+    "name": "stage6-notification-privacy",
+    "passed": true
+  },
+  {
+    "name": "domain-integration",
+    "passed": true
+  },
+  {
+    "name": "domain-location",
+    "passed": true
+  },
+  {
+    "name": "stage7-security",
+    "passed": true
+  },
+  {
+    "name": "stage8-access",
+    "passed": true
+  },
+  {
+    "name": "stage8-review",
+    "passed": true
+  },
+  {
+    "name": "stage8-health",
+    "passed": true
+  },
+  {
+    "name": "stage8-delivery",
+    "passed": true
+  },
+  {
+    "name": "stage8-delivery-erasure",
+    "passed": true
+  },
+  {
+    "name": "stage8-delivery-retention",
+    "passed": true
+  }
+]

@@ -1,0 +1,10 @@
+import {cp,mkdir,readFile,writeFile,rm} from 'node:fs/promises';
+import {fileURLToPath} from 'node:url';
+import path from 'node:path';
+import {build} from 'esbuild';
+await import('../../scripts/configure-supabase.mjs');
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..'),mobile=path.join(root,'mobile'),www=path.join(mobile,'www');
+await rm(www,{recursive:true,force:true,maxRetries:3,retryDelay:100});await mkdir(www,{recursive:true});await cp(path.join(root,'public'),www,{recursive:true});
+await build({entryPoints:[path.join(mobile,'src/native-runtime.js')],bundle:true,format:'esm',platform:'browser',target:'safari15',outfile:path.join(www,'native-runtime.js'),minify:true});
+let html=await readFile(path.join(www,'kiyi.html'),'utf8');html=html.replace('</head>','<script type="module" src="native-runtime.js"></script></head>');await writeFile(path.join(www,'index.html'),html);
+console.log('Bundled local web assets and native lifecycle/browser/share bridge. No remote server.url.');
